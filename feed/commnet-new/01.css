@@ -1,0 +1,16 @@
+
+
+.modal.rb-topsubmit .content {
+    background-color: transparent;
+    z-index: 11
+}
+
+.modal.rb-topsubmit [type="submit"]  {
+    position: fixed;
+    top: -44px;
+    right: 0;
+    padding-top:0;
+    padding-bottom: 0;
+    font-size: 16px;
+    line-height: 44px;
+}
