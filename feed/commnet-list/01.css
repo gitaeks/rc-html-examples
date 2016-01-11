@@ -1,25 +1,10 @@
-.rb-overlay {
-	display: none;
-	position: fixed;
-	opacity: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 15;
-}
-.rb-mod-overlay .rb-overlay {
-	display: block;
-	opacity: 1;
-	background-color: rgba(0, 0, 0, .3);
-}
-.rb-popover {
-	display: none;
-    position: fixed;
+
+.popover.rb-bottom {
+	top: auto;
     bottom: 0;
     left: 0;
-    z-index: 20;
-    display: none;
+    margin-left: 0;
+    margin-right: 0;
     width: 100%;
     background-color: #fff;
     border-radius: 0;
@@ -33,7 +18,10 @@
 	  -ms-transform: translate3d(0, 100%, 0);
 	      transform: translate3d(0, 100%, 0);
 }
-.rb-popover.active {
+.popover.rb-bottom:before {
+	border: none;
+}
+.popover.rb-bottom.visible {
 	display: block;
 	opacity: 1;
 	-webkit-transition: -webkit-transform .25s;
@@ -42,7 +30,4 @@
 	-webkit-transform: translate3d(0, 0, 0);
 	  -ms-transform: translate3d(0, 0, 0);
 	      transform: translate3d(0, 0, 0);
-}
-.rb-popover .table-view {
-	margin-bottom: 0
 }

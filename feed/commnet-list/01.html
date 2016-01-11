@@ -17,21 +17,18 @@
     <script src="../../assets/plugins/ratchet-2.0.2/js/ratchet.js"></script>
 
   </head>
-  <body class="rb-mod-overlay">
+  <body>
     
+
     <div class="modal active">
         <header class="bar bar-nav">
           <h1 class="title">댓글</h1>
         </header>
 
-        <div class="bar bar-footer">
-          <a class="icon icon-compose pull-right" href="#modal-feed-default"></a>
-        </div>
-
         <div class="content">
             <ul class="table-view">
                 <li class="table-view-cell media">
-                    <a class="navigate-right">
+                    <a class="navigate-right" href="#comment-000">
                         <img class="media-object pull-left" src="http://placehold.it/42x42">
                         <div class="media-body">
                         홍길동
@@ -45,7 +42,7 @@
     </div>
     
     <!-- popover 요소 -->
-    <div id="comment-000" class="rb-popover active">
+    <div id="comment-000" class="popover rb-bottom">
         <ul class="table-view">
             <li class="table-view-cell media">
                 <a class="navigate-right">
@@ -65,8 +62,6 @@
             </li>
         </ul>
     </div>
-
-    <!-- 하단 요소는 기본으로 포함되어 있습니다. -->
-    <div class="rb-overlay"></div>
+    
 </body>
 </html>
