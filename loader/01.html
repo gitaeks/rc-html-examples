@@ -1,0 +1,71 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>loader</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<!-- system-style -->
+<link href="../assets/plugins/ratchet-2.0.2/css/ratchet.css" rel="stylesheet">
+<link href="../assets/css/ratchet-theme-rb.css" rel="stylesheet">
+
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css" rel="stylesheet">
+
+<link rel="stylesheet" href="../assets/css/sys.css">
+<link rel="stylesheet" href="./01.css">
+
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script src="../assets/plugins/is-loading/1.0.6/jquery.isloading.rc.js"></script>
+
+</head>
+<body>
+    
+
+<header class="bar bar-nav">
+    <h1 class="title">Basic</h1>
+</header>
+
+<div class="content">
+
+    <div class="content-padded">
+
+        <div id="basic">
+            <button class="btn btn-outlined">Button <span class="badge badge-inverted"></span></button>
+            <p></p>
+        </div>
+
+    </div>
+
+</div>
+
+    
+
+
+<script>
+$(function() {
+
+    // Action on Click
+    $( "#basic .btn" ).click(function() {
+
+        $( this ).isLoading();
+
+        // Load data or whatever
+        $( "#basic .demo p" ).removeClass("alert-success");
+
+        // Data Loaded, re-enable event
+        setTimeout( function(){
+
+            // Deactivate the loading plugin
+            $( "#basic .btn" ).isLoading( "hide" );
+
+            $( "#basic p" ).html( "Content Loaded" ).addClass("alert-success"); 
+        }, 1000 );
+    });
+
+});
+
+
+</script>
+</body>
+</html>
