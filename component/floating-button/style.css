@@ -1,0 +1,111 @@
+/*floating button*/
+
+.rb-floating-tl{
+	animation: fromTop 1s 1;
+	-webkit-animation: fromTop 1s 1;
+}
+.rb-floating-tr{
+	animation: fromTop 1.3s 1;
+	-webkit-animation: fromTop 1.3s 1;
+} 
+.rb-floating-br{
+	animation: fromBottom 1.6s 1;
+	-webkit-animation: fromBottom 1.6s 1;
+}
+.rb-floating-bl{
+	animation: fromBottom 0.5s 1;
+	-webkit-animation: fromBottom 0.5s 1;
+}        
+@keyframes fromBottom {
+	0% {transform: translateY(250px)}
+	100% {transform: translateY(0)}
+}
+@keyframes fromTop {
+	0% {transform: translateY(-250px)}
+	100% {transform: translateY(0)}
+}
+@-webkit-keyframes fromBottom {
+	0% {transform: translateY(250px)}
+	100% {transform: translateY(0)}
+}    
+@-webkit-keyframes fromTop {
+	0% {transform: translateY(-250px)}
+	100% {transform: translateY(0)}
+}   
+
+.rb-floating, 
+.rb-floating-tl,
+.rb-floating-tr, 
+.rb-floating-bl, 
+.rb-floating-br {
+	box-sizing: border-box;
+	margin: 25px;
+	position: fixed;
+	white-space: nowrap;
+	z-index: 30;
+	padding-left: 0;
+	list-style: none; 
+}
+.rb-floating-tl {
+    left: 0;
+    top: 0
+}
+.rb-floating-tr {
+    right: 0;
+    top: 0
+}
+.rb-floating-bl {
+    left: 0;
+    bottom: 0
+}
+.rb-floating-br {
+    right: 0;
+    bottom: 0 
+}
+
+.rb-floating-button, 
+.rb-floating-button-main {
+    background-color: #F15A29;
+    display: inline-block;
+    position: relative;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    position: relative;
+    -webkit-user-drag: none;
+    font-weight: bold;
+    color: #f1f1f1
+}
+
+.rb-floating-list {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+.rb-floating-list > div {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 1px;
+    padding: 10px 0;
+    margin: -10px 0
+}
+.rb-floating-wrap {
+    padding: 25px;
+    margin: -25px
+}
+.rb-floating-button-main {
+    height: 56px;
+    width: 56px;
+    z-index: 20
+}
+.rb-floating-icon {
+    position: absolute;
+    font-size: 18px;
+    text-align: center;
+    line-height: 56px;
+    width: 100%
+}
