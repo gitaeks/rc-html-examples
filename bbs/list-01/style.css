@@ -321,3 +321,40 @@ body {
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
 }
+
+
+
+#page-bbs-list .table-view-cell .rb-comment .rb-new {
+    position: absolute;
+    top: -2px;
+    right: 0;
+    padding: 2px 2px 1px 2px;
+    font-size: 9px;
+    line-height: 0.9;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #d9534f;
+}
+#page-bbs-list .table-view-cell .rb-comment .rb-new:before {
+    content: 'N'
+}
+
+#page-bbs-view .bar-tab .rb-comment {
+    position: relative;
+}
+
+#page-bbs-view .bar-tab .rb-comment .rb-new {
+    position: absolute;
+    top: 5px;
+    right: 13px;
+    padding: 2px 2px 1px 2px;
+    border-radius: 100px;
+    font-size: 9px;
+    line-height: 0.9;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #d9534f;
+}
+#page-bbs-view .bar-tab .rb-comment .rb-new:before {
+    content: 'N'
+}
