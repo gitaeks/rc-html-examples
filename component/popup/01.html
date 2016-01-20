@@ -1,0 +1,72 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>popup</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<!-- system-style -->
+<link href="../../assets/plugins/ratchet-2.0.2/css/ratchet.css" rel="stylesheet">
+<link href="../../assets/css/ratchet-theme-rb.css" rel="stylesheet">
+
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css" rel="stylesheet">
+
+<link rel="stylesheet" href="../../assets/css/sys.css">
+<link rel="stylesheet" href="./style.css">
+
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+</head>
+<body>
+    
+
+<header class="bar bar-nav">
+    <h1 class="title">popup (onload)</h1>
+</header>
+
+<div class="content">
+</div>
+
+<!-- popup 시작 -->
+<div class="rb-popup" id="popup-01" role="popup">
+    <div class="rb-wrap">
+		<header class="bar bar-nav">
+			<h1 class="title">title</h1>
+		</header>
+		<div class="bar bar-standard bar-footer">
+			<button class="btn btn-block" data-dismiss="popup">확인</button>
+		</div>
+		<ul class="table-view">
+			<li class="table-view-cell">Item1</li>
+			<li class="table-view-cell">Item2</li>
+			<li class="table-view-cell">Item3</li>
+			<li class="table-view-cell">Item4</li>
+			<li class="table-view-cell">Item5</li>
+			<li class="table-view-cell">Item6</li>
+			<li class="table-view-cell">Item7</li>
+			<li class="table-view-cell">Item8</li>
+		</ul>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+$( document ).ready(function() {
+	$("#popup-01").delay(300).queue(function(next) {
+		$('body').append('<div class="backdrop"></div>');
+		$(this).addClass("active");
+     });
+ });
+
+$('[data-dismiss="popup"]').on('click', function() {
+	$('#popup-01').removeClass("active");
+	$(".backdrop").remove();
+});
+
+</script>
+
+
+
+</body>
+</html>

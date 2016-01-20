@@ -1,0 +1,134 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>popup</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<!-- system-style -->
+<link href="../../assets/plugins/ratchet-2.0.2/css/ratchet.css" rel="stylesheet">
+<link href="../../assets/css/ratchet-theme-rb.css" rel="stylesheet">
+
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css" rel="stylesheet">
+
+<link rel="stylesheet" href="../../assets/css/sys.css">
+<link rel="stylesheet" href="./style.css">
+
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+</head>
+<body>
+    
+
+<header class="bar bar-nav">
+    <h1 class="title">자유게시판</h1>
+</header>
+
+<nav class="bar bar-tab" id="bbs-post-sort">
+    <a class="tab-item" data-toggle="popup" data-target="popup-bbs-default" data-title="게시물정렬">
+        <span class="icon icon-list"></span>
+        <span class="tab-label" data-role="sort">등록순</span>
+    </a>
+</nav>
+
+<div class="content">
+
+	<ul class="table-view">
+		<li class="table-view-cell">Item 1</li>
+		<li class="table-view-cell">Item 2</li>
+		<li class="table-view-cell">Item 3</li>
+		<li class="table-view-cell">Item 4</li>
+	</ul>
+
+</div>
+
+<!-- popup 시작 -->
+<div class="rb-popup" id="popup-bbs-default" role="popup">
+    <div class="rb-wrap">
+		<header class="bar bar-nav">
+			<h1 class="title"></h1>
+		</header>
+		<div class="bar bar-standard bar-footer">
+			<button type="button" class="btn btn-default btn-block" data-dismiss="popup">닫기</button>
+		</div>
+		<ul class="table-view">
+			<li class="table-view-cell media">
+				<a data-toggle="sort" data-value="date" data-target="bbs-post-sort" data-label="등록순">
+					<span class="media-object pull-left icon icon-check"></span>
+					<div class="media-body">
+						등록순
+					</div>
+				</a>
+			</li>
+			<li class="table-view-cell media">
+				<a data-toggle="sort" data-value="hit" data-target="bbs-post-sort" data-label="조회순">
+					<div class="media-body">
+						조회순
+					</div>
+				</a>
+			</li>
+			<li class="table-view-cell media">
+				<a data-toggle="sort" data-value="like" data-target="bbs-post-sort" data-label="좋아요순">
+					<div class="media-body">
+						좋아요순
+					</div>
+				</a>
+			</li>
+			<li class="table-view-cell media">
+				<a  data-toggle="sort" data-value="comment" data-target="bbs-post-sort" data-label="댓글순">
+					<div class="media-body">
+						댓글순
+					</div>
+				</a>
+			</li>
+		</ul>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    $('[data-toggle=popup]').on('click',function(){
+
+        var title =  $(this).data('title');
+        var state =  $(this).data('state');
+
+        var popup =  '#' + $(this).data('target');
+
+		$('body').append('<div class="backdrop"></div>');
+        $(popup).addClass("active");
+
+        $(popup).find('.bar-nav .title').text(title);
+
+        History.pushState(state, title, url);
+        window.addEventListener("popstate", function () {
+
+            $(popup).removeClass('active')
+           	$(".backdrop").remove();
+        });
+    });
+
+    // history back
+    $('body').on('touchend', '[data-history=back]', function() {
+        History.back() 
+    });
+
+	$('[data-dismiss="popup"]').on('click', function() {
+		$('#popup-bbs-default').removeClass("active");
+		$(".backdrop").remove();
+	});
+    
+    $('[data-toggle=sort]').on('click',function(){
+        var label =  $(this).data('label');
+        var barTab =  '#' + $(this).data('target');
+
+		$('#popup-bbs-default').removeClass("active");
+		$(".backdrop").remove();
+
+        $(barTab).find('[data-role=sort]').text(label);
+    });
+
+</script>
+
+</body>
+</html>
