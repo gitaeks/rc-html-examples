@@ -1,0 +1,323 @@
+body {
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: 'Malgun Gothic','맑은 고딕',sans-serif;
+    color: #333;
+}
+
+
+/*bar-nav 영역 버튼 터치범위 확장*/
+.bar a.pull-left,
+.bar .btn-link.pull-left {
+    margin-left: -10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.bar a.pull-right,
+.bar .btn-link.pull-right {
+    margin-right: -10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+/*rb-menu*/
+
+.rb-menu {
+    height: 37px;
+}
+
+.rb-menu ~ .content {
+    padding-top: 80px;
+}
+
+.rb-menu .segmented-control {
+    top: 2px;
+    border: none;
+    border-radius: 0
+}
+
+.rb-menu .segmented-control .control-item {
+    position: relative;
+    background-color: transparent;
+    padding: 10px 3px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap;
+    text-decoration: none;
+    border: none;
+}
+
+.rb-menu .segmented-control .control-item.active {
+    color: #F15A29
+}
+
+.rb-menu .segmented-control .control-item.active:after {
+    position: absolute;
+    bottom: -1px;
+    left: 10px;
+    right: 10px;
+    vertical-align: middle;
+    content: " ";
+    border-bottom: 5px solid;
+    color: #F15A29;
+}
+
+/*Panel*/
+
+.rb-panel a:visited {
+    /*color: #888;*/
+}
+
+.rb-panel a:active {
+    background-color: #eee
+}
+
+.rb-panel {
+    position: relative;
+    background-color: #fff;
+    margin-top: 5px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>"), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>");
+    background-repeat: no-repeat;
+    background-position: 0 100%, 0 0;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.rb-panel:first-child {
+    margin-top: 0;
+}
+
+.rb-panel .rb-panel-heading {
+    margin-right: 100px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding:  10px 10px 8px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.rb-panel .rb-panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding:  0;
+    font-weight: 400;
+    font-size: 1.2em;
+    line-height: 1.23;
+    letter-spacing: -1px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.rb-panel .rb-panel-heading .rb-more {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    min-height: 45px;
+    padding: 14px 14px 15px 9px;
+    font-size: .93em;
+    line-height: 1;
+    color: #666;
+    text-align: right;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.rb-panel .rb-panel-heading-more:after {
+    padding-left: 2px;
+    font-family: FontAwesome;
+    content: "\f105";
+}
+
+.rb-panel .rb-panel-body {
+    padding: 10px
+}
+
+.rb-panel .table-view {
+    margin-bottom: 0
+}
+
+.rb-panel-heading + .rb-thumbnails {
+    padding-top: 0;
+}
+
+.rb-panel .rb-panel-footer {
+    margin-top: -1px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>"), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>");
+    background-repeat: no-repeat;
+    background-position: 0 100%, 0 0;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.rb-panel .rb-panel-footer .rb-more {
+    font-size: 15px;
+    margin-bottom: 0;
+    border: none;
+    background-color: #fff
+}
+
+
+.rb-avatar {
+    width: 42px;
+    height: 42px
+}
+
+
+/*Paging*/
+
+.rb-paging {
+    position: relative;
+    text-align: center;
+    display: block;
+    height: 48px;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.rb-paging .rb-count {
+    display: inline-block;
+    margin: 5px 42px 0;
+    padding: 0 8px;
+    font-weight: 700;
+    font-size: 1.2em;
+    line-height: 1.15;
+    font-family: helvetica;
+    color: #939393;
+    font-style: normal;
+}
+
+.rb-paging .rb-count .rb-current {
+    font-weight: 700;
+    color: #2e2e2e;
+}
+
+.rb-paging .rb-count .rb-bar {
+    padding: 0 2px;
+    font-weight: 300;
+    font-size: 0.9em;
+}
+
+.rb-paging .btn {
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    color: #000;
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.rb-paging .btn i {
+    margin-top: -2px
+}
+
+.rb-paging .btn.rb-disabled {
+    color: #ccc
+}
+
+.rb-paging .rb-prev {
+    left: 0;
+}
+.rb-paging .rb-next {
+    right: 0
+}
+
+
+/**
+ * 9 - notice 공지사항
+ * ----------------------------------------------------------------------------
+ */
+
+
+.rb-bbs-list .table-view-cell {
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+
+.rb-bbs-list .table-view-cell a {
+    font-size: 1.15em;
+    letter-spacing: -1px;
+  line-height: 1.4;
+}
+
+.rb-bbs-view .rb-panel-heading {
+    margin: 0;
+    white-space: normal;
+    border-bottom: 1px solid #ddd
+
+}
+
+.rb-bbs-view .rb-panel-heading h1,
+.rb-bbs-view .rb-panel-heading h2,
+.rb-bbs-view .rb-panel-heading h3,
+.rb-bbs-view .rb-panel-heading h4 {
+      line-height: 1.15;
+}
+
+
+
+.rb-bbs-view .rb-panel-body p {
+    margin-bottom: 2em;
+    font-size: 19px;
+    color: #141414;
+}
+
+
+
+.badge.rb-new {
+    padding: 2px 3px 1px 2px;
+    font-size: 9px;
+    line-height: 0.9;
+    border-radius: 3px;
+}
+
+/*replay*/
+.table-view-cell.rb-reply-01 {padding-left: 25px}
+.table-view-cell.rb-reply-02 {padding-left: 35px}
+
+.table-view-cell.rb-reply-01 .rb-icon,
+.table-view-cell.rb-reply-02 .rb-icon {
+    position: absolute;
+    top: 40%;
+    left: 7px;
+    font-size: 20px;
+    color: #999
+
+}
+
+/*popover*/
+
+.popover {
+    top: 10px;
+    left: auto;
+    right: 5%;
+    width: 200px;
+    margin-left: 0;
+    border: none;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+
+}
+
+#page-bbs-view .bar-nav .title {
+    padding-right: 20px
+}
+
+#page-bbs-view .bar-nav .title span {
+    display: -webkit-box;
+    overflow: hidden;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
