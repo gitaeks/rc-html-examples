@@ -1,0 +1,100 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>BBS-리스트형</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<!-- system-style -->
+<link href="../../assets/plugins/ratchet-2.0.2/css/ratchet.css" rel="stylesheet">
+<link href="../../assets/css/ratchet-theme-rb.css" rel="stylesheet">
+
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css" rel="stylesheet">
+
+<link rel="stylesheet" href="../../assets/css/sys.css">
+<link rel="stylesheet" href="./style.css">
+
+<script src="../../assets/plugins/ratchet-2.0.2/js/ratchet.js"></script>
+
+</head>
+<body>
+    
+<div class="rb-bbs-write">
+
+    <header class="bar bar-nav rb-inverse">
+        <button class="btn btn-link btn-nav pull-left">
+            임시저장
+        </button>
+        <button class="btn btn-link btn-nav pull-right">
+            확인
+        </button>
+        <h1 class="title">글쓰기</h1>
+    </header>
+
+    <nav class="bar bar-tab">
+        <a class="tab-item active" href="#attach-photo" id="photos" data-toggle="tab">
+             <i class="icon fa fa-camera fa-lg"></i>
+        </a>
+        <a class="tab-item">
+             <i class="icon fa fa-tags fa-lg"></i>
+        </a>
+        <a class="tab-item">
+             <i class="icon fa fa-paperclip fa-lg"></i>
+        </a>
+        <a class="tab-item" data-toggle="tab">
+             <i class="icon fa fa-map-marker fa-lg"></i>
+        </a>
+        <a class="tab-item">
+             <i class="icon fa fa-globe fa-lg"></i>
+        </a>
+        <a class="tab-item" data-toggle="tab">
+             <i class="icon fa fa-cog fa-lg"></i>
+        </a>
+        <a class="tab-item" data-toggle="tab">
+             임시 <span class="badge">1</span> 
+        </a>
+    </nav>
+
+<div class="content">
+    <form class="input-group">
+        <div class="input-row rb-navigate-down">
+            <label>분류</label>
+            <select>
+                <option label="선택하세요" disabled="disabled">선택하세요</option>
+                <option>분류1</option>
+                <option>분류2</option>
+                <option>분류3</option>
+            </select>
+        </div>
+        <input type="text" placeholder="제목">
+        <textarea rows="2" placeholder="내용"></textarea>
+    </form>
+</div>
+
+
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- textarea autosize : https://github.com/jackmoore/autosize -->
+<script src="../../assets/plugins/autosize-3.0.14/autosize.min.js"></script>
+
+<script>
+    autosize($('.rb-bbs-write textarea'));
+
+    $('.rb-oneline-list .input-group textarea').on('keyup', function(event) {
+        var $oneline = $('.rb-oneline-list .input-group');
+        
+        $oneline.find('button[type="submit"]').css("display", "none");
+
+        if ($(this).val().length >= 1) {
+            $oneline.find('button[type="submit"]').css("display", "block");
+        }
+    });
+
+</script>
+
+</body>
+</html>

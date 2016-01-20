@@ -386,3 +386,47 @@ body {
 .content .rb-guide .btn {
     margin-top: 20px
 }
+
+
+/*글쓰기 전용*/
+
+/*이슈작성 전용*/
+.rb-bbs-write .rb-more:before {
+    margin-right: -10px;
+    padding-left: 20px;
+    padding-right: 10px
+}
+
+.rb-bbs-write .input-group {
+    box-shadow: none;
+}
+.rb-bbs-write .input-row label {
+    width: 18%;
+    text-align: center;
+}
+.rb-bbs-write .input-row input {
+    width: 82%;
+}
+.rb-bbs-write .input-row label + select {
+    width: 82%;
+}
+.rb-bbs-write .content {
+    background-color: #fff
+}
+.rb-bbs-write .content textarea {
+    border-bottom: none;
+    border: none;
+    border-radius: 0;
+    resize: none;
+    box-shadow: none;
+}
+.rb-bbs-write .input-group {
+    background-position: inherit; 
+}
+
+
+@media (max-width: 360px) {
+    .rb-bbs-write .input-row label {
+        padding: 10px 5px;
+    } 
+}
