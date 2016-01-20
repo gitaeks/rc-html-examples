@@ -17,61 +17,189 @@
 
 <script src="../../assets/plugins/ratchet-2.0.2/js/ratchet.js"></script>
 
+
+<style type="text/css">
+.page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.page.left {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+}
+
+.page.center {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.page.right {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+}
+
+.page.transition {
+    -webkit-transition-duration: .25s;
+    transition-duration: .25s;
+}
+
+</style>
+
+
 </head>
 <body>
-    
-<div class="rb-bbs-write">
 
-    <header class="bar bar-nav rb-inverse">
-        <button class="btn btn-link btn-nav pull-left">
-            임시저장
-        </button>
-        <button class="btn btn-link btn-nav pull-right">
-            확인
-        </button>
-        <h1 class="title">글쓰기</h1>
-    </header>
-
-    <nav class="bar bar-tab">
-        <a class="tab-item active" href="#attach-photo" id="photos" data-toggle="tab">
-             <i class="icon fa fa-camera fa-lg"></i>
-        </a>
-        <a class="tab-item">
-             <i class="icon fa fa-tags fa-lg"></i>
-        </a>
-        <a class="tab-item">
-             <i class="icon fa fa-paperclip fa-lg"></i>
-        </a>
-        <a class="tab-item" data-toggle="tab">
-             <i class="icon fa fa-map-marker fa-lg"></i>
-        </a>
-        <a class="tab-item">
-             <i class="icon fa fa-globe fa-lg"></i>
-        </a>
-        <a class="tab-item" data-toggle="tab">
-             <i class="icon fa fa-cog fa-lg"></i>
-        </a>
-        <a class="tab-item" data-toggle="tab">
-             임시 <span class="badge">1</span> 
-        </a>
-    </nav>
+<header class="bar bar-nav">
+    <h1 class="title">게시판</h1>
+</header>
 
 <div class="content">
-    <form class="input-group">
-        <div class="input-row rb-navigate-down">
-            <label>분류</label>
-            <select>
-                <option label="선택하세요" disabled="disabled">선택하세요</option>
-                <option>분류1</option>
-                <option>분류2</option>
-                <option>분류3</option>
-            </select>
-        </div>
-        <input type="text" placeholder="제목">
-        <textarea rows="2" placeholder="내용"></textarea>
-    </form>
+    <div class="content-padded">
+        <a href="#modal-bbs-write" class="btn btn-block">글쓰기</a>
+    </div>
 </div>
 
+ 
+<div class="modal rb-bbs-write" id="modal-bbs-write">
+
+
+    <div id="homePage" class="page center">
+        <header class="bar bar-nav rb-inverse">
+            <button class="btn btn-link btn-nav pull-left">
+                임시저장
+            </button>
+            <a class="btn btn-link pull-right" href="#modal-bbs-write">확인</a>
+            <h1 class="title">글쓰기</h1>
+        </header>
+        <nav class="bar bar-tab">
+            <a class="tab-item" href="javascript:slidePageFrom(page1, 'right')">
+                 <i class="icon fa fa-camera fa-lg"></i>
+            </a>
+            <a class="tab-item" href="javascript:slidePageFrom(page2, 'right')">
+                 <i class="icon fa fa-tags fa-lg"></i>
+            </a>
+            <a class="tab-item" href="javascript:slidePageFrom(page3, 'right')">
+                 <i class="icon fa fa-paperclip fa-lg"></i>
+            </a>
+            <a class="tab-item" href="javascript:slidePageFrom(page4, 'right')">
+                 <i class="icon fa fa-map-marker fa-lg"></i>
+            </a>
+            <a class="tab-item" href="javascript:slidePageFrom(page5, 'right')">
+                 <i class="icon fa fa-globe fa-lg"></i>
+            </a>
+            <a class="tab-item" href="javascript:slidePageFrom(page6, 'right')">
+                 <i class="icon fa fa-cog fa-lg"></i>
+            </a>
+            <a class="tab-item" href="javascript:slidePageFrom(page7, 'right')">
+                 임시 <span class="badge">1</span> 
+            </a>
+        </nav>
+        <div class="content">
+            <form class="input-group">
+                <div class="input-row rb-navigate-down">
+                    <label>분류</label>
+                    <select>
+                        <option label="선택하세요" disabled="disabled">선택하세요</option>
+                        <option>분류1</option>
+                        <option>분류2</option>
+                        <option>분류3</option>
+                    </select>
+                </div>
+                <input type="text" placeholder="제목">
+                <textarea rows="2" placeholder="내용"></textarea>
+            </form>
+        </div>
+    </div>
+
+    <div id="attach-photo" class="page right">
+        <header class="bar bar-nav">
+            <a class="btn btn-link pull-left" href="javascript:slidePageFrom(homePage, 'left');">이전</a>
+            <h1 class="title">사진첨부</h1>
+        </header>
+        <div class="content">
+            <div class="content-padded">
+                사진 첨부
+            </div>
+        </div>
+    </div>
+
+    <div id="attach-tag" class="page right">
+        <header class="bar bar-nav">
+            <a class="btn btn-link pull-left" href="javascript:slidePageFrom(homePage, 'left');">이전</a>
+            <h1 class="title">태그 지정</h1>
+        </header>
+        <div class="content">
+            <div class="content-padded">
+                태그 지정
+            </div>
+        </div>
+    </div>
+
+    <div id="attach-file" class="page right">
+        <header class="bar bar-nav">
+            <a class="btn btn-link pull-left" href="javascript:slidePageFrom(homePage, 'left');">이전</a>
+            <h1 class="title">첨부파일</h1>
+        </header>
+        <div class="content">
+            <div class="content-padded">
+                첨부파일
+            </div>
+        </div>
+    </div>
+
+    <div id="attach-map" class="page right">
+        <header class="bar bar-nav">
+            <a class="btn btn-link pull-left" href="javascript:slidePageFrom(homePage, 'left');">이전</a>
+            <h1 class="title">위치 추가</h1>
+        </header>
+        <div class="content">
+            <div class="content-padded">
+                위치 추가
+            </div>
+        </div>
+    </div>
+
+    <div id="attach-link" class="page right">
+        <header class="bar bar-nav">
+            <a class="btn btn-link pull-left" href="javascript:slidePageFrom(homePage, 'left');">이전</a>
+            <h1 class="title">링크 추가</h1>
+        </header>
+        <div class="content">
+            <div class="content-padded">
+                링크 추가
+            </div>
+        </div>
+    </div>
+
+    <div id="settings" class="page right">
+        <header class="bar bar-nav">
+            <a class="btn btn-link pull-left" href="javascript:slidePageFrom(homePage, 'left');">이전</a>
+            <h1 class="title">글쓰기 설정</h1>
+        </header>
+        <div class="content">
+            <div class="content-padded">
+                글쓰기 설정
+            </div>
+        </div>
+    </div>
+
+    <div id="draft" class="page right">
+        <header class="bar bar-nav">
+            <a class="btn btn-link pull-left" href="javascript:slidePageFrom(homePage, 'left');">이전</a>
+            <h1 class="title">임시 저장함</h1>
+        </header>
+        <div class="content">
+            <div class="content-padded">
+                글쓰기 설정
+            </div>
+        </div>
+    </div>
 
 </div>
 
@@ -84,15 +212,25 @@
 <script>
     autosize($('.rb-bbs-write textarea'));
 
-    $('.rb-oneline-list .input-group textarea').on('keyup', function(event) {
-        var $oneline = $('.rb-oneline-list .input-group');
-        
-        $oneline.find('button[type="submit"]').css("display", "none");
+    var homePage = document.getElementById("homePage"),
+        page1 = document.getElementById("attach-photo"),
+        page2 = document.getElementById("attach-tag"),
+        page3 = document.getElementById("attach-file"),
+        page4 = document.getElementById("attach-map"),
+        page5 = document.getElementById("attach-link"),
+        page6 = document.getElementById("settings"),
+        page7 = document.getElementById("draft"),
+        currentPage = homePage;
 
-        if ($(this).val().length >= 1) {
-            $oneline.find('button[type="submit"]').css("display", "block");
-        }
-    });
+    function slidePageFrom(page, from) {
+        // Position the page at the starting position of the animation
+        page.className = "page " + from;
+        // Position the new page and the current page at the ending position of their animation with a transition class indicating the duration of the animation
+        page.className ="page transition center";
+        currentPage.className = "page transition " + (from === "left" ? "right" : "left");
+        currentPage = page;
+    }
+
 
 </script>
 
