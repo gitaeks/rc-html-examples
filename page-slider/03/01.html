@@ -1,0 +1,108 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>page-slider</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<link href="../../assets/plugins/ratchet-2.0.2/css/ratchet.css" rel="stylesheet">
+
+<link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+
+<header class="bar bar-nav">
+    <h1 class="title">모달 슬라이드</h1>
+</header>
+
+<div class="content">
+    <div class="content-padded">
+        <a href="#example" class="btn">Open modal</a>
+    </div>
+</div>
+
+
+<!-- 모달 시작 -->
+<div id="example" class="modal">
+
+    <div id="homePage" class="page center">
+        <header class="bar bar-nav">
+            <a class="icon icon-close pull-left" href="#example"></a>
+            <h1 class="title">목록</h1>
+        </header>
+        <div class="content">
+            <ul class="table-view">
+                <li class="table-view-cell">
+                    <a href="javascript:slidePageFrom(page1, 'right');" class="navigate-right">
+                    Page 1
+                    </a>
+                </li>
+                <li class="table-view-cell">
+                    <a href="javascript:slidePageFrom(page1, 'right');" class="navigate-right">
+                    Page 2
+                    </a>
+                </li>
+                <li class="table-view-cell">
+                    <a href="javascript:slidePageFrom(page1, 'right');" class="navigate-right">
+                    Page 3
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="p1" class="page right">
+        <header class="bar bar-nav">
+            <a class="btn btn-link pull-left" href="javascript:slidePageFrom(homePage, 'left');">이전</a>
+            <h1 class="title">내용</h1>
+        </header>
+        <div class="content">
+            <div class="content-padded">
+                <p>
+                    박근혜 대통령이 한일 위한부 협상을 최상의 합의라고 자평하며 일본의 사과를 받아줘야 한다고 말한 가운데, 경찰이 한국정신대문제대책협의회를 상대로 수사에 착수한 사실이 CBS노컷뉴스 취재 결과 확인됐다.
+                    정부가 일본군 위안부 피해자들을 위해 최선의 노력을 다했다고 하면서도, 뒤로는 수십년간 위안부 문제 해결을 주장한 시민단체를 수사 선상에 놓은 것이어서 파문이 예상된다.
+
+                    14일 서울지방경찰청 등에 따르면 경찰은 집회 시위에 관한 법률 위반 혐의로 정대협을 수사하고 있다.
+
+                    경찰이 문제삼고 있는 부분은 집회 및 시위에 관한 법률 16조 4항 '신고한 목적, 일시, 장소, 방법 등의 범위를 뚜렷이 벗어나는 행위' 항목이다.
+
+                    수요집회 참가자 수가 1천명 가까이 되면서 당초 신고한 인원 100명을 넘어 해당 조항을 위반했다는 것.
+                    서울경찰청 관계자는 "외교 공간 100m 이내에는 원칙적으로 집회가 금지되지만 24년 동안 정대협 수요 집회는 평화적으로 진행돼 이를 허용해 왔다"면서도 "현재 정대협 집회 부분에 대해서는 신고범위 이탈을 별도로 검토하고 있다"고 말했다.
+
+                    경찰은 정대협 관계자에 대한 출석 요구서 발송을 고려중인 것으로 알려졌다.
+
+                    그러나 일각에서는 경찰의 정대협 수사가 무리수라는 지적이 나온다.
+
+                    민주사회를 위한 변호사모임 박주민 변호사는 "신고범위를 현격하게 일탈했다고 해도 정대협에서 의도했는지를 봐야 한다"며 "집회에 참여한 인원이 많다고 정대협에게 책임을 물을 수 있을지 의문"이라고 말했다.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="../../assets/plugins/ratchet-2.0.2/js/ratchet.js"></script>
+
+<script>
+
+var homePage = document.getElementById("homePage"),
+    page1 = document.getElementById("p1"),
+    currentPage = homePage;
+
+    function slidePageFrom(page, from) {
+        // Position the page at the starting position of the animation
+        page.className = "page " + from;
+        // Position the new page and the current page at the ending position of their animation with a transition class indicating the duration of the animation
+        page.className ="page transition center";
+        currentPage.className = "page transition " + (from === "left" ? "right" : "left");
+        currentPage = page;
+    }
+
+</script>
+
+</body>
+</html>
