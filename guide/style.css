@@ -1,0 +1,26 @@
+/*guide*/
+
+.content .rb-guide {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top: -220px;
+    padding: 10px;
+    color: #777;
+    text-align: center;
+}
+.content .rb-guide i {
+    display: block;
+    margin: 0 auto 20px;
+    width: 126px;
+    font-size: 130px;
+    color: #ccc;
+}
+
+.content .rb-guide p {
+    font-size: 13px
+}
+
+.content .rb-guide .btn {
+    /*margin-top: 20px*/
+}
