@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BBS-리스트형</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!-- system-style -->
+<link href="../../assets/plugins/ratchet-2.0.2/css/ratchet.css" rel="stylesheet">
+<link href="../../assets/css/ratchet-theme-rb.css" rel="stylesheet">
+
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css" rel="stylesheet">
+
+<link rel="stylesheet" href="../../assets/css/sys.css">
+<link rel="stylesheet" href="./style.css">
+
+<script src="../../assets/plugins/ratchet-2.0.2/js/ratchet.js"></script>
+
+<style type="text/css">
+
+.rb-bbs-search .bar-header-secondary {
+    height: 100px;
+}
+.rb-bbs-search .bar-header-secondary,
+.rb-bbs-search .bar.bar-footer {
+    box-shadow: none
+}
+.rb-bbs-search .bar-header-secondary ~ .content {
+    padding-top: 144px;
+}
+.rb-bbs-search .bar-header-secondary input[type="search"] {
+    height: 39px;
+    margin: 10px 0 8px;
+}
+.rb-bbs-search .bar-header-secondary .segmented-control {
+    top: 0; 
+    margin: 0 auto;
+}
+
+</style>
+
+</head>
+<body>
+
+<header class="bar bar-nav rb-inverse">
+    <button class="btn btn-link btn-nav pull-left" data-history="back"><span class="icon icon-left-nav"></span></button>
+    <h1 class="title">
+        자유게시판
+    </h1>
+</header>
+    <nav class="bar bar-tab">
+        <a class="tab-item" href="#modal-bbs-search">
+            <span class="icon icon-search"></span>
+            <span class="tab-label">검색</span>
+        </a>
+    </nav>
+<div class="content">
+</div>
+
+<div class="modal rb-bbs-search" id="modal-bbs-search">
+    <header class="bar bar-nav rb-inverse">
+        <a href="#modal-bbs-search" class="btn btn-link btn-nav pull-left"><span class="icon icon-left-nav"></span></a>
+        <h1 class="title">
+            자유게시판
+        </h1>
+    </header>
+
+    <div class="bar bar-standard bar-header-secondary">
+        <form>
+            <input type="search" placeholder="게시판 내 검색">
+            <div class="segmented-control">
+                <a class="control-item active" data-transition="fade">제목+내용</a>
+                <a class="control-item" data-transition="fade">제목+태그</a>
+                <a class="control-item" data-transition="fade">제목만</a>
+                <a class="control-item" data-transition="fade">작성자</a>
+            </div>
+        </form>
+    </div>
+    <div class="bar bar-standard bar-footer">
+        <button class="btn btn-block" type="submit" disabled="disabled">검색</button>
+    </div>
+    <div class="content">
+    </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script>
+
+    $('.rb-bbs-search input[type=search]').on('keyup', function(event) {
+        var $btn = $('.bar-footer button[type="submit"]');
+        
+        $btn.removeClass('btn-primary').attr("disabled","disabled");
+
+        if ($(this).val().length >= 1) {
+            $btn.addClass("btn-primary").removeAttr("disabled","disabled");
+        }
+    });
+
+</script>
+</body>
+</html>
