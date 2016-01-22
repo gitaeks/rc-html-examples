@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -19,6 +20,11 @@
 
 
 <style type="text/css">
+
+.modal {
+    background-color: #222
+}
+
 .page {
     position: fixed;
     top: 0;
@@ -27,26 +33,49 @@
     bottom: 0;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+
+    visibility: visible;
 }
 
 .page.left {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
+
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+
 }
 
 .page.center {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
 }
 
 .page.right {
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
+
+
 }
 
 .page.transition {
-    -webkit-transition-duration: .25s;
-    transition-duration: .25s;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    animation: mymove .3s;
 }
 
 </style>
@@ -123,9 +152,77 @@
             <h1 class="title">사진첨부</h1>
         </header>
         <div class="content">
-            <div class="content-padded">
-                사진 첨부
-            </div>
+
+
+
+
+<div class="rb-panel">
+
+    <div class="rb-gallery rb-row" data-pswp-uid="1">
+        <figure class="rb-col-xs-3 rb-col-sm-3 rb-thumbnail">
+            <span class="rb-pic">
+                <img src="http://live2.kimsq.com/_core/opensrc/timthumb/thumb.php?src=http://break.kimsq.co.kr/rb200/files/2014/12/03/e25418821200a0f7c8f9f81b22d21691203832.jpg&amp;w=155&amp;h=155&amp;q=90">
+            </span>
+        </figure>
+        <figure class="rb-col-xs-3 rb-col-sm-3 rb-thumbnail">
+            <span class="rb-pic">
+                <img src="http://live2.kimsq.com/_core/opensrc/timthumb/thumb.php?src=http://break.kimsq.co.kr/rb200/files/2014/12/03/86c3cbc8cde622a8c725d89a88bdcb96203759.jpg&amp;w=155&amp;h=155&amp;q=90">
+            </span>
+        </figure>
+        <figure class="rb-col-xs-3 rb-col-sm-3 rb-thumbnail">
+            <span class="rb-pic">
+                <img src="http://live2.kimsq.com/_core/opensrc/timthumb/thumb.php?src=http://break.kimsq.co.kr/rb200/files/2014/12/03/1058abae0dc372f4432cbea7fa123512203759.jpg&amp;w=155&amp;h=155&amp;q=90">
+            </span>
+        </figure>
+        <figure class="rb-col-xs-3 rb-col-sm-3 rb-thumbnail">
+            <span class="rb-pic">
+                <img src="http://live2.kimsq.com/_core/opensrc/timthumb/thumb.php?src=http://break.kimsq.co.kr/rb200/files/2014/12/03/e25418821200a0f7c8f9f81b22d21691203832.jpg&amp;w=155&amp;h=155&amp;q=90">
+            </span>
+        </figure>
+
+    </div>
+
+    <div class="rb-panel-footer">
+
+        <button class="btn btn-block">사진추가</button>
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
     </div>
 
