@@ -137,139 +137,235 @@
                 </div>
                 <div class="rb-panel-footer">
 
-                    <ul class="table-view">
-                        <li class="table-view-cell table-view-divider">작성자</li>
-                        <li class="table-view-cell media">
-                            <a data-toggle="modal" data-target="modal-bbs-default" data-title="프로필 보기">
-                                <img class="media-object pull-left rb-avatar" src="./image/noavatar-blue.jpg">
-                                <div class="media-body">
-                                    <strong>홍길동</strong>
-                                    <p>test@email.com</p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="table-view">
-                        <li class="table-view-cell table-view-divider">댓글</li>
-                        <!-- 최신 5개 출력 -->
-                        <li class="table-view-cell media">
-                            <a data-toggle="modal" data-target="modal-bbs-default" data-title="댓글보기">
-                                <img class="media-object pull-left rb-avatar" src="./image/noavatar-blue.jpg">
-                                <div class="media-body">
-                                    <strong>홍길동</strong> <span class="badge badge-inverted">1 시간 전</span>       
-                                    <p>감사합니다. 수고하세요.</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="table-view-cell media">
-                            <a data-toggle="modal" data-target="modal-bbs-default" data-title="댓글보기">
-                                <img class="media-object pull-left rb-avatar" src="./image/noavatar-blue.jpg">
-                                <div class="media-body">
-                                    <strong>홍길동</strong> <span class="badge badge-inverted">1 시간 전</span>       
-                                    <p>감사합니다. 수고하세요.</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="table-view-cell media">
-                            <a data-toggle="modal" data-target="modal-bbs-default" data-title="댓글보기">
-                                <img class="media-object pull-left rb-avatar" src="./image/noavatar-blue.jpg">
-                                <div class="media-body">
-                                    <strong>홍길동</strong> <span class="badge badge-inverted">1 시간 전</span>       
-                                    <p>감사합니다. 수고하세요.</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="table-view-cell media">
-                            <a data-toggle="modal" data-target="modal-bbs-default" data-title="댓글보기">
-                                <img class="media-object pull-left rb-avatar" src="./image/noavatar-blue.jpg">
-                                <div class="media-body">
-                                    <strong>홍길동</strong> <span class="badge badge-inverted">1 시간 전</span>       
-                                    <p>감사합니다. 수고하세요.</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="table-view-cell media">
-                            <a data-toggle="modal" data-target="modal-bbs-default" data-title="댓글보기">
-                                <img class="media-object pull-left rb-avatar" src="./image/noavatar-blue.jpg">
-                                <div class="media-body">
-                                    <strong>홍길동</strong> <span class="badge badge-inverted">1 시간 전</span>       
-                                    <p>감사합니다. 수고하세요.</p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                    <button class="btn btn-block btn-link" data-toggle="modal" data-target="" data-title="댓글보기">전체 댓글 보기 (100)</button>
+                    <!-- 작성자 -->
+                    <div class="rb-panel" data-role="author-wrapper">
+                        <div class="rb-panel-heading">
+                            <h4 class="rb-panel-title">작성자</h4>
+                        </div>
+                        <ul class="table-view">
+                            <li class="table-view-cell media">
+                                <a data-toggle="modal" data-target="modal-bbs-default" data-title="프로필 보기">
+                                    <img class="media-object pull-left rb-avatar" src="./image/noavatar-blue.jpg">
+                                    <div class="media-body">
+                                        <strong>홍길동</strong>
+                                        <p>test@email.com</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
-                    <ul class="table-view">
-                        <li class="table-view-cell table-view-divider">이 글을 좋아하는 사람들</li>
-                        <li class="table-view-cell media">
-                            <a data-toggle="modal" data-target="" >
-                                <img class="media-object pull-left rb-avatar" src="./image/noavatar-blue.jpg">
-                                <div class="media-body">
-                                    홍길동
-                                    <p>test@email.com</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="table-view-cell media">
-                            <a data-toggle="modal" data-target="" >
-                                <img class="media-object pull-left rb-avatar" src="./image/noavatar-blue.jpg">
-                                <div class="media-body">
-                                    홍길동
-                                    <p>test@email.com</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="table-view-cell media">
-                            <a data-toggle="modal" data-target="" >
-                                <img class="media-object pull-left rb-avatar" src="./image/noavatar-blue.jpg">
-                                <div class="media-body">
-                                    홍길동
-                                    <p>test@email.com</p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                    <button class="btn btn-block btn-link" data-toggle="modal" data-target="" data-title="좋아요한 사람">전체 보기 (100)</button>
+                    <!-- 최신 댓글-  댓글이 없는 경우-->
+                    <div class="rb-panel" data-role="comment-wrapper">
+                        <div class="rb-panel-heading">
+                            <h4 class="rb-panel-title rb-hidden">댓글</h4>
+                        </div>
+                        <div class="rb-nopost">
+                            <i class="fa fa-exclamation-circle fa-5x"></i>
+                            <p>등록된 댓글이 없습니다.</p>
+                        </div>
+                        <ul class="table-view rb-hidden">
+                            <!-- 최신 5개 출력 -->
+                            <li class="table-view-cell media">
+                                <a data-toggle="modal" data-target="modal-bbs-default" data-title="댓글보기">
+                                    <img class="media-object pull-left rb-avatar" src="./image/noavatar-blue.jpg">
+                                    <div class="media-body">
+                                        <strong>홍길동</strong> <span class="badge badge-inverted">1 시간 전</span>       
+                                        <p>감사합니다. 수고하세요.</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="table-view-cell media">
+                                <a data-toggle="modal" data-target="modal-bbs-default" data-title="댓글보기">
+                                    <img class="media-object pull-left rb-avatar" src="./image/noavatar-blue.jpg">
+                                    <div class="media-body">
+                                        <strong>홍길동</strong> <span class="badge badge-inverted">1 시간 전</span>       
+                                        <p>감사합니다. 수고하세요.</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="table-view-cell media">
+                                <a data-toggle="modal" data-target="modal-bbs-default" data-title="댓글보기">
+                                    <img class="media-object pull-left rb-avatar" src="./image/noavatar-blue.jpg">
+                                    <div class="media-body">
+                                        <strong>홍길동</strong> <span class="badge badge-inverted">1 시간 전</span>       
+                                        <p>감사합니다. 수고하세요.</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="table-view-cell media">
+                                <a data-toggle="modal" data-target="modal-bbs-default" data-title="댓글보기">
+                                    <img class="media-object pull-left rb-avatar" src="./image/noavatar-blue.jpg">
+                                    <div class="media-body">
+                                        <strong>홍길동</strong> <span class="badge badge-inverted">1 시간 전</span>       
+                                        <p>감사합니다. 수고하세요.</p>
+                                    </div>
+                                </a>
+                            </li>
+                            
+                                <a data-toggle="modal" data-target="modal-bbs-default" data-title="댓글보기">
+                                    <img class="media-object pull-left rb-avatar" src="./image/noavatar-blue.jpg">
+                                    <div class="media-body">
+                                        <strong>홍길동</strong> <span class="badge badge-inverted">1 시간 전</span>       
+                                        <p>감사합니다. 수고하세요.</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="rb-panel-footer rb-hidden">
+                            <button class="btn btn-block btn-link" data-toggle="modal" data-target="" data-title="댓글보기">전체 댓글 보기 (100)</button>
+                        </div>
+                    </div>
 
-                    <ul class="table-view">
-                        <li class="table-view-cell table-view-divider"><i class="fa fa-globe fa-fw"></i> 링크</li>
-                        <li class="table-view-cell table-view-divider"><i class="fa fa-user fa-fw"></i> 인물</li>
-                        <li class="table-view-cell table-view-divider"><i class="fa fa-map-marker fa-fw"></i> 장소</li>
-                        <li class="table-view-cell media">
-                            <a class="navigate-right">
-                                <div class="media-body">
-                                    서울 시청
-                                </div>
-                            </a>
-                        </li>
-                        <li class="table-view-cell table-view-divider"><i class="fa fa-tag fa-fw"></i> 태그</li>
-                        <li class="table-view-cell media">
-                            키워드 1
-                        </li>
-                        <li class="table-view-cell media">
-                            키워드 2
-                        </li>
-                        <li class="table-view-cell table-view-divider"><i class="fa fa-paperclip fa-fw"></i> 첨부</li>
-                        <li class="table-view-cell media">
-                            <a class="navigate-right">
-                                <span class="badge">5</span>
-                                <div class="media-body">
-                                    킴스큐 메뉴얼.zip
-                                </div>
-                            </a>
-                        </li>
-                        <li class="table-view-cell media">
-                            <a class="navigate-right">
-                                <span class="badge">5</span>
-                                <div class="media-body">
-                                    킴스큐 메뉴얼2.zip
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
+                    <!-- 최신 댓글 -->
+                    <div class="rb-panel" data-role="comment-wrapper">
+                        <div class="rb-panel-heading">
+                            <h4 class="rb-panel-title">댓글</h4>
+                        </div>
+                        <div class="rb-nopost rb-hidden">
+                            <i class="fa fa-exclamation-circle fa-5x"></i>
+                            <p>등록된 댓글이 없습니다.</p>
+                        </div>
+                        <ul class="table-view">
+                            <!-- 최신 5개 출력 -->
+                            <li class="table-view-cell media">
+                                <a data-toggle="modal" data-target="modal-bbs-default" data-title="댓글보기">
+                                    <img class="media-object pull-left rb-avatar" src="./image/noavatar-blue.jpg">
+                                    <div class="media-body">
+                                        <strong>홍길동</strong> <span class="badge badge-inverted">1 시간 전</span>       
+                                        <p>감사합니다. 수고하세요.</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="table-view-cell media">
+                                <a data-toggle="modal" data-target="modal-bbs-default" data-title="댓글보기">
+                                    <img class="media-object pull-left rb-avatar" src="./image/noavatar-blue.jpg">
+                                    <div class="media-body">
+                                        <strong>홍길동</strong> <span class="badge badge-inverted">1 시간 전</span>       
+                                        <p>감사합니다. 수고하세요.</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="table-view-cell media">
+                                <a data-toggle="modal" data-target="modal-bbs-default" data-title="댓글보기">
+                                    <img class="media-object pull-left rb-avatar" src="./image/noavatar-blue.jpg">
+                                    <div class="media-body">
+                                        <strong>홍길동</strong> <span class="badge badge-inverted">1 시간 전</span>       
+                                        <p>감사합니다. 수고하세요.</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="table-view-cell media">
+                                <a data-toggle="modal" data-target="modal-bbs-default" data-title="댓글보기">
+                                    <img class="media-object pull-left rb-avatar" src="./image/noavatar-blue.jpg">
+                                    <div class="media-body">
+                                        <strong>홍길동</strong> <span class="badge badge-inverted">1 시간 전</span>       
+                                        <p>감사합니다. 수고하세요.</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="rb-panel-footer">
+                            <button class="btn btn-block btn-link" data-toggle="page" data-target="" data-title="댓글보기">전체 댓글 보기 (100)</button>
+                        </div>
+                    </div>
+
+                    <!-- 최신 좋아요 목록 -->
+                    <div class="rb-panel" data-role="like-wrapper">
+                        <div class="rb-panel-heading">
+                            <h4 class="rb-panel-title">이 글을 좋아하는 사람들</h4>
+                        </div>
+                        <ul class="table-view">
+                            <li class="table-view-cell media">
+                                <a data-toggle="modal" data-target="" >
+                                    <img class="media-object pull-left rb-avatar" src="./image/noavatar-blue.jpg">
+                                    <div class="media-body">
+                                        홍길동
+                                        <p>test@email.com</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="table-view-cell media">
+                                <a data-toggle="modal" data-target="" >
+                                    <img class="media-object pull-left rb-avatar" src="./image/noavatar-blue.jpg">
+                                    <div class="media-body">
+                                        홍길동
+                                        <p>test@email.com</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="table-view-cell media">
+                                <a data-toggle="modal" data-target="" >
+                                    <img class="media-object pull-left rb-avatar" src="./image/noavatar-blue.jpg">
+                                    <div class="media-body">
+                                        홍길동
+                                        <p>test@email.com</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="rb-panel-footer">
+                            <button class="btn btn-block btn-link" data-toggle="page" data-target="" data-title="좋아요한 사람">전체 보기 (100)</button>
+                        </div>
+                        
+                    </div>
+
+                    <!-- 최신 좋아요 목록- 좋아요가 없는 경우 -->
+                    <div class="rb-panel" data-role="like-wrapper">
+                        <div class="rb-panel-heading rb-hidden">
+                            <h4 class="rb-panel-title">이 글을 좋아하는 사람들</h4>
+                        </div>
+                        <div class="rb-nopost">
+                            <i class="fa fa-exclamation-circle fa-5x"></i>
+                            <p>좋아요가 없습니다.</p>
+                        </div>
+                        <div class="rb-panel-footer rb-hidden">
+                            <button class="btn btn-block btn-link" data-toggle="page" data-target="" data-title="좋아요한 사람">전체 보기 (100)</button>
+                        </div>
+                    </div>
 
 
+                    <!-- 첨부 목록은 작업중 -->
+
+                    <!-- 첨부 -->
+                    <div class="rb-panel" data-role="attach-wrapper">
+                        <ul class="table-view">
+                            <li class="table-view-cell table-view-divider"><i class="fa fa-globe fa-fw"></i> 링크</li>
+                            <li class="table-view-cell table-view-divider"><i class="fa fa-user fa-fw"></i> 인물</li>
+                            <li class="table-view-cell table-view-divider"><i class="fa fa-map-marker fa-fw"></i> 장소</li>
+                            <li class="table-view-cell media">
+                                <a class="navigate-right">
+                                    <div class="media-body">
+                                        서울 시청
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="table-view-cell table-view-divider"><i class="fa fa-tag fa-fw"></i> 태그</li>
+                            <li class="table-view-cell media">
+                                키워드 1
+                            </li>
+                            <li class="table-view-cell media">
+                                키워드 2
+                            </li>
+                            <li class="table-view-cell table-view-divider"><i class="fa fa-paperclip fa-fw"></i> 첨부</li>
+                            <li class="table-view-cell media">
+                                <a class="navigate-right">
+                                    <span class="badge">5</span>
+                                    <div class="media-body">
+                                        킴스큐 메뉴얼.zip
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="table-view-cell media">
+                                <a class="navigate-right">
+                                    <span class="badge">5</span>
+                                    <div class="media-body">
+                                        킴스큐 메뉴얼2.zip
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
                 </div>
 
@@ -277,9 +373,6 @@
             
         </div>
 
-        <div class="content-padded">
-            <p data-role="content"></p>
-        </div>
     </div>
 
 </div>

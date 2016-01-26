@@ -430,3 +430,38 @@ body {
         padding: 10px 5px;
     } 
 }
+
+
+/*게시물 보기*/
+
+.rb-bbs-view .rb-panel-footer {
+    background-color: #f5f5f5;
+}
+.rb-bbs-view .rb-panel-footer .rb-panel-heading {
+    padding: 7px 15px 5px;
+    border-top: none;
+    border-bottom: none;
+    font-weight: 500;
+    color: #999;
+}
+.rb-bbs-view .rb-panel-footer .rb-panel-heading .rb-panel-title {
+    font-size: 1.2em
+}
+.rb-bbs-view .rb-panel-footer .rb-panel-heading ~ .table-view {
+    margin-top: -1px
+}
+.rb-bbs-view .rb-panel-footer .rb-nopost {
+    padding: 30px 0;
+    text-align: center;
+    color: #ddd
+}
+.rb-bbs-view .rb-panel-footer .rb-nopost p {
+    margin-top: 10px
+}
+.rb-bbs-view .rb-panel-footer .rb-panel-footer {
+    background-color: #fff;
+}
+.rb-bbs-view .rb-panel-footer .rb-panel-footer .btn {
+    margin-bottom: 0;
+    font-size: 1em
+}
