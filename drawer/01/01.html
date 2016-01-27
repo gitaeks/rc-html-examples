@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>drawer</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<link href="../../assets/plugins/ratchet-2.0.2/css/ratchet.css" rel="stylesheet">
+
+<link href="../../assets/plugins/snap/1.9.3/snap.css" rel="stylesheet">
+
+<link rel="stylesheet" href="./style.css">
+<script src="../../assets/plugins/ratchet-2.0.2/js/ratchet.js"></script>
+
+<style type="text/css">
+.snap-content {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    background-color: #eee;
+    webkit-box-shadow: -10px 0 8px -8px rgba(0,0,0,0.2), 10px 0 8px -8px rgba(0,0,0,0.2);
+    box-shadow: -10px 0 8px -8px rgba(0,0,0,0.2), 10px 0 8px -8px rgba(0,0,0,0.2);
+}
+</style>
+
+
+</head>
+
+<body>
+<div class="snap-drawers">
+    <div class="snap-drawer snap-drawer-left" id="drawer-left">
+        <div class="content">
+            <ul class="table-view">
+                <li class="table-view-cell">
+                    <a class="navigate-right" data-drawer-close="left">
+                        Item 1
+                    </a>
+                </li>
+                <li class="table-view-cell">
+                    <a class="navigate-right" data-drawer-close="left">
+                        Item 2
+                    </a>
+                </li>
+                <li class="table-view-cell">
+                    <a class="navigate-right" data-drawer-close="left">
+                        Item 3
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="snap-drawer snap-drawer-right">
+        right
+    </div>
+</div> 
+
+<div class="snap-content" id="content-wrap">
+
+    <header class="bar bar-nav rb-inverse">
+        <button class="btn btn-link btn-nav pull-left" data-drawer-toggle="left">
+            <span class="icon icon-bars"></span>
+        </button>
+        <h1 class="title">
+            drawer(페이스북형)
+        </h1>
+    </header>
+
+    <div class="content">
+
+        <div class="content-padded">
+            content 영역이 이동합니다.
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+<script src="../../assets/plugins/snap/1.9.3/snap.min.js"></script>
+
+
+<script>
+// Snap.js : https://github.com/jakiestfu/Snap.js/    $(this).snapper();
+
+    // Instance
+    snapper = new Snap({
+        // element: document.getElementById('content-wrap')
+        element: $("#content-wrap")[0]
+    }),
+
+
+
+    snapper.on('open', function(){
+        $('.snap-content').append('<div class="backdrop"></div>');
+    });
+
+
+    snapper.on('close', function(){
+        $(".backdrop").remove();
+    });
+
+    $('body').on('click', '[data-drawer-close="left"]', function() {
+        snapper.close('left');
+    });
+    $('body').on('click', '[data-drawer-open="left"]', function() {
+        snapper.open('left');
+    });
+    $('body').on('click', '[data-drawer-expand="left"]', function() {
+        snapper.expand('left');
+    });
+    $('body').on('click','[data-drawer-toggle="left"]',function(){
+        if( snapper.state().state=="left" ){
+            snapper.close();
+        } else {
+            snapper.open('left');
+        }
+    });
+
+    $('body').on('click', '[data-drawer-close="right"]', function() {
+        snapper.close('right');
+    });
+    $('body').on('click', '[data-drawer-open="right"]', function() {
+        snapper.open('right');
+    });
+    $('body').on('click', '[data-drawer-expand="right"]', function() {
+        snapper.expand('right');
+    });
+    $('body').on('click','[data-drawer-toggle="right"]',function(){
+        if( snapper.state().state=="right" ){
+            snapper.close();
+        } else {
+            snapper.open('right');
+        }
+    });
+
+
+</script>
+
+</body>
+</html>
