@@ -85,15 +85,12 @@
 
 
 <script>
-// Snap.js : https://github.com/jakiestfu/Snap.js/    $(this).snapper();
 
     // Instance
     snapper = new Snap({
         // element: document.getElementById('content-wrap')
         element: $("#content-wrap")[0]
     }),
-
-
 
     snapper.on('open', function(){
         $('.snap-content').append('<div class="backdrop"></div>');
@@ -137,7 +134,6 @@
             snapper.open('right');
         }
     });
-
 
 </script>
 
