@@ -1,0 +1,517 @@
+.bar {background-color: #fff}
+
+.rb-inverse {
+    background-color: #DA4336;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#DA4336),to(#DA4336));
+    background-image: -webkit-linear-gradient(top,#DA4336 0,#DA4336 100%);
+    background-image: -o-linear-gradient(top,#DA4336 0,#DA4336 100%);
+    background-image: linear-gradient(to bottom,#DA4336 0,#DA4336 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DA4336', endColorstr='#DA4336', GradientType=0);
+    background-repeat: repeat-x;
+
+}
+
+.bar .btn-link,
+.bar .title {
+	line-height: 56px;
+    color: #999;
+}
+
+.rb-inverse.bar .btn-link,
+.rb-inverse.bar .title {
+    color: #fff;
+}
+
+
+
+.bar .btn-nav.pull-left {
+    margin-left: -10px;
+}
+.bar .btn-nav.pull-right {
+    margin-right: -10px;
+}
+
+.bar {
+	height: 57px;
+	-webkit-box-shadow: inset 0 0 0 #d2d2d2, 0 3px 3px rgba(0, 0, 0, .07);
+	box-shadow: inset 0 0 0 #d2d2d2, 0 3px 3px rgba(0, 0, 0, .07);
+}
+
+.backdrop {
+    background-color: rgba(0, 0, 0, .3);
+}
+
+
+.bar .title {
+    padding-left: 55px;
+    font-size: 20px;
+}
+.bar .icon {
+    font-size: 24px;
+}
+
+.bar .btn-link .icon {
+    top: 4px;
+}
+
+.bar .btn-link {
+	padding: 0 10px;
+}
+
+.bar-nav ~ .content {
+    padding-top: 57px;
+}
+
+
+.content > .table-view:first-child {
+    margin-top:0;
+}
+.content .table-view-cell > a > .rb-time {
+	top: 25%;
+}
+.content .table-view-cell > a > .rb-bookmark {
+	top: 65%;
+}
+
+
+.content .table-view-cell .media-object {
+	color: #9E9E9E
+}
+
+.content .table-view-cell {line-height: 1.5}
+.content .table-view-cell p {
+	line-height: 1.3
+}
+
+/*drawer*/
+
+
+.snap-drawer {
+	width: 300px;
+}
+
+.snap-drawer-left  {
+    background-color: #fff;
+}
+
+/*header*/
+.snap-drawer-left .rb-drawer-header {
+    position: relative;
+    background-color: #ccc;
+    color: #315284;
+    background-size: cover;
+    background-repeat: repeat-y;
+}
+.snap-drawer-left .rb-drawer-header:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.1)),to(rgba(0,0,0,.4)));
+    background-image: -moz-linear-gradient(top,rgba(0,0,0,.1),rgba(0,0,0,.4));
+    background-image: -o-linear-gradient(top,rgba(0,0,0,.1),rgba(0,0,0,.4));
+    background-image: linear-gradient(to bottom,rgba(0,0,0,.1),rgba(0,0,0,.4));
+}
+.snap-drawer-left .rb-drawer-header .rb-avatar {
+    display: block;
+    padding-top: 10px;
+    padding-left: 15px;
+    z-index: 15
+}
+.snap-drawer-left .rb-drawer-header .rb-avatar img {
+    width: 48px;
+    border-radius: 50%;
+}
+.snap-drawer-left .rb-drawer-header .table-view {
+    margin-bottom: 0;
+    background-image: none;
+    background-color: transparent;
+	border: none;
+}
+.snap-drawer-left .rb-drawer-header .table-view-cell  {
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0,0,0,.7);
+}
+.snap-drawer-left .rb-drawer-header a:active {
+    background-color: rgba(0,0,0,.3);
+}
+.snap-drawer-left .rb-drawer-header .table-view-cell p  {
+    color: #eee;
+}
+.snap-drawer-left .rb-drawer-header .navigate-right:after {
+    right: 15px;
+    content: '\e820';
+    color: #fff
+}
+.snap-drawer-left .rb-drawer-header.open .navigate-right:after {
+    content: '\e80d';
+}
+
+
+.snap-drawer-left .rb-drawer-body .table-view {
+    border-top: none;
+}
+
+.snap-drawer-left .rb-drawer-body .table-view .table-view-cell {
+    font-size: 16px;
+    color: #555;
+	border-bottom: none; 
+}
+.snap-drawer-left .table-view .table-view-cell.active {
+	background-color: #eee
+}
+
+.snap-content {
+	background-color: #000
+}
+
+
+/*transition*/
+.page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+
+    visibility: visible;
+}
+
+.page.left {
+    /*-webkit-transform: translate3d(-100%, 0, 0);*/
+    /*transform: translate3d(-100%, 0, 0);*/
+
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+}
+
+.page.center {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+.page.right {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+
+
+}
+
+.page.transition {
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    animation: mymove .3s;
+}
+
+/*floating button*/
+/*https://github.com/nobitagit/material-floating-button*/
+
+.rb-floating-tl{
+	animation: fromTop 1s 1;
+	-webkit-animation: fromTop 1s 1;
+}
+.rb-floating-tr{
+	animation: fromTop 1.3s 1;
+	-webkit-animation: fromTop 1.3s 1;
+} 
+.rb-floating-br{
+	animation: fromBottom 1.6s 1;
+	-webkit-animation: fromBottom 1.6s 1;
+}
+.rb-floating-bl{
+	animation: fromBottom 0.5s 1;
+	-webkit-animation: fromBottom 0.5s 1;
+}        
+@keyframes fromBottom {
+	0% {transform: translateY(250px)}
+	100% {transform: translateY(0)}
+}
+@keyframes fromTop {
+	0% {transform: translateY(-250px)}
+	100% {transform: translateY(0)}
+}
+@-webkit-keyframes fromBottom {
+	0% {transform: translateY(250px)}
+	100% {transform: translateY(0)}
+}    
+@-webkit-keyframes fromTop {
+	0% {transform: translateY(-250px)}
+	100% {transform: translateY(0)}
+}   
+
+.rb-floating, 
+.rb-floating-tl,
+.rb-floating-tr, 
+.rb-floating-bl, 
+.rb-floating-br {
+	box-sizing: border-box;
+	margin: 25px;
+	position: fixed;
+	white-space: nowrap;
+	z-index: 10;
+	padding-left: 0;
+	list-style: none; 
+}
+.rb-floating-tl {
+    left: 0;
+    top: 0
+}
+.rb-floating-tr {
+    right: 0;
+    top: 0
+}
+.rb-floating-bl {
+    left: 0;
+    bottom: 0
+}
+.rb-floating-br {
+    right: 0;
+    bottom: 0 
+}
+
+.rb-floating-button, 
+.rb-floating-button-main {
+    background-color: #DA4336;
+    display: inline-block;
+    position: relative;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    position: relative;
+    -webkit-user-drag: none;
+    font-weight: bold;
+    color: #f1f1f1
+}
+
+.rb-floating-list {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+.rb-floating-list > div {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 1px;
+    padding: 10px 0;
+    margin: -10px 0
+}
+.rb-floating-wrap {
+    padding: 25px;
+    margin: -25px
+}
+.rb-floating-button-main {
+    height: 56px;
+    width: 56px;
+    z-index: 20
+}
+.rb-floating-icon {
+    position: absolute;
+    font-size: 22px;
+    text-align: center;
+    line-height: 56px;
+    width: 100%
+}
+
+
+/*쓰기전용*/
+#compose .input-group {
+    box-shadow: none;
+}
+#compose .input-row label {
+    width: 23%;
+    text-align: center;
+    font-size: 16px;
+    color: #999
+}
+#compose .input-row input {
+    width: 77%;
+}
+#compose .input-row label + select {
+    width: 77%;
+}
+#compose .content {
+    background-color: #fff
+}
+#compose .content textarea {
+    border-bottom: none;
+    border: none;
+    border-radius: 0;
+    resize: none;
+    box-shadow: none;
+}
+#compose .input-group {
+    background-position: inherit; 
+}
+
+
+@media (max-width: 360px) {
+    #compose .input-row label {
+        padding: 10px 5px;
+    } 
+}
+
+.input-row label + select {
+    float: right;
+    font-size: 16px;
+    padding-left: 0;
+    padding-right: 30px;
+    margin-bottom: 0;
+    border-bottom: 0;
+    background-color: #fff;
+    color: #ABABAB;
+    line-height: 16px;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.input-row.rb-navigate-down:after {
+    content: "\e814";
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    display: inline-block;
+    font-family: Ratchicons;
+    font-size: inherit;
+    line-height: 1;
+    color: #bbb;
+    text-decoration: none;
+}
+
+
+/*유틸리티*/
+.fa-stack.rb-label-positive .fa-stack-2x {
+	color: #FF8A65
+}
+.fa-stack.rb-label-primary .fa-stack-2x {
+	color: #B39DDB
+}
+.fa-stack.rb-label-negative .fa-stack-2x {
+	color: #F06292
+}
+
+
+/*검색전용*/
+
+.rb-search .bar {
+	box-shadow: inset 0 0 0 #d2d2d2, 0 1px 1px rgba(0, 0, 0, .07); 
+}
+
+.rb-search .bar input {
+	display: inline-block;
+	margin-left: -20px;
+	border: none;
+	box-shadow: none;
+}
+.rb-search .content {
+	background-color: #fff
+}
+.rb-search .table-view,
+.rb-search .table-view .table-view-cell {
+    border-bottom: none;
+}
+.rb-search .table-view .table-view-cell a {
+	color: #777
+}
+.rb-search .table-view .media-object.pull-left {
+	margin-top: 3px;
+    margin-right: 20px;
+}
+
+/*Modal Effect*/
+
+ .rb-effect-scale {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    visibility: hidden;
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    z-index: 1
+}
+ .rb-effect-scale.active {
+    z-index: 11;
+    visibility: visible;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+
+/*메일보기*/
+
+.modal.rb-view .content {
+	background-color: #fff
+}
+.modal.rb-view .content header .table-view {
+	padding: 10px 0
+}
+.modal.rb-view .content header .table-view,
+.modal.rb-view .content section .table-view,
+.modal.rb-view .content header .table-view-cell,
+.modal.rb-view .content section .table-view-cell {
+	border: none;
+}
+
+.modal.rb-view .content header .table-view {
+	border-bottom : 1px solid #eee ;
+}
+.modal.rb-view .content header .table-view-cell h1 {
+	font-size: 22px;
+	font-weight: normal;
+}
+
+.modal.rb-view .content section {
+	margin-top: -15px
+}
+
+.modal.rb-view .content section .table-view-cell .media-object {
+	width: 42px;
+	height: 42px;
+	border-radius: 50%
+}
+
+.modal.rb-view .content section .table-view-cell .rb-more,
+.modal.rb-view .content section .table-view-cell .rb-foward {
+	top: 25%;
+}
+.modal.rb-view .content section .table-view-cell .rb-foward {
+	right: 50px;
+}
+
+.modal.rb-view .content article p {
+	font-size: 18px;
+	color: #444;
+	line-height: 1.5
+}
