@@ -263,7 +263,7 @@
 
         <div class="content">
             <div class="rb-social-login content-padded">
-                <button class="btn btn-primary btn-block">비회원 접속</button>
+                <a href="/rc-html-examples/package/company/phone/01/index.html" class="btn btn-primary btn-block" data-ignore="push">비회원 접속</a>
                 <a href="javascript:slidePageFrom(page1, 'right');" class="btn btn-outlined btn-block"><span class="icon icon-person"></span> 회원 로그인</a>
             </div>
 
@@ -399,7 +399,8 @@ $('[data-toggle=modal]').on('tap',function(){
 
     $(modal).addClass("active");
 
-    History.pushState({step:2}, title, url);
+    History.replaceState({state:1}, null, null);
+    History.pushState({state:2}, null, null);
     window.addEventListener("popstate", function () {
         $(modal).removeClass('active')
     });
