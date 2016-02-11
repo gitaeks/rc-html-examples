@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Swipe(Customized Pagination)</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<link href="../../assets/plugins/ratchet-2.0.2/css/ratchet.css" rel="stylesheet">
+<script src="../../assets/plugins/ratchet-2.0.2/js/ratchet.js"></script>
+
+<link rel="stylesheet" href="./style.css">
+
+<!-- Swiper : https://github.com/nolimits4web/Swiper -->
+<link href="../../assets/plugins/swiper/3.2.7/css/swiper.css" rel="stylesheet">
+
+<style type="text/css">
+.bar-nav-inverse {
+    background-color: #00C73C
+}
+.bar-nav-inverse .title {
+    color: #fff
+}
+
+.bar-nav-inverse .title img {
+    height: 20px;
+    margin-top: 12px
+}
+
+/*rc-menu*/
+.rc-menu {
+    height: 37px;
+}
+.rc-menu ~ .content {
+    padding-top: 80px;
+}
+.rc-menu .segmented-control {
+    top: 2px;
+    border: none;
+    border-radius: 0
+}
+.rc-menu .segmented-control .control-item {
+    position: relative;
+    background-color: transparent;
+    padding: 9px 3px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap;
+    text-decoration: none;
+    border: none;
+}
+.rc-menu .segmented-control .control-item.active {
+    color: #00C73C
+}
+.rc-menu .segmented-control .control-item.active:after {
+    position: absolute;
+    bottom: -1px;
+    left: 10px;
+    right: 10px;
+    vertical-align: middle;
+    content: " ";
+    border-bottom: 5px solid;
+    color: #00C73C;
+}
+
+/*custom table-view-cell */
+.table-view-cell {
+    padding: 11px 15px 11px 15px;
+}
+.table-view-cell > a:not(.btn) {
+    margin: -11px -15px -11px -15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+<header class="bar bar-nav bar-nav-inverse">
+    <h1 class="title"><img src="./img/logo-naver.png"></h1>
+</header>
+
+<div class="bar bar-standard bar-header-secondary rc-menu">
+    <div class="segmented-control ">
+    </div>
+</div>
+
+<div class="content">
+
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <ul class="table-view">
+                    <li class="table-view-cell">
+                        <a>
+                            산업부 "개성공단 전력공급 전면중단" 공식 발표
+                        </a>
+                    </li>
+                    <li class="table-view-cell">
+                        <a>
+                            개성공단 피해규모 2조 원 넘을 듯, 입주기업 '발동동'
+                        </a>
+                    </li>
+                    <li class="table-view-cell">
+                        <a>
+                            아인슈타인 예측 '중력파' 발견…우주과학 새 획 긋다
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="swiper-slide">
+                <ul class="table-view">
+                    <li class="table-view-cell">
+                        <a>
+                            '헌집새집' 김동현, 김구라 힘든 시절 이겨내게 해준 '원동력'
+                        </a>
+                    </li>
+                    <li class="table-view-cell">
+                        <a>
+                            '질투나요 BABY'…AOA크림, 2016년산 러블리 유닛탄생
+                        </a>
+                    </li>
+                    <li class="table-view-cell">
+                        <a>
+                            '객주' 장혁, 정태우 계략으로 죄인 누명…답답한 전개
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-slide">
+                <ul class="table-view">
+                    <li class="table-view-cell">
+                        <a>
+                            메이저리그의 황금 세대 1992년생
+                        </a>
+                    </li>
+                    <li class="table-view-cell">
+                        <a>
+                            코비와 르브론, 유니폼 바꿔 입을 뻔했다?
+                        </a>
+                    </li>
+                    <li class="table-view-cell">
+                        <a>
+                            리디아 고가 뉴질랜드에서 국민 여동생 대접 받는 이유
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-slide">
+                <ul class="table-view">
+                    <li class="table-view-cell">
+                        <a>
+                            조석 너의 인생을 내가 갖겠어
+                        </a>
+                    </li>
+                    <li class="table-view-cell">
+                        <a>
+                            모든 기지에 전하게 싸움이 끝났다고
+                        </a>
+                    </li>
+                    <li class="table-view-cell">
+                        <a>
+                            반지로 부르면 오는 남자 그린라이드인가요 ?
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-slide">
+                <ul class="table-view">
+                    <li class="table-view-cell">
+                        <a>
+                            백화점 정품 '게스 언더웨어' 10종 1만 원대!
+                        </a>
+                    </li>
+                    <li class="table-view-cell">
+                        <a>
+                            봄 신상 주말만 추가할인 + 무배!
+                        </a>
+                    </li>
+                    <li class="table-view-cell">
+                        <a>
+                            훨씬 비싸보이는 '강추' 봄 신상
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+<!-- Swiper : https://github.com/nolimits4web/Swiper -->
+<script src="../../assets/plugins/swiper/3.2.7/js/swiper.jquery.min.js"></script>
+
+<script>
+
+// Initialize Swiper
+var swiper = new Swiper('.swiper-container', {
+    pagination: '.segmented-control',
+    paginationClickable: true,
+    loop: true,
+    slideActiveClass :'active',
+    bulletClass : 'control-item',
+    bulletActiveClass : 'active' ,
+    paginationBulletRender: function (index, className) {
+    var title;
+    if (index === 0) title = '뉴스';
+    if (index === 1) title = '연예'
+    if (index === 2) title = '스포츠'
+    if (index === 3) title = '웹툰'
+    if (index === 4) title = '쇼핑'
+    return '<a class="' + className + '">'+title+'</a>';
+    }
+});
+
+</script>
+
+</body>
+</html>
