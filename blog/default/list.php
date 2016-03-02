@@ -50,7 +50,7 @@
     </div>
 
     <nav class="bar bar-tab">
-        <a class="tab-item" data-toggle="modal" data-target="modal-bbs-default" data-content="search" data-title="게시판 검색">
+        <a class="tab-item" href="#modal-search">
             <span class="icon icon-search"></span>
             <span class="tab-label">검색</span>
         </a>
@@ -81,7 +81,7 @@
 
                 <div class="card-deck">
                     <div class="card rb-format-standard">
-                        <a data-toggle="modal" data-target="">
+                        <a href="#modal-view">
                             <div class="rb-img-wrap">
                                 <img class="card-img-top img-fluid" src="../../assets/img/01.jpg" alt="Card image cap">
                             </div>
@@ -93,7 +93,7 @@
                     </div>
 
                     <div class="card rb-format-video">
-                        <a data-toggle="modal" data-target="">
+                        <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
                             <div class="rb-img-wrap">
                                 <img class="card-img-top img-fluid" src="../../assets/img/02.jpg" alt="Card image cap">
                                 <div class="rb-icon">
@@ -110,7 +110,7 @@
 
                 <div class="card-deck">
                     <div class="card rb-format-gallery">
-                        <a data-toggle="modal" data-target="">
+                        <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
                             <div class="rb-img-wrap">
                                 <img class="card-img-top img-fluid" src="../../assets/img/02.jpg" alt="Card image cap">
                                 <div class="rb-icon">
@@ -124,7 +124,7 @@
                         </a>
                     </div>
                     <div class="card rb-format-video">
-                        <a data-toggle="modal" data-target="">
+                        <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
                             <div class="rb-img-wrap">
                                 <img class="card-img-top img-fluid" src="../../assets/img/03.jpg" alt="Card image cap">
                                 <div class="rb-icon">
@@ -142,7 +142,7 @@
                 <div class="card-deck">
                     <!-- 이미지 형 -->
                     <div class="card rb-format-image">
-                        <a data-toggle="modal" data-target="">
+                        <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
                             <div class="rb-img-wrap">
                                 <img class="card-img-top img-fluid" src="../../assets/img/05.jpg" alt="Card image cap">
                                 <span class="badge rb-count">10장</span>
@@ -155,7 +155,7 @@
 
                     <!-- 인용문형 -->
                     <div class="card rb-format-quote">
-                        <a data-toggle="modal" data-target="">
+                        <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
                             <span class="rb-new badge badge-negative">NEW</span>
                             <div class="card-block">
                                 <h4 class="card-title">평범하지만 위대한 레시피</h4>
@@ -360,6 +360,37 @@
     <div class="content">
         <div class="content-padded">
             블로그 목록
+        </div>
+    </div>
+</div>
+
+<!-- 포스트 내용보기 -->
+<div id="modal-view" class="modal rb-effect-scale">
+    <header class="bar bar-nav">
+        <a href="#modal-view" class="btn btn-link btn-nav pull-left">
+            <span class="icon icon-left-nav"></span>&nbsp;
+        </a>
+        <h1 class="title">제목</h1>
+    </header>
+    <div class="content">
+        <div class="content-padded">
+            블로그 내용
+        </div>
+    </div>
+</div>
+
+
+<!-- 포스트 검색 -->
+<div id="modal-search" class="modal">
+    <header class="bar bar-nav">
+        <a href="#modal-search" class="btn btn-link btn-nav pull-left">
+            <span class="icon icon-left-nav"></span>&nbsp;
+        </a>
+        <h1 class="title">검색</h1>
+    </header>
+    <div class="content">
+        <div class="content-padded">
+            검색창 
         </div>
     </div>
 </div>
