@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+    <title>infinite-scroll-Ratchet기반 html 템플릿</title>
+
+    <!-- system-style -->
+    <link href="../../assets/plugins/ratchet-2.0.2/css/ratchet.css" rel="stylesheet">
+
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- fuelux -->
+    <link rel="stylesheet" href="../../assets/plugins/fuelux/3.14.2/dist/css/fuelux.css">
+    
+    <!-- system-style -->
+    <!-- <link rel="stylesheet" href="../../assets/css/sys.css"> -->
+
+    <!-- Common-style -->
+    <link rel="stylesheet" href="../../assets/css/default.css">
+
+    <!-- style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="fuelux">
+
+
+    <header class="bar bar-nav">
+        <h1 class="title">infinite-scroll(Auto-loads)</h1>
+    </header>
+
+    <div class="content infinitescroll" id="myInfiniteScroll1" >
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+    <!-- fuelux -->
+    <script src="../../assets/plugins/fuelux/3.14.2/js/loader.js"></script>
+    <script src="../../assets/plugins/fuelux/3.14.2/js/infinite-scroll.js"></script>
+
+    <script type="text/javascript">
+
+    var content = '<ul class="table-view"><li class=table-view-cell>Item 1</li><li class=table-view-cell>Item 1</li><li class=table-view-cell>Item 1</li>' +
+                    '<li class=table-view-cell>Item 1</li><li class=table-view-cell>Item 1</li><li class=table-view-cell>Item 1</li>' +
+                    '<li class=table-view-cell>Item 1</li><li class=table-view-cell>Item 1</li><li class=table-view-cell>Item 1</li></ul>';
+
+    var delays = ['300', '600', '900', '1200'];
+    var setup = function(selector){
+        $(selector).append(content + content + content);
+        $(selector).scrollTop(0);
+    };
+
+    $('#myInfiniteScroll1').infinitescroll({
+        dataSource: function(helpers, callback){
+            setTimeout(function(){
+                callback({ content: content });
+            }, delays[Math.floor(Math.random() * 4)]);
+        }
+    });
+
+    setup('#myInfiniteScroll1');
+
+    </script>
+
+    </body>
+</html>
