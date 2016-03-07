@@ -83,7 +83,7 @@
 
                             <div class="card-deck">
                                 <div class="card rb-format-default">
-                                    <a href="#modal-view-standard" data-format="standard">
+                                    <a href="#modal-view-default" data-format="standard">
                                         <div class="rb-img-wrap">
                                             <img class="card-img-top img-fluid" src="../../assets/img/01.jpg" alt="Card image cap">
                                         </div>
@@ -465,9 +465,9 @@
     </ul>
 </div>
 
-<div id="modal-view-standard" class="modal effect-scale rb-format-default">
+<div id="modal-view-default" class="modal effect-scale rb-format-default">
     <header class="bar bar-nav">
-        <a href="#modal-view-standard" class="btn btn-link btn-nav pull-right">
+        <a href="#modal-view-default" class="btn btn-link btn-nav pull-right">
             <span class="icon icon-close"></span>
         </a>
         <a href="#popover-view" class="btn btn-link btn-nav pull-right">

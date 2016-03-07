@@ -26,7 +26,7 @@ var swiper = new Swiper('.swiper-container', {
 
 // 포토 캡션 
 var doPhotoCaption=function(){
-    var img=$('.rb-blog-view .rb-article').find('img');
+    var img=$('.modal .rb-article').find('img');
     $(img).each(function(){
           var alt=$(this).attr('alt');
           var figure='<figure>';
