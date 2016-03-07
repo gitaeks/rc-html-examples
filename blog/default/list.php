@@ -378,7 +378,7 @@
 
 <div id="modal-view-standard" class="modal effect-scale rb-format-standard">
     <header class="bar bar-nav">
-        <a href="#modal-view" class="btn btn-link btn-nav pull-right">
+        <a href="#modal-view-standard" class="btn btn-link btn-nav pull-right">
             <span class="icon icon-close"></span>
         </a>
         <a href="#popover-view" class="btn btn-link btn-nav pull-right">
