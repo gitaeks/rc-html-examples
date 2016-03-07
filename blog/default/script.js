@@ -1,6 +1,6 @@
 // Initialize Swiper
 var swiper = new Swiper('.swiper-container', {
-    pagination: '.segmented-control',
+    pagination: '.bar-standard .segmented-control',
     paginationClickable: true,
     effect: 'slide',
     loop: true,
