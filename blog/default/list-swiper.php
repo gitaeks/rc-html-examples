@@ -18,6 +18,10 @@
 
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css" rel="stylesheet">
 
+<!-- Swiper : https://github.com/nolimits4web/Swiper -->
+<link href="../../assets/plugins/swiper/3.2.7/css/swiper.css" rel="stylesheet">
+
+
 <link rel="stylesheet" href="../../assets/css/sys.css">
 <link rel="stylesheet" href="./style.css">
 <link rel="stylesheet" href="./article.css">
@@ -41,12 +45,7 @@
     </header>
 
     <div class="bar bar-standard bar-header-secondary rb-menu">
-        <div class="segmented-control">
-            <a class="control-item<?php if($tab==''):?> active<?php endif?>" href="./list.php" data-transition="fade">메인</a>
-            <a class="control-item<?php if($tab=='category'):?> active<?php endif?>" href="./list.php?tab=category" data-transition="fade">카테고리</a>
-            <a class="control-item<?php if($tab=='archive'):?> active<?php endif?>" href="./list.php?tab=archive" data-transition="fade">아카이브</a>
-            <a class="control-item<?php if($tab=='tags'):?> active<?php endif?>" href="./list.php?tab=tags" data-transition="fade">태그</a>
-            <a class="control-item<?php if($tab=='about'):?> active<?php endif?>" href="./list.php?tab=about" data-transition="fade">소개</a>
+        <div class="segmented-control ">
         </div>
     </div>
 
@@ -75,248 +74,339 @@
 
     <div class="content">
 
-        <?php if($tab==''):?>
-        <div class="content-padded">
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" data-hash="main">
+                    <div class="content-padded">
 
-            <div class="rb-blog-list card-deck-wrapper">
+                        <div class="rb-blog-list card-deck-wrapper">
 
-                <div class="card-deck">
-                    <div class="card rb-format-standard">
-                        <a href="#modal-view">
-                            <div class="rb-img-wrap">
-                                <img class="card-img-top img-fluid" src="../../assets/img/01.jpg" alt="Card image cap">
-                            </div>
-                            <span class="rb-new badge badge-negative">NEW</span>
-                            <div class="card-block">
-                                <h4 class="card-title">오븐 빵/케익 만들기</h4>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="card rb-format-video">
-                        <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
-                            <div class="rb-img-wrap">
-                                <img class="card-img-top img-fluid" src="../../assets/img/02.jpg" alt="Card image cap">
-                                <div class="rb-icon">
-                                    <i class="fa fa-play-circle-o"></i>
+                            <div class="card-deck">
+                                <div class="card rb-format-standard">
+                                    <a href="#modal-view">
+                                        <div class="rb-img-wrap">
+                                            <img class="card-img-top img-fluid" src="../../assets/img/01.jpg" alt="Card image cap">
+                                        </div>
+                                        <span class="rb-new badge badge-negative">NEW</span>
+                                        <div class="card-block">
+                                            <h4 class="card-title">오븐 빵/케익 만들기</h4>
+                                        </div>
+                                    </a>
                                 </div>
-                                <span class="badge rb-count">0:59</span>
+
+                                <div class="card rb-format-video">
+                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
+                                        <div class="rb-img-wrap">
+                                            <img class="card-img-top img-fluid" src="../../assets/img/02.jpg" alt="Card image cap">
+                                            <div class="rb-icon">
+                                                <i class="fa fa-play-circle-o"></i>
+                                            </div>
+                                            <span class="badge rb-count">0:59</span>
+                                        </div>
+                                        <div class="card-block">
+                                            <h4 class="card-title">오늘의 요리</h4>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="card-block">
-                                <h4 class="card-title">오늘의 요리</h4>
+
+                            <div class="card-deck">
+                                <div class="card rb-format-gallery">
+                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
+                                        <div class="rb-img-wrap">
+                                            <img class="card-img-top img-fluid" src="../../assets/img/02.jpg" alt="Card image cap">
+                                            <div class="rb-icon">
+                                                <i class="fa fa-clone"></i>
+                                            </div>
+                                            <span class="badge rb-count">10장</span>
+                                        </div>
+                                        <div class="card-block">
+                                            <h4 class="card-title">종가의 내림 손맛</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="card rb-format-video">
+                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
+                                        <div class="rb-img-wrap">
+                                            <img class="card-img-top img-fluid" src="../../assets/img/03.jpg" alt="Card image cap">
+                                            <div class="rb-icon">
+                                                <i class="fa fa-play-circle-o"></i>
+                                            </div>
+                                            <span class="badge rb-count">0:59</span>
+                                        </div>
+                                        <div class="card-block">
+                                            <h4 class="card-title">새로운 식재료를 소개합니다.</h4>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                        </a>
+
+                            <div class="card-deck">
+                                <!-- 이미지 형 -->
+                                <div class="card rb-format-image">
+                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
+                                        <div class="rb-img-wrap">
+                                            <img class="card-img-top img-fluid" src="../../assets/img/05.jpg" alt="Card image cap">
+                                            <span class="badge rb-count">10장</span>
+                                        </div>
+                                        <div class="card-block">
+                                            <h4 class="card-title">작은 요리 노하우</h4>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- 인용문형 -->
+                                <div class="card rb-format-quote">
+                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
+                                        <span class="rb-new badge badge-negative">NEW</span>
+                                        <div class="card-block">
+                                            <h4 class="card-title">평범하지만 위대한 레시피</h4>
+                                            <p class="card-text">간단한 한끼 식사로도, 간식으로도 인기 만점인 가래떡과 불고기의 색다른 만남</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+
+                            <div class="card-deck">
+                                <div class="card rb-format-standard">
+                                    <a href="#modal-view">
+                                        <div class="rb-img-wrap">
+                                            <img class="card-img-top img-fluid" src="../../assets/img/01.jpg" alt="Card image cap">
+                                        </div>
+                                        <span class="rb-new badge badge-negative">NEW</span>
+                                        <div class="card-block">
+                                            <h4 class="card-title">오븐 빵/케익 만들기</h4>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="card rb-format-video">
+                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
+                                        <div class="rb-img-wrap">
+                                            <img class="card-img-top img-fluid" src="../../assets/img/02.jpg" alt="Card image cap">
+                                            <div class="rb-icon">
+                                                <i class="fa fa-play-circle-o"></i>
+                                            </div>
+                                            <span class="badge rb-count">0:59</span>
+                                        </div>
+                                        <div class="card-block">
+                                            <h4 class="card-title">오늘의 요리</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="card-deck">
+                                <div class="card rb-format-gallery">
+                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
+                                        <div class="rb-img-wrap">
+                                            <img class="card-img-top img-fluid" src="../../assets/img/02.jpg" alt="Card image cap">
+                                            <div class="rb-icon">
+                                                <i class="fa fa-clone"></i>
+                                            </div>
+                                            <span class="badge rb-count">10장</span>
+                                        </div>
+                                        <div class="card-block">
+                                            <h4 class="card-title">종가의 내림 손맛</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="card rb-format-video">
+                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
+                                        <div class="rb-img-wrap">
+                                            <img class="card-img-top img-fluid" src="../../assets/img/03.jpg" alt="Card image cap">
+                                            <div class="rb-icon">
+                                                <i class="fa fa-play-circle-o"></i>
+                                            </div>
+                                            <span class="badge rb-count">0:59</span>
+                                        </div>
+                                        <div class="card-block">
+                                            <h4 class="card-title">새로운 식재료를 소개합니다.</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="card-deck">
+                                <!-- 이미지 형 -->
+                                <div class="card rb-format-image">
+                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
+                                        <div class="rb-img-wrap">
+                                            <img class="card-img-top img-fluid" src="../../assets/img/05.jpg" alt="Card image cap">
+                                            <span class="badge rb-count">10장</span>
+                                        </div>
+                                        <div class="card-block">
+                                            <h4 class="card-title">작은 요리 노하우</h4>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- 인용문형 -->
+                                <div class="card rb-format-quote">
+                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
+                                        <span class="rb-new badge badge-negative">NEW</span>
+                                        <div class="card-block">
+                                            <h4 class="card-title">평범하지만 위대한 레시피</h4>
+                                            <p class="card-text">간단한 한끼 식사로도, 간식으로도 인기 만점인 가래떡과 불고기의 색다른 만남</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="card-deck">
-                    <div class="card rb-format-gallery">
-                        <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
-                            <div class="rb-img-wrap">
-                                <img class="card-img-top img-fluid" src="../../assets/img/02.jpg" alt="Card image cap">
-                                <div class="rb-icon">
-                                    <i class="fa fa-clone"></i>
-                                </div>
-                                <span class="badge rb-count">10장</span>
-                            </div>
-                            <div class="card-block">
-                                <h4 class="card-title">종가의 내림 손맛</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card rb-format-video">
-                        <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
-                            <div class="rb-img-wrap">
-                                <img class="card-img-top img-fluid" src="../../assets/img/03.jpg" alt="Card image cap">
-                                <div class="rb-icon">
-                                    <i class="fa fa-play-circle-o"></i>
-                                </div>
-                                <span class="badge rb-count">0:59</span>
-                            </div>
-                            <div class="card-block">
-                                <h4 class="card-title">새로운 식재료를 소개합니다.</h4>
-                            </div>
-                        </a>
-                    </div>
+                <div class="swiper-slide" data-hash="">
+                    <ul class="table-view">
+                        <li class="table-view-cell">
+                            <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-category" data-title="분류 1" data-url="">
+                                <span class="badge">5</span>
+                                분류 1
+                            </a>
+                        </li>
+                        <li class="table-view-cell">
+                            <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-category" data-title="분류 2" data-url="">
+                                <span class="badge">5</span>
+                                분류 2
+                            </a>
+                        </li>
+                        <li class="table-view-cell">
+                            <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-category" data-title="분류 3" data-url="">
+                                <span class="badge">5</span>
+                                분류 3
+                            </a>
+                        </li>
+                        <li class="table-view-cell">
+                            <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-category" data-title="분류 4" data-url="">
+                                분류 4
+                            </a>
+                        </li>
+                        <li class="table-view-cell">
+                            <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-category" data-title="분류 5" data-url="">
+                                분류 5
+                            </a>
+                        </li>
+                        <li class="table-view-cell">
+                            <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-category" data-title="분류 6" data-url="">
+                                분류 6
+                            </a>
+                        </li>
+                    </ul>
                 </div>
 
-                <div class="card-deck">
-                    <!-- 이미지 형 -->
-                    <div class="card rb-format-image">
-                        <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
-                            <div class="rb-img-wrap">
-                                <img class="card-img-top img-fluid" src="../../assets/img/05.jpg" alt="Card image cap">
-                                <span class="badge rb-count">10장</span>
-                            </div>
-                            <div class="card-block">
-                                <h4 class="card-title">작은 요리 노하우</h4>
-                            </div>
-                        </a>
-                    </div>
+                <div class="swiper-slide" data-hash="">
+                    <ul class="table-view">
+                        <li class="table-view-divider">2016년</li>
+                        <li class="table-view-cell">
+                            <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-archive" data-title="2016년 3월" data-url="">
+                                <span class="badge">5</span>
+                                3월
+                            </a>
+                        </li>
+                        <li class="table-view-cell">
+                            <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-archive" data-title="2016년 3월" data-url="">
+                                2월
+                            </a>
+                        </li>
+                        <li class="table-view-cell">
+                            <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-archive" data-title="2016년 3월" data-url="">
+                                <span class="badge">5</span>
+                                1월
+                            </a>
+                        </li>
+                        <li class="table-view-divider">2015년</li>
+                        <li class="table-view-cell">
+                            <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-archive" data-title="2016년 3월" data-url="">
+                                12월
+                            </a>
+                        </li>
+                        <li class="table-view-cell">
+                            <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-archive" data-title="2016년 3월" data-url="">
+                                <span class="badge">5</span>
+                               11월
+                            </a>
+                        </li>
+                        <li class="table-view-cell">
+                            <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-archive" data-title="2016년 3월" data-url="">
+                                10월
+                            </a>
+                        </li>
 
-                    <!-- 인용문형 -->
-                    <div class="card rb-format-quote">
-                        <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
-                            <span class="rb-new badge badge-negative">NEW</span>
-                            <div class="card-block">
-                                <h4 class="card-title">평범하지만 위대한 레시피</h4>
-                                <p class="card-text">간단한 한끼 식사로도, 간식으로도 인기 만점인 가래떡과 불고기의 색다른 만남</p>
-                            </div>
-                        </a>
+                        <li class="table-view-cell">
+                            <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-archive" data-title="2016년 3월" data-url="">
+                                9월
+                            </a>
+                        </li>
+                        <li class="table-view-cell">
+                            <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-archive" data-title="2016년 3월" data-url="">
+                                8월
+                            </a>
+                        </li>
+                        <li class="table-view-cell">
+                            <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-archive" data-title="2016년 3월" data-url="">
+                                7월
+                            </a>
+                        </li>
+                        <li class="table-view-cell">
+                            <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-archive" data-title="2016년 3월" data-url="">
+                                6월
+                            </a>
+                        </li>
+                        <li class="table-view-cell">
+                            <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-archive" data-title="2016년 3월" data-url="">
+                               5월
+                            </a>
+                        </li>
+                        <li class="table-view-cell">
+                            <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-archive" data-title="2016년 3월" data-url="">
+                                4월
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="swiper-slide" data-hash="">
+                    <ul class="table-view">
+                        <li class="table-view-cell">
+                            <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-tags" data-title="태그1" data-url="">
+                                <i class="fa fa-tag fa-lg"></i> Tag 1
+                            </a>
+                        </li>
+                        <li class="table-view-cell">
+                            <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-tags" data-title="태그1" data-url="">
+                                <i class="fa fa-tag fa-lg"></i> Tag 1
+                            </a>
+                        </li>
+                        <li class="table-view-cell">
+                            <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-tags" data-title="태그1" data-url="">
+                                <i class="fa fa-tag fa-lg"></i> Tag 1
+                            </a>
+                        </li>
+                        <li class="table-view-cell">
+                            <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-tags" data-title="태그1" data-url="">
+                                <i class="fa fa-tag fa-lg"></i> Tag 1
+                            </a>
+                        </li>
+                        <li class="table-view-cell">
+                            <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-tags" data-title="태그1" data-url="">
+                                <i class="fa fa-tag fa-lg"></i> Tag 1
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="swiper-slide" data-hash="">
+                    <div class="card">
+                        <div class="content-padded">
+                            <h4>킴스큐 소개</h4>
+                            <p>킴스큐(kimsQ)는 전문기술이 없는 사용자도 간단한 조작으로 쉽게 웹사이트를 구축하고 운영할 수 있게해 주는 도구입니다. 개인화된 나만의 웹사이트를 구축하고 싶은 사용자에게 쉽고 빠르게 웹사이트를 만들 수 있는 기반을 제공하는 것을 목표로 개발되고 있습니다. </p>
+                            <p>기본적으로 블로그/커뮤니티/기업 웹사이트를 만들 수 있으며 구성요소를 넣고 뺄 수 있는 '모듈' 시스템을 통해서 쇼핑몰,그룹웨어 등으로 기능의 확장이 가능합니다.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <?php endif?>
-
-        <?php if($tab=='category'):?>
-        <ul class="table-view">
-            <li class="table-view-cell">
-                <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-category" data-title="분류 1" data-url="">
-                    <span class="badge">5</span>
-                    분류 1
-                </a>
-            </li>
-            <li class="table-view-cell">
-                <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-category" data-title="분류 2" data-url="">
-                    <span class="badge">5</span>
-                    분류 2
-                </a>
-            </li>
-            <li class="table-view-cell">
-                <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-category" data-title="분류 3" data-url="">
-                    <span class="badge">5</span>
-                    분류 3
-                </a>
-            </li>
-            <li class="table-view-cell">
-                <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-category" data-title="분류 4" data-url="">
-                    분류 4
-                </a>
-            </li>
-            <li class="table-view-cell">
-                <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-category" data-title="분류 5" data-url="">
-                    분류 5
-                </a>
-            </li>
-            <li class="table-view-cell">
-                <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-category" data-title="분류 6" data-url="">
-                    분류 6
-                </a>
-            </li>
-        </ul>
-        <?php endif?>
-
-        <?php if($tab=='archive'):?>
-        <ul class="table-view">
-            <li class="table-view-divider">2016년</li>
-            <li class="table-view-cell">
-                <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-archive" data-title="2016년 3월" data-url="">
-                    <span class="badge">5</span>
-                    3월
-                </a>
-            </li>
-            <li class="table-view-cell">
-                <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-archive" data-title="2016년 3월" data-url="">
-                    2월
-                </a>
-            </li>
-            <li class="table-view-cell">
-                <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-archive" data-title="2016년 3월" data-url="">
-                    <span class="badge">5</span>
-                    1월
-                </a>
-            </li>
-            <li class="table-view-divider">2015년</li>
-            <li class="table-view-cell">
-                <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-archive" data-title="2016년 3월" data-url="">
-                    12월
-                </a>
-            </li>
-            <li class="table-view-cell">
-                <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-archive" data-title="2016년 3월" data-url="">
-                    <span class="badge">5</span>
-                   11월
-                </a>
-            </li>
-            <li class="table-view-cell">
-                <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-archive" data-title="2016년 3월" data-url="">
-                    10월
-                </a>
-            </li>
-
-            <li class="table-view-cell">
-                <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-archive" data-title="2016년 3월" data-url="">
-                    9월
-                </a>
-            </li>
-            <li class="table-view-cell">
-                <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-archive" data-title="2016년 3월" data-url="">
-                    8월
-                </a>
-            </li>
-            <li class="table-view-cell">
-                <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-archive" data-title="2016년 3월" data-url="">
-                    7월
-                </a>
-            </li>
-            <li class="table-view-cell">
-                <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-archive" data-title="2016년 3월" data-url="">
-                    6월
-                </a>
-            </li>
-            <li class="table-view-cell">
-                <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-archive" data-title="2016년 3월" data-url="">
-                   5월
-                </a>
-            </li>
-            <li class="table-view-cell">
-                <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-archive" data-title="2016년 3월" data-url="">
-                    4월
-                </a>
-            </li>
-        </ul>
-        <?php endif?>
-
-        <?php if($tab=='tags'):?>
-        <ul class="table-view">
-            <li class="table-view-cell">
-                <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-tags" data-title="태그1" data-url="">
-                    <i class="fa fa-tag fa-lg"></i> Tag 1
-                </a>
-            </li>
-            <li class="table-view-cell">
-                <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-tags" data-title="태그1" data-url="">
-                    <i class="fa fa-tag fa-lg"></i> Tag 1
-                </a>
-            </li>
-            <li class="table-view-cell">
-                <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-tags" data-title="태그1" data-url="">
-                    <i class="fa fa-tag fa-lg"></i> Tag 1
-                </a>
-            </li>
-            <li class="table-view-cell">
-                <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-tags" data-title="태그1" data-url="">
-                    <i class="fa fa-tag fa-lg"></i> Tag 1
-                </a>
-            </li>
-            <li class="table-view-cell">
-                <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-tags" data-title="태그1" data-url="">
-                    <i class="fa fa-tag fa-lg"></i> Tag 1
-                </a>
-            </li>
-        </ul>
-        <?php endif?>
-
-        <?php if($tab=='about'):?>
-        <div class="card">
-            <div class="content-padded">
-                <h4>킴스큐 소개</h4>
-                <p>킴스큐(kimsQ)는 전문기술이 없는 사용자도 간단한 조작으로 쉽게 웹사이트를 구축하고 운영할 수 있게해 주는 도구입니다. 개인화된 나만의 웹사이트를 구축하고 싶은 사용자에게 쉽고 빠르게 웹사이트를 만들 수 있는 기반을 제공하는 것을 목표로 개발되고 있습니다. </p>
-                <p>기본적으로 블로그/커뮤니티/기업 웹사이트를 만들 수 있으며 구성요소를 넣고 뺄 수 있는 '모듈' 시스템을 통해서 쇼핑몰,그룹웨어 등으로 기능의 확장이 가능합니다.</p>
-            </div>
-        </div>
-        <?php endif?>
     </div>
 
 </div>
@@ -494,12 +584,12 @@
 <script src="../../assets/plugins/history-js/1.8.0b2/jquery.history.js"></script>
 
 <!-- ratchet plus JS -->
-<script src="http://gitaeks.github.io/rc/dist/js/ratchet-plus.js" type="text/javascript"></script>
+<script src="http://break.kimsq.co.kr/rc/dist/js/ratchet-plus.js" type="text/javascript"></script>
+
+<!-- Swiper : https://github.com/nolimits4web/Swiper -->
+<script src="../../assets/plugins/swiper/3.2.7/js/swiper.jquery.min.js"></script>
 
 <script src="./script.js"></script>
 
-
 </body>
 </html>
-
-
