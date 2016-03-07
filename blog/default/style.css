@@ -248,6 +248,12 @@ body {
     text-shadow: 1px 1px 1px rgba(0,0,0,0.6)
 }
 
+.modal.rb-format-default .rb-blog-header .rb-destription,
+.modal.rb-format-default .rb-blog-header .rb-meta .badge {
+    color: #eee;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.4)
+}
+
 .modal.rb-format-default .rb-blog-header .rb-scroll {
     padding: 10px 0 0;
 }
