@@ -258,7 +258,7 @@
                     </div>
                 </div>
 
-                <div class="swiper-slide" data-hash="">
+                <div class="swiper-slide">
                     <ul class="table-view">
                         <li class="table-view-cell">
                             <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-category" data-title="분류 1" data-url="">
@@ -296,7 +296,7 @@
                     </ul>
                 </div>
 
-                <div class="swiper-slide" data-hash="">
+                <div class="swiper-slide">
                     <ul class="table-view">
                         <li class="table-view-divider">2016년</li>
                         <li class="table-view-cell">
@@ -367,7 +367,7 @@
                     </ul>
                 </div>
 
-                <div class="swiper-slide" data-hash="">
+                <div class="swiper-slide">
                     <ul class="table-view">
                         <li class="table-view-cell">
                             <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-tags" data-title="태그1" data-url="">
@@ -397,7 +397,7 @@
                     </ul>
                 </div>
 
-                <div class="swiper-slide" data-hash="">
+                <div class="swiper-slide">
                     <div class="card">
                         <div class="content-padded">
                             <h4>킴스큐 소개</h4>
