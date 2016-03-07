@@ -1,6 +1,4 @@
 // Initialize Swiper
-
-
 var swiper = new Swiper('.swiper-container', {
     pagination: '.segmented-control',
     paginationClickable: true,
@@ -27,9 +25,7 @@ var swiper = new Swiper('.swiper-container', {
 });
 
 
-
 // 포토 캡션 
-
 var doPhotoCaption=function(){
     var img=$('.rb-blog-view .rb-article').find('img');
     $(img).each(function(){
