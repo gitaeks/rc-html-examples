@@ -75,12 +75,11 @@
 
         <?php if($tab==''):?>
         <div class="content-padded">
-
             <div class="rb-blog-list card-deck-wrapper">
 
                 <div class="card-deck">
                     <div class="card rb-format-standard">
-                        <a data-toggle="modal" data-target="">
+                        <a href="#modal-view" data-format="standard">
                             <div class="rb-img-wrap">
                                 <img class="card-img-top img-fluid" src="../../assets/img/01.jpg" alt="Card image cap">
                             </div>
@@ -92,7 +91,7 @@
                     </div>
 
                     <div class="card rb-format-video">
-                        <a data-toggle="modal" data-target="">
+                        <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목" data-format="video">
                             <div class="rb-img-wrap">
                                 <img class="card-img-top img-fluid" src="../../assets/img/02.jpg" alt="Card image cap">
                                 <div class="rb-icon">
@@ -109,7 +108,7 @@
 
                 <div class="card-deck">
                     <div class="card rb-format-gallery">
-                        <a data-toggle="modal" data-target="">
+                        <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목" data-format="gallery">
                             <div class="rb-img-wrap">
                                 <img class="card-img-top img-fluid" src="../../assets/img/02.jpg" alt="Card image cap">
                                 <div class="rb-icon">
@@ -123,7 +122,7 @@
                         </a>
                     </div>
                     <div class="card rb-format-video">
-                        <a data-toggle="modal" data-target="">
+                        <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목" data-format="video">
                             <div class="rb-img-wrap">
                                 <img class="card-img-top img-fluid" src="../../assets/img/03.jpg" alt="Card image cap">
                                 <div class="rb-icon">
@@ -141,7 +140,7 @@
                 <div class="card-deck">
                     <!-- 이미지 형 -->
                     <div class="card rb-format-image">
-                        <a data-toggle="modal" data-target="">
+                        <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목" data-format="image">
                             <div class="rb-img-wrap">
                                 <img class="card-img-top img-fluid" src="../../assets/img/05.jpg" alt="Card image cap">
                                 <span class="badge rb-count">10장</span>
@@ -154,7 +153,94 @@
 
                     <!-- 인용문형 -->
                     <div class="card rb-format-quote">
-                        <a data-toggle="modal" data-target="">
+                        <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목" data-format="quote">
+                            <span class="rb-new badge badge-negative">NEW</span>
+                            <div class="card-block">
+                                <h4 class="card-title">평범하지만 위대한 레시피</h4>
+                                <p class="card-text">간단한 한끼 식사로도, 간식으로도 인기 만점인 가래떡과 불고기의 색다른 만남</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="card-deck">
+                    <div class="card rb-format-standard">
+                        <a href="#modal-view" data-format="standard">
+                            <div class="rb-img-wrap">
+                                <img class="card-img-top img-fluid" src="../../assets/img/01.jpg" alt="Card image cap">
+                            </div>
+                            <span class="rb-new badge badge-negative">NEW</span>
+                            <div class="card-block">
+                                <h4 class="card-title">오븐 빵/케익 만들기</h4>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="card rb-format-video">
+                        <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목" data-format="video">
+                            <div class="rb-img-wrap">
+                                <img class="card-img-top img-fluid" src="../../assets/img/02.jpg" alt="Card image cap">
+                                <div class="rb-icon">
+                                    <i class="fa fa-play-circle-o"></i>
+                                </div>
+                                <span class="badge rb-count">0:59</span>
+                            </div>
+                            <div class="card-block">
+                                <h4 class="card-title">오늘의 요리</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card-deck">
+                    <div class="card rb-format-gallery">
+                        <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목" data-format="gallery">
+                            <div class="rb-img-wrap">
+                                <img class="card-img-top img-fluid" src="../../assets/img/02.jpg" alt="Card image cap">
+                                <div class="rb-icon">
+                                    <i class="fa fa-clone"></i>
+                                </div>
+                                <span class="badge rb-count">10장</span>
+                            </div>
+                            <div class="card-block">
+                                <h4 class="card-title">종가의 내림 손맛</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card rb-format-video">
+                        <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목" data-format="video">
+                            <div class="rb-img-wrap">
+                                <img class="card-img-top img-fluid" src="../../assets/img/03.jpg" alt="Card image cap">
+                                <div class="rb-icon">
+                                    <i class="fa fa-play-circle-o"></i>
+                                </div>
+                                <span class="badge rb-count">0:59</span>
+                            </div>
+                            <div class="card-block">
+                                <h4 class="card-title">새로운 식재료를 소개합니다.</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card-deck">
+                    <!-- 이미지 형 -->
+                    <div class="card rb-format-image">
+                        <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목" data-format="image">
+                            <div class="rb-img-wrap">
+                                <img class="card-img-top img-fluid" src="../../assets/img/05.jpg" alt="Card image cap">
+                                <span class="badge rb-count">10장</span>
+                            </div>
+                            <div class="card-block">
+                                <h4 class="card-title">작은 요리 노하우</h4>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- 인용문형 -->
+                    <div class="card rb-format-quote">
+                        <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목" data-format="quote">
                             <span class="rb-new badge badge-negative">NEW</span>
                             <div class="card-block">
                                 <h4 class="card-title">평범하지만 위대한 레시피</h4>

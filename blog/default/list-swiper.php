@@ -79,12 +79,11 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="content-padded">
-
                         <div class="rb-blog-list card-deck-wrapper">
 
                             <div class="card-deck">
                                 <div class="card rb-format-standard">
-                                    <a href="#modal-view">
+                                    <a href="#modal-view" data-format="standard">
                                         <div class="rb-img-wrap">
                                             <img class="card-img-top img-fluid" src="../../assets/img/01.jpg" alt="Card image cap">
                                         </div>
@@ -96,7 +95,7 @@
                                 </div>
 
                                 <div class="card rb-format-video">
-                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
+                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목" data-format="video">
                                         <div class="rb-img-wrap">
                                             <img class="card-img-top img-fluid" src="../../assets/img/02.jpg" alt="Card image cap">
                                             <div class="rb-icon">
@@ -113,7 +112,7 @@
 
                             <div class="card-deck">
                                 <div class="card rb-format-gallery">
-                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
+                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목" data-format="gallery">
                                         <div class="rb-img-wrap">
                                             <img class="card-img-top img-fluid" src="../../assets/img/02.jpg" alt="Card image cap">
                                             <div class="rb-icon">
@@ -127,7 +126,7 @@
                                     </a>
                                 </div>
                                 <div class="card rb-format-video">
-                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
+                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목" data-format="video">
                                         <div class="rb-img-wrap">
                                             <img class="card-img-top img-fluid" src="../../assets/img/03.jpg" alt="Card image cap">
                                             <div class="rb-icon">
@@ -145,7 +144,7 @@
                             <div class="card-deck">
                                 <!-- 이미지 형 -->
                                 <div class="card rb-format-image">
-                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
+                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목" data-format="image">
                                         <div class="rb-img-wrap">
                                             <img class="card-img-top img-fluid" src="../../assets/img/05.jpg" alt="Card image cap">
                                             <span class="badge rb-count">10장</span>
@@ -158,7 +157,7 @@
 
                                 <!-- 인용문형 -->
                                 <div class="card rb-format-quote">
-                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
+                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목" data-format="quote">
                                         <span class="rb-new badge badge-negative">NEW</span>
                                         <div class="card-block">
                                             <h4 class="card-title">평범하지만 위대한 레시피</h4>
@@ -171,7 +170,7 @@
 
                             <div class="card-deck">
                                 <div class="card rb-format-standard">
-                                    <a href="#modal-view">
+                                    <a href="#modal-view" data-format="standard">
                                         <div class="rb-img-wrap">
                                             <img class="card-img-top img-fluid" src="../../assets/img/01.jpg" alt="Card image cap">
                                         </div>
@@ -183,7 +182,7 @@
                                 </div>
 
                                 <div class="card rb-format-video">
-                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
+                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목" data-format="video">
                                         <div class="rb-img-wrap">
                                             <img class="card-img-top img-fluid" src="../../assets/img/02.jpg" alt="Card image cap">
                                             <div class="rb-icon">
@@ -200,7 +199,7 @@
 
                             <div class="card-deck">
                                 <div class="card rb-format-gallery">
-                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
+                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목" data-format="gallery">
                                         <div class="rb-img-wrap">
                                             <img class="card-img-top img-fluid" src="../../assets/img/02.jpg" alt="Card image cap">
                                             <div class="rb-icon">
@@ -214,7 +213,7 @@
                                     </a>
                                 </div>
                                 <div class="card rb-format-video">
-                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
+                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목" data-format="video">
                                         <div class="rb-img-wrap">
                                             <img class="card-img-top img-fluid" src="../../assets/img/03.jpg" alt="Card image cap">
                                             <div class="rb-icon">
@@ -232,7 +231,7 @@
                             <div class="card-deck">
                                 <!-- 이미지 형 -->
                                 <div class="card rb-format-image">
-                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
+                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목" data-format="image">
                                         <div class="rb-img-wrap">
                                             <img class="card-img-top img-fluid" src="../../assets/img/05.jpg" alt="Card image cap">
                                             <span class="badge rb-count">10장</span>
@@ -245,7 +244,7 @@
 
                                 <!-- 인용문형 -->
                                 <div class="card rb-format-quote">
-                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목">
+                                    <a data-toggle="modal" data-target="#modal-view" data-title="포스트 제목" data-format="quote">
                                         <span class="rb-new badge badge-negative">NEW</span>
                                         <div class="card-block">
                                             <h4 class="card-title">평범하지만 위대한 레시피</h4>
@@ -457,7 +456,7 @@
 
 <!-- 포스트 내용보기 -->
 
-<div id="popover-view" class="popover rb-blog-view">
+<div id="popover-view" class="popover rb-format-standard">
     <ul class="table-view">
         <li class="table-view-cell">URL복사</li>
         <li class="table-view-cell">소셜미디어 공유</li>
@@ -466,7 +465,7 @@
     </ul>
 </div>
 
-<div id="modal-view" class="modal effect-scale rb-blog-view">
+<div id="modal-view" class="modal effect-scale rb-format-standard">
     <header class="bar bar-nav">
         <a href="#modal-view" class="btn btn-link btn-nav pull-right">
             <span class="icon icon-close"></span>
@@ -480,7 +479,7 @@
         </h1>
     </header>
     <div class="content">
-        <section class="rb-blog-view">
+        <section class="rb-format-standard">
 
             <div class="rb-blog-header card card-inverse" style="background-image: url(../../assets/img/01.jpg)">
                 <div class="card-block">

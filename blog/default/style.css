@@ -189,27 +189,27 @@ body {
  * ----------------------------------------------------------------------------
  */
 
-.popover.rb-blog-view:before {
+.popover.rb-format-standard:before {
     border: none;
 }
 
-.modal.rb-blog-view .rb-blog-body {
+.modal.rb-format-standard .rb-blog-body {
     margin: 10px;
     padding: 15px 0;
 }
 
 
-.modal.rb-blog-view .bar-nav .title {
+.modal.rb-format-standard .bar-nav .title {
     padding: 5px 80px 0 10px;
     font-size: 15px;
     line-height: 1.2;
 }
 
-.modal.rb-blog-view .bar-nav .title p {
+.modal.rb-format-standard .bar-nav .title p {
     font-size: 12px
 }
 
-.modal.rb-blog-view .rb-blog-header {
+.modal.rb-format-standard .rb-blog-header {
     position: relative;
     margin: 0;
     padding: 30px 5px;
@@ -221,7 +221,7 @@ body {
     min-height: 300px;
 }
 
-.modal.rb-blog-view .rb-blog-header:before {
+.modal.rb-format-standard .rb-blog-header:before {
     position: absolute;
     top: 0;
     left: 0;
@@ -231,42 +231,42 @@ body {
     content: ''
 }
 
-.modal.rb-blog-view .rb-blog-header .card-block {
+.modal.rb-format-standard .rb-blog-header .card-block {
     position: absolute;
     bottom: 0;
     height: auto;
     padding: 30px 15px;
 }
 
-.modal.rb-blog-view .rb-blog-header .rb-category .badge{
+.modal.rb-format-standard .rb-blog-header .rb-category .badge{
     background-color: #333;
     color: #fff
 }
-.modal.rb-blog-view .rb-blog-header .rb-title {
+.modal.rb-format-standard .rb-blog-header .rb-title {
     font-size: 28px;
     line-height: 35px;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.6)
 }
 
-.modal.rb-blog-view .rb-blog-header .rb-scroll {
+.modal.rb-format-standard .rb-blog-header .rb-scroll {
     padding: 10px 0 0;
 }
-.modal.rb-blog-view .rb-blog-header .rb-scroll,
-.modal.rb-blog-view .rb-blog-header .rb-scroll .icon {
+.modal.rb-format-standard .rb-blog-header .rb-scroll,
+.modal.rb-format-standard .rb-blog-header .rb-scroll .icon {
     font-size: 12px;
 }
 
-.modal.rb-blog-view .rb-blog-body p {
+.modal.rb-format-standard .rb-blog-body p {
     margin-bottom: 2em;
     font-size: 19px;
     color: #141414;
 }
 
-.modal.rb-blog-view .rb-blog-body figure {
+.modal.rb-format-standard .rb-blog-body figure {
     margin-bottom: 2em;
 }
 
-.modal.rb-blog-view .rb-blog-body figcaption {
+.modal.rb-format-standard .rb-blog-body figcaption {
     font-size: 0.8em;
     line-height: 1.5em;
     color: #616686;
@@ -274,38 +274,38 @@ body {
     margin: 10px auto 0;
 }
 
-.modal.rb-blog-view .rb-blog-body figcaption:before {
+.modal.rb-format-standard .rb-blog-body figcaption:before {
     padding-right: 7px;
     content: '▲'
 }
 
-.modal.rb-blog-view .rb-blog-footer {
+.modal.rb-format-standard .rb-blog-footer {
     margin-top: 30px
 }
 
-.modal.rb-blog-view .rb-blog-footer .rb-author .rb-avatar {
+.modal.rb-format-standard .rb-blog-footer .rb-author .rb-avatar {
     width: 48px;
     height: 48px
 }
 
 
 /*share*/
-.modal.rb-blog-view .rb-share {
+.modal.rb-format-standard .rb-share {
     border: none
 }
-.modal.rb-blog-view .rb-share .control-item{
+.modal.rb-format-standard .rb-share .control-item{
     font-size: 18px;
     color: #fff;
     border-left: none;
 }
-.modal.rb-blog-view .rb-share-facebook {
+.modal.rb-format-standard .rb-share-facebook {
     background-color: #3A5795;
 
 }
-.modal.rb-blog-view .rb-share-twitter {
+.modal.rb-format-standard .rb-share-twitter {
     background-color: #59ADEE;
 }
-.modal.rb-blog-view .rb-share-kakao {
+.modal.rb-format-standard .rb-share-kakao {
     background-color: #FFEB00;
     color: #3C1E1E!important
 }
