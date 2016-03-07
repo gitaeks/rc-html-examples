@@ -20,6 +20,7 @@
 
 <link rel="stylesheet" href="../../assets/css/sys.css">
 <link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./article.css">
 
 <script src="../../assets/plugins/ratchet-2.0.2/js/ratchet.js"></script>
 <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
@@ -365,17 +366,111 @@
 </div>
 
 <!-- 포스트 내용보기 -->
-<div id="modal-view" class="modal rb-effect-scale">
+
+<div id="popover-view" class="popover rb-blog-view">
+    <ul class="table-view">
+        <li class="table-view-cell">URL복사</li>
+        <li class="table-view-cell">소셜미디어 공유</li>
+        <li class="table-view-cell">Item3</li>
+        <li class="table-view-cell">Item4</li>
+    </ul>
+</div>
+
+<div id="modal-view" class="modal effect-scale rb-blog-view">
     <header class="bar bar-nav">
-        <a href="#modal-view" class="btn btn-link btn-nav pull-left">
-            <span class="icon icon-left-nav"></span>&nbsp;
+        <a href="#modal-view" class="btn btn-link btn-nav pull-right">
+            <span class="icon icon-close"></span>
         </a>
-        <h1 class="title">제목</h1>
+        <a href="#popover-view" class="btn btn-link btn-nav pull-right">
+            <span class="icon icon-more-vertical"></span>
+        </a>
+        <h1 class="title rb-left">
+            <span data-role="title">오븐 빵/케익 만들기</span>
+            <p data-role="">분류1</p>
+        </h1>
     </header>
     <div class="content">
-        <div class="content-padded">
-            블로그 내용
-        </div>
+        <section class="rb-blog-view">
+
+            <div class="rb-blog-header card card-inverse" style="background-image: url(../../assets/img/01.jpg)">
+                <div class="card-block">
+                    <p class="card-text rb-category"><span class="badge">분류1</span></p>
+                    <h4 class="card-title rb-title">오븐 빵/케익 만들기</h4>
+                    <p class="card-text rb-destription">구체적인 입출국 날짜나 국내 일정은 공개되지 않았으나 경기 전날이자 갈라디너 행사가 열리는 8일에 입국할 가능성이 커 보인다.</p>
+                    <p class="card-text rb-meta">
+                        <span class="badge badge-inverted"><i class="fa fa-calendar"></i> 2016.02.01</span>
+                        <span class="badge badge-inverted"><i class="fa fa-user"></i> 벽돌공장</span>
+                        <span class="badge badge-inverted"><i class="fa fa-eye"></i> 123</span>
+                    </p>
+                    <p class="card-text rb-scroll"><span class="icon icon-down-nav"></span>&nbsp;아래로 스크롤</p>
+                </div>
+            </div>
+
+            <div class="rb-blog-body">
+
+                <article class="rb-article" data-role="content">
+                    <p>4일 구글코리아에 따르면 슈미트 회장은 9일부터 서울에서 열리는 이세돌 9단과 인공지능(AI) 프로그램 알파고의 대국을 보고자 한국을 찾을 예정이다.</p>
+                    <p>구체적인 입출국 날짜나 국내 일정은 공개되지 않았으나 경기 전날이자 갈라디너 행사가 열리는 8일에 입국할 가능성이 커 보인다.</p>
+                    <img src="http://break.kimsq.co.kr/rc-html-examples/assets/img/04.jpg" class="img-fluid" alt="여기는 사진설명">
+                    <p>구글은 갈라디너 행사에 이세돌 9단과 한국기원 등 바둑계 관계자, AI 분야 전문가 등을 초청했다.</p>
+                    <p>슈미트 회장은 이세돌 9단과 알파고의 대국을 직접 관전할 것으로 알려졌다. 그러나 대국 전 일정을 소화할지는 분명치 않다.</p>
+                </article>
+            </div>
+
+            <div class="rb-blog-footer">
+
+                <ul class="table-view rb-author">
+                    <li class="table-view-cell table-view-divider">작성자</li>
+                    <li class="table-view-cell media">
+                        <a data-toggle="modal" data-target="modal-bbs-default" data-title="프로필 보기">
+                            <img class="media-object pull-left rb-avatar" src="http://live2.kimsq.com/avatar/sf14534519348196_m.jpg" data-role="avatar">
+                            <div class="media-body">
+                                <strong data-role="author">권기택</strong>
+                                <p data-role="email">break@redblock.co.kr</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="table-view rb-tag">
+                    <li class="table-view-cell table-view-divider"><i class="fa fa-tag fa-fw"></i> 태그</li>
+                    <li class="table-view-cell media">
+                        키워드 1
+                    </li>
+                    <li class="table-view-cell media">
+                        키워드 2
+                    </li>
+                </ul>
+                <ul class="table-view rb-attach">
+                    <li class="table-view-cell table-view-divider"><i class="fa fa-paperclip fa-fw"></i> 첨부</li>
+                    <li class="table-view-cell media">
+                        <a class="navigate-right">
+                            <span class="badge">446.1KB</span>
+                            <div class="media-body">
+                                킴스큐 메뉴얼.zip
+                            </div>
+                        </a>
+                    </li>
+                    <li class="table-view-cell media">
+                        <a class="navigate-right">
+                            <span class="badge">446.1KB</span>
+                            <div class="media-body">
+                                킴스큐 메뉴얼2.zip
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="content-padded">
+                    <p class="segmented-control rb-share ">
+                        <a class="control-item rb-share-facebook"><i class="fa fa-facebook fa-lg"></i></a>
+                        <a class="control-item rb-share-twitter"><i class="fa fa-twitter fa-lg"></i></a>
+                        <a class="control-item rb-share-kakao"><i class="fa fa-comment fa-lg"></i></a>
+                    </p>
+                </div>
+
+            </div>
+        </section>
     </div>
 </div>
 
@@ -401,5 +496,10 @@
 <!-- ratchet plus JS -->
 <script src="http://gitaeks.github.io/rc/dist/js/ratchet-plus.js" type="text/javascript"></script>
 
+<script src="./script.js"></script>
+
+
 </body>
 </html>
+
+
