@@ -81,7 +81,7 @@
             <div class="rb-blog-list card-deck-wrapper">
 
                 <div class="card-deck">
-                    <div class="card rb-format-standard">
+                    <div class="card rb-format-default">
                         <a href="#modal-view-standard">
                             <div class="rb-img-wrap">
                                 <img class="card-img-top img-fluid" src="../../assets/img/01.jpg" alt="Card image cap">
@@ -367,7 +367,7 @@
 
 <!-- 포스트 내용보기 -->
 
-<div id="popover-view" class="popover rb-format-standard">
+<div id="popover-view" class="popover rb-format-default">
     <ul class="table-view">
         <li class="table-view-cell">URL복사</li>
         <li class="table-view-cell">소셜미디어 공유</li>
@@ -376,7 +376,7 @@
     </ul>
 </div>
 
-<div id="modal-view-standard" class="modal effect-scale rb-format-standard">
+<div id="modal-view-standard" class="modal effect-scale rb-format-default">
     <header class="bar bar-nav">
         <a href="#modal-view-standard" class="btn btn-link btn-nav pull-right">
             <span class="icon icon-close"></span>
@@ -390,7 +390,7 @@
         </h1>
     </header>
     <div class="content">
-        <section class="rb-format-standard">
+        <section class="rb-format-default">
 
             <div class="rb-blog-header card card-inverse" style="background-image: url(../../assets/img/01.jpg)">
                 <div class="card-block">
