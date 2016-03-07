@@ -4,7 +4,6 @@ var swiper = new Swiper('.swiper-container', {
     paginationClickable: true,
     effect: 'slide',
     loop: true,
-    hashnav: true,
     autoHeight: true,
     slideActiveClass :'active',
     bulletClass : 'control-item',

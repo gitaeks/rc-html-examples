@@ -77,7 +77,7 @@
         <!-- Swiper -->
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide" data-hash="main">
+                <div class="swiper-slide">
                     <div class="content-padded">
 
                         <div class="rb-blog-list card-deck-wrapper">
