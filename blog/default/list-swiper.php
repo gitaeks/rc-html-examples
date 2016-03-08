@@ -78,7 +78,13 @@
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide" data-hash="">
-                    <div class="content-padded">
+
+                    <div class="rb-nopost content-padded">
+                        <i class="fa fa-exclamation-circle"></i> 
+                        <p>자료가 없습니다.</p>
+                    </div>
+
+                    <div class="content-padded" style="display: none">
                         <div class="rb-blog-list card-deck-wrapper">
 
                             <div class="card-deck">
@@ -258,7 +264,13 @@
                 </div>
 
                 <div class="swiper-slide" data-hash="category">
-                    <ul class="table-view">
+
+                    <div class="rb-nopost content-padded">
+                        <i class="fa fa-exclamation-circle"></i> 
+                        <p>자료가 없습니다.</p>
+                    </div>
+
+                    <ul class="table-view" style="display: none">
                         <li class="table-view-cell">
                             <a class="navigate-right" data-toggle="page" data-start="#page-main" data-target="#page-category" data-title="분류 1" data-url="">
                                 <span class="badge">5</span>

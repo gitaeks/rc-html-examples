@@ -76,7 +76,19 @@ body {
  * ----------------------------------------------------------------------------
  */
 
+.rb-nopost {
+    padding: 100px 0;
+    text-align: center;
+    color: #999;
+    font-size: 14px
+}
 
+.rb-nopost i {
+    display: block;
+    padding-bottom: 5px;
+    color: #ddd;
+    font-size: 5rem
+}
 
 /**
  * 2 - list 목록
