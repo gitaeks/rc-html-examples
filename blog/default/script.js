@@ -8,6 +8,7 @@ var swiper = new Swiper('.swiper-container', {
     slideActiveClass :'active',
     bulletClass : 'control-item',
     bulletActiveClass : 'active' ,
+    hashnav: true,
     paginationBulletRender: function (index, className) {
     var title;
     if (index === 0) title = '메인';
