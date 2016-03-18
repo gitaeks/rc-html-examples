@@ -34,7 +34,11 @@
     <div class="page center" id="catalog-list">
         <div class="rb-catalog-list">
             <header class="bar bar-nav">
-                <a class="icon icon-left-nav pull-left">늘곁애</a>
+                <button class="btn btn-link btn-nav pull-left">
+                    <span class="icon icon-left-nav"></span>
+                    늘곁애
+                </button>
+                <button class="btn btn-link btn-nav pull-right"><span class="icon icon-more-vertical"></span></button>
                 <h1 class="title">장례</h1>
             </header>
             <div class="content">
@@ -384,15 +388,16 @@
     <div class="page right" id="catalog-form" >
         <div class="rb-catalog-form">
             <header class="bar bar-nav">
-                <a class="btn btn-link btn-nav pull-left" href="javascript:slidePageFrom(homePage, 'left');"><span class="icon icon-left-nav"></span></a>
-                <button class="btn btn-link btn-nav pull-right"><span class="icon icon-more-vertical"></span></button>
+                <a class="btn btn-link btn-nav pull-left" href="javascript:slidePageFrom(homePage, 'left');">
+                    취소
+                </a>
                 <h1 class="title">
                     늘곁애 240
                 </h1>
             </header>
 
             <div class="bar bar-standard bar-footer rb-buttons">
-                <a href="javascript:slidePageFrom(homePage, 'left');" class="btn btn-default btn-block">취소하기</a>
+                <a href="javascript:slidePageFrom(homePage, 'left');" class="btn btn-primary btn-block">전송하기</a>
             </div>
             <div class="content">
                 <div class="row">
@@ -409,7 +414,6 @@
                                 <input type="text" placeholder="휴대폰">
                                 <input type="email" placeholder="이메일">
                                 <textarea rows="5"></textarea>
-                                <button class="btn btn-primary btn-block">신청하기</button>
                             </form>
 
                         </section>
