@@ -244,6 +244,10 @@ body {
     border: 1px solid #A89231;
 }
 
+.rb-catalog-list .swiper-container {
+    padding-bottom: 30px
+}
+
 /*cover*/
 
 .rb-catalog-list .content .rb-cover {
