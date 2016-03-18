@@ -381,9 +381,9 @@
         </div>
     </div>
 
-    <div class="page right" id="catalog-view2" >
-        <div class="rb-catalog-view">
-            <header class="bar bar-nav rb-nav">
+    <div class="page right" id="catalog-form" >
+        <div class="rb-catalog-form">
+            <header class="bar bar-nav">
                 <a class="btn btn-link btn-nav pull-left" href="javascript:slidePageFrom(homePage, 'left');"><span class="icon icon-left-nav"></span></a>
                 <button class="btn btn-link btn-nav pull-right"><span class="icon icon-more-vertical"></span></button>
                 <h1 class="title">
@@ -396,20 +396,6 @@
             </div>
             <div class="content">
                 <div class="row">
-
-                    <div class="col-sm-6">
-                        <section class="rb-cover">
-                            <div class="card card-full card-inverse">
-                                <div class="card-img-backdrop rb-cover-bg"></div>
-                                <img class="card-img img-fluid rb-cover-image" src="http://211.253.8.119/files/tmp/funeral-240_500_200.jpg" alt="">
-                                <div class="card-img-overlay text-xs-center" id="cover-name">
-                                    <p class="card-text">필수품목만 엄선한 일뜰형 상품입니다.</p>
-                                    <h3 class="card-title">늘곁애 240</h3>
-                                </div>
-                            </div>
-                        </section>
-
-                    </div>
 
                     <div class="col-sm-6">
 
@@ -428,6 +414,8 @@
 
                         </section>
 
+                    </div>
+                    <div class="col-sm-6">
                     </div>
 
                 </div>
@@ -486,8 +474,8 @@
 
 // 임시 적용
 var homePage = document.getElementById("catalog-list"),
-    page1 = document.getElementById("catalog-view"),기
-    page2 = document.getElementById("catalog-view2"),
+    page1 = document.getElementById("catalog-view"),
+    page2 = document.getElementById("catalog-form"),
     currentPage = homePage;
 
     function slidePageFrom(page, from) {
