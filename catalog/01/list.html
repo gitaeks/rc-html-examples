@@ -458,14 +458,14 @@
             opacity=1;
             opacity2=0;
             opacity4=1;
-            fading3.removeClass('rb-inverse fadeInDown animated');
+            fading3.removeClass('rb-inverse fadeIn animated');
         }else if( offset<=fadeUntil ){
             opacity=1-offset/fadeUntil;
             opacity2=offset/fadeUntil;
             opacity4=0.7-offset/fadeUntil;
-            fading3.removeClass('rb-inverse fadeInDown animated');
+            fading3.removeClass('rb-inverse fadeIn animated');
         }else if( offset>fadeUntil ){
-            fading3.addClass('rb-inverse fadeInDown animated');
+            fading3.addClass('rb-inverse fadeIn animated');
         }
         fading.css('opacity',opacity);
         fading2.css('opacity',opacity2);
