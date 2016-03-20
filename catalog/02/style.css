@@ -1,0 +1,230 @@
+/**
+ * layout 레이아웃 영역
+ * ----------------------------------------------------------------------------
+ */
+
+body {
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: 'Malgun Gothic','맑은 고딕',sans-serif;
+    color: #333;
+}
+
+/*bar-nav 영역 버튼 터치범위 확장*/
+.bar a.pull-left,
+.bar .btn-link.pull-left {
+    margin-left: -10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.bar a.pull-right,
+.bar .btn-link.pull-right {
+    margin-right: -10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+/**
+ * 1 - global 공통
+ * ----------------------------------------------------------------------------
+ */
+
+.rb-nopost {
+    padding: 100px 0;
+    text-align: center;
+    color: #999;
+    font-size: 14px
+}
+
+.rb-nopost i {
+    display: block;
+    padding-bottom: 5px;
+    color: #ddd;
+    font-size: 5rem
+}
+
+/*animate.css*/
+/*https://github.com/daneden/animate.css*/
+
+/*base*/
+.animated {
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+/*fadeIn*/
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*fadeOut*/
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+
+
+
+/**
+ * 2 - list 목록
+ * ----------------------------------------------------------------------------
+ */
+
+
+.rb-catalog-categroy .card {
+    padding: 30px
+}
+
+.rb-catalog-categroy .card .card-img {
+    width: 100px;
+    height: 100px
+}
+
+
+
+
+.rb-catalog-list .content {
+    background-color: #E2E3E4;
+    background-image: url('./image/content-bg.png');
+    background-position: bottom;
+}
+.rb-catalog-list .swiper-container {
+    padding-bottom: 30px
+}
+.rb-catalog-list .content .card {
+    padding: 15px
+}
+
+.rb-catalog-list .content .card img {
+    margin: 15px 0 30px
+}
+
+.rb-catalog-list .content .card dt .badge {
+    border-radius: 4px;
+    min-width: 50px;
+    text-align: center;
+}
+.rb-catalog-list .content .card dd {
+    letter-spacing: -1px
+}
+
+.rb-catalog-list .swiper-button-prev, 
+.rb-catalog-list .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    width: 27px;
+    height: 44px;
+    margin-top: -22px;
+    background-image: none;
+    color: #fff;
+}
+.rb-catalog-list .swiper-button-prev {
+    left: 15px
+}
+.rb-catalog-list .swiper-button-next {
+    right: 23px
+}
+.rb-catalog-list .swiper-button-prev .icon, 
+.rb-catalog-list .swiper-button-next .icon {
+    font-size: 40px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+    z-index: 10
+}
+
+
+/**
+ * 3 - view 보기
+ * ----------------------------------------------------------------------------
+ */
+
+
+
+
+.rb-catalog-view .content {
+    background-color: #f3f2f3;
+    background-image: url('./image/content-bg.png');
+    background-position: bottom;
+}
+
+.rb-catalog-view .content section {
+    margin-top: 30px;
+    margin-bottom: 10px
+}
+
+
+
+
+/**
+ * 4 - modal 
+ * ----------------------------------------------------------------------------
+ */
+
+.modal .rb-catalog-view .bar-nav {
+    box-shadow: none;
+    background-color: transparent;
+    border-bottom: none;
+    z-index: 11;
+}
+
+.modal .rb-catalog-view .bar-nav .title {
+    color: transparent;
+}
+
+.modal .rb-catalog-view .bar-nav .btn {
+    color: #fff;
+}
+
+.modal .rb-catalog-view  .bar-nav ~ .content {
+    padding-top: 0;
+}
+
+.modal .rb-catalog-view .bar-nav.rb-inverse {
+    background-color: #453107;
+}
+.modal .rb-catalog-view .bar-nav.rb-inverse .title {
+    color: #fff;
+}
+
