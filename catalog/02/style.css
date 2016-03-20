@@ -113,6 +113,9 @@ body {
  * ----------------------------------------------------------------------------
  */
 
+.rb-catalog-categroy .content {
+    background-color: #E2E3E4;
+}
 
 .rb-catalog-categroy .card {
     padding: 30px;
@@ -124,13 +127,8 @@ body {
     height: 100px
 }
 
-
-
-
 .rb-catalog-list .content {
     background-color: #E2E3E4;
-    background-image: url('./image/content-bg.png');
-    background-position: bottom;
 }
 .rb-catalog-list .swiper-container {
     padding-bottom: 30px
