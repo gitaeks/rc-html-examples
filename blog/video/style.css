@@ -1,0 +1,214 @@
+/**
+ * layout 레이아웃 영역
+ * ----------------------------------------------------------------------------
+ */
+
+body {
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: 'Malgun Gothic','맑은 고딕',sans-serif;
+    color: #333;
+}
+
+/*bar-nav 영역 버튼 터치범위 확장*/
+.bar a.pull-left,
+.bar .btn-link.pull-left {
+    margin-left: -10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.bar a.pull-right,
+.bar .btn-link.pull-right {
+    margin-right: -10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+/*rb-menu*/
+
+.rb-menu {
+    height: 37px;
+}
+
+.rb-menu ~ .content {
+    padding-top: 80px;
+}
+
+.rb-menu .segmented-control {
+    top: 2px;
+    border: none;
+    border-radius: 0
+}
+
+.rb-menu .segmented-control .control-item {
+    position: relative;
+    background-color: transparent;
+    padding: 10px 3px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap;
+    text-decoration: none;
+    border: none;
+}
+
+.rb-menu .segmented-control .control-item.active {
+    color: #007AFF
+}
+
+.rb-menu .segmented-control .control-item.active:after {
+    position: absolute;
+    bottom: -1px;
+    left: 10px;
+    right: 10px;
+    vertical-align: middle;
+    content: " ";
+    border-bottom: 5px solid;
+    color: #007AFF;
+}
+
+
+
+/**
+ * 1 - global 공통
+ * ----------------------------------------------------------------------------
+ */
+
+.rb-nopost {
+    padding: 100px 0;
+    text-align: center;
+    color: #999;
+    font-size: 14px
+}
+
+.rb-nopost i {
+    display: block;
+    padding-bottom: 5px;
+    color: #ddd;
+    font-size: 5rem
+}
+
+
+/*Responsive embed*/
+.embed-responsive {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.embed-responsive .embed-responsive-item,
+.embed-responsive iframe,
+.embed-responsive embed,
+.embed-responsive object,
+.embed-responsive video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.embed-responsive-16by9 {
+  padding-bottom: 56.25%;
+}
+.embed-responsive-4by3 {
+  padding-bottom: 75%;
+}
+
+
+
+/**
+ * 2 - view 보기
+ * ----------------------------------------------------------------------------
+ */
+
+.rb-format-video .bar-header-secondary {
+    height: 210px;
+    padding: 0;
+    border-bottom: none;
+}
+
+.rb-format-video .bar-header-secondary ~ .content {
+    padding-top: 254px;
+}
+
+.rb-format-video .rb-blog-heading {
+    border-bottom: 1px solid #ddd;
+}
+
+.rb-format-video .rb-blog-heading .rb-title {
+    margin: 10px 0 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.rb-format-video .rb-blog-heading .rb-meta div,
+.rb-format-video .rb-blog-heading .rb-meta dl {
+    margin-bottom: 5px;
+    color: #767676
+}
+
+.rb-format-video .content section {
+    margin-top: 30px;
+    margin-bottom: 10px
+}
+
+.rb-format-video .content .rb-blog-body p {
+    margin-bottom: 2em;
+    font-size: 19px;
+    color: #141414;
+}
+
+/*share*/
+.rb-format-video .content .rb-blog-body .rb-share {
+    margin-top: 20px
+}
+
+.rb-format-video .content .rb-blog-body .rb-share .segmented-control {
+    border: none;
+}
+.rb-format-video .content .rb-blog-body .rb-share .control-item{
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+    border-left: none;
+}
+.rb-format-video .content .rb-blog-body .rb-share-facebook {
+    background-color: #3A5795;
+
+}
+.rb-format-video .content .rb-blog-body .rb-share-twitter {
+    background-color: #59ADEE;
+}
+.rb-format-video .content .rb-blog-body .rb-share-kakao {
+    background-color: #FFEB00;
+    color: #3C1E1E!important
+}
+
+
+/**
+ * 2 - modal 
+ * ----------------------------------------------------------------------------
+ */
+
+.modal .rb-format-video .bar-nav {
+    border: none;
+    background-color: transparent;
+    z-index: 12
+}
+
+.modal .rb-format-video .bar-nav button {
+    color: #fff
+}
+
+.modal .rb-format-video .bar-header-secondary {
+    top: 0;
+} 
+
+.modal .rb-format-video .bar-header-secondary ~ .content {
+    padding-top: 210px;
+}
