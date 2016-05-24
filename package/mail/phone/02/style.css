@@ -164,9 +164,56 @@
 }
 
 .snap-content {
-	background-color: #000
+	background-color: #fff
 }
 
+
+.rb-hidden {
+    display: none;
+}
+
+
+#main-header .btn-nav.pull-left {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    right: auto;
+    bottom: auto;
+}
+#main-header .btn-nav.pull-left span{
+    position: absolute;
+    top: 17px;
+    left: 10px;
+    right: auto;
+    bottom: auto;
+}
+
+#main-header .btn-nav.pull-left .rc-main {
+    opacity: 1;
+    -webkit-transform: scale(1) rotate(360deg);
+    transform: scale(1) rotate(360deg);
+    -webkit-transition: -webkit-transform 100ms cubic-bezier(0.4, 0, 1, 1);
+    transition: transform 100ms cubic-bezier(0.4, 0, 1, 1);
+
+}
+#main-header .btn-nav.pull-left .rc-view {
+    opacity: 0;
+    -webkit-transform: scale(1) rotate(360deg);
+    transform: scale(1) rotate(360deg);
+    -webkit-transition: -webkit-transform 100ms cubic-bezier(0.4, 0, 1, 1);
+    transition: transform 100ms cubic-bezier(0.4, 0, 1, 1);
+}
+
+#main-header.active .btn-nav.pull-left .rc-main {
+    opacity: 0;
+    -webkit-transform: scale(1) rotate(0deg);
+    transform: scale(1) rotate(0deg);
+}
+#main-header.active .btn-nav.pull-left .rc-view {
+    opacity: 1;
+    -webkit-transform: scale(1) rotate(0deg);
+    transform: scale(1) rotate(0deg);
+}
 
 /*transition*/
 .page {
@@ -471,47 +518,49 @@
 
 /*메일보기*/
 
-.modal.rb-view .content {
-	background-color: #fff
+.page.center .content {
+    background-color: #fff;
+    top: 57px
 }
-.modal.rb-view .content header .table-view {
-	padding: 10px 0
+.page.center .content header .table-view {
+    padding: 10px 0
 }
-.modal.rb-view .content header .table-view,
-.modal.rb-view .content section .table-view,
-.modal.rb-view .content header .table-view-cell,
-.modal.rb-view .content section .table-view-cell {
-	border: none;
-}
-
-.modal.rb-view .content header .table-view {
-	border-bottom : 1px solid #eee ;
-}
-.modal.rb-view .content header .table-view-cell h1 {
-	font-size: 22px;
-	font-weight: normal;
+.page.center .content header .table-view,
+.page.center .content section .table-view,
+.page.center .content header .table-view-cell,
+.page.center .content section .table-view-cell {
+    border: none;
 }
 
-.modal.rb-view .content section {
-	margin-top: -15px
+.page.center .content header .table-view {
+    border-bottom : 1px solid #eee ;
+}
+.page.center .content header .table-view-cell h1 {
+    font-size: 22px;
+    font-weight: normal;
 }
 
-.modal.rb-view .content section .table-view-cell .media-object {
-	width: 42px;
-	height: 42px;
-	border-radius: 50%
+.page.center .content section {
+    margin-top: -15px
 }
 
-.modal.rb-view .content section .table-view-cell .rb-more,
-.modal.rb-view .content section .table-view-cell .rb-foward {
-	top: 25%;
-}
-.modal.rb-view .content section .table-view-cell .rb-foward {
-	right: 50px;
+.page.center .content section .table-view-cell .media-object {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%
 }
 
-.modal.rb-view .content article p {
-	font-size: 18px;
-	color: #444;
-	line-height: 1.5
+.page.center .content section .table-view-cell .rb-more,
+.page.center .content section .table-view-cell .rb-foward {
+    top: 25%;
 }
+.page.center .content section .table-view-cell .rb-foward {
+    right: 50px;
+}
+
+.page.center .content article p {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.5
+}
+
