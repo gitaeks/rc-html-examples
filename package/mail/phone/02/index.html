@@ -10,12 +10,14 @@
 <link href="../../../../assets/plugins/ratchet-2.0.2/css/ratchet.css" rel="stylesheet">
 <link href="../../../../assets/plugins/ratchet-2.0.2/css/ratchet-theme-android.css" rel="stylesheet">
 
+<link href="http://kimsq.github.io/rc/dist/css/rc-plus.css" rel="stylesheet">
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 <link href="../../../../assets/plugins/snap/1.9.3/snap.css" rel="stylesheet">
 
 <link rel="stylesheet" href="./style.css">
-<script src="../../../../assets/plugins/ratchet-2.0.2/js/ratchet.js"></script>
+
 
 <style type="text/css">
 
@@ -43,9 +45,10 @@
 
 <body>
 
+
 <div class="snap-drawers">
     <div class="snap-drawer snap-drawer-left" id="drawer-left">
-        <div class="rb-drawer-header rb-sidebar-close" style="background-image: url('../../../../assets/img/cover.jpg');" data-toggle="collapse">
+        <div class="rb-drawer-header rb-sidebar-close" style="background-image: url('../../../../assets/img/cover3.jpg');" data-toggle="collapse">
             <a class="rb-avatar" href="#"><img src="../../../../assets/img/noavatar-blue.png"></a>
             <ul class="table-view">
                 <li class="table-view-cell media">
@@ -168,30 +171,54 @@
 </div> 
 
 <div class="snap-content" id="content-wrap">
-    <div id="homePage" class="page center">
-        <div class="rb-floating-br">
-            <div class="rb-floating-wrap">
-                <a href="javascript:slidePageFrom(page1, 'right');" class="rb-floating-button-main">
-                    <i class="rb-floating-icon fa fa-pencil"></i>
-                </a>
-            </div>
-        </div>
-        <header class="bar bar-nav rb-inverse">
+
+    <header class="bar bar-nav rb-inverse" id="main-header">
+        <div id="list-header">
             <button class="btn btn-link btn-nav pull-left" data-drawer-open="left">
                 <span class="icon icon-bars"></span>
             </button>
-            <a href="#search" class="btn btn-link btn-nav pull-right">
+            <a href="#search" data-toggle="modal" class="btn btn-link btn-nav pull-right">
                 <span class="icon icon-search"></span>
             </a>
             <h1 class="title">
                 받은편지함
             </h1>
-        </header>
+        </div>
+        <div id="view-header" class="rb-hidden">
+            <a class="btn btn-link btn-nav pull-left" data-history="back">
+                <span class="icon icon-left-nav"></span>
+            </a>
+            <button class="btn btn-link btn-nav pull-right">
+                <span class="icon icon-more-vertical"></span>
+            </button>
+            <button class="btn btn-link btn-nav pull-right">
+                <span class="icon fa fa-envelope-o"></span>
+            </button>
+            <button class="btn btn-link btn-nav pull-right">
+                <span class="icon fa fa-trash"></span>
+            </button>
+            <button class="btn btn-link btn-nav pull-right">
+                <span class="icon fa fa-archive"></span>
+            </button>
+            <h1 class="title">
+            </h1>
+        </div>
+    </header>
+
+
+    <div id="page-home" class="page center">
+        <div class="rb-floating-br">
+            <div class="rb-floating-wrap">
+                <a href="#compose" data-toggle="page" data-start="#page-home" class="rb-floating-button-main">
+                    <i class="rb-floating-icon fa fa-pencil"></i>
+                </a>
+            </div>
+        </div>
 
         <div class="content">
             <ul class="table-view">
                 <li class="table-view-cell media">
-                    <a data-toggle="modal" data-target="modal-view">
+                    <a data-toggle="page" data-start="#page-home" data-target="#page-view">
                         <span class="media-object pull-left fa-stack fa-lg">
                             <i class="fa fa-circle fa-stack-2x"></i>
                             <i class="fa fa-stack-1x fa-inverse">K</i>
@@ -205,7 +232,7 @@
                     </a>
                 </li>
                 <li class="table-view-cell media">
-                    <a data-toggle="modal" data-target="modal-view">
+                    <a data-toggle="page" data-start="#page-home" data-target="#page-view" data-transition="right"  data-title="타이틀" data-url="url" data-content="view" data-id="2" data-position-y="250">
                         <span class="media-object pull-left fa-stack fa-lg">
                             <i class="fa fa-circle fa-stack-2x"></i>
                             <i class="fa fa-stack-1x fa-inverse">B</i>
@@ -219,7 +246,7 @@
                     </a>
                 </li>
                 <li class="table-view-cell media">
-                    <a data-toggle="modal" data-target="modal-view">
+                    <a data-toggle="page" data-start="#page-home" data-target="#page-view" data-transition="right"  data-title="타이틀" data-url="url" data-content="view" data-id="2" data-position-y="300">
                         <span class="media-object pull-left fa-stack fa-lg rb-label-positive">
                             <i class="fa fa-circle fa-stack-2x"></i>
                             <i class="fa fa-stack-1x fa-inverse fa-user"></i>
@@ -233,7 +260,7 @@
                     </a>
                 </li>
                 <li class="table-view-cell media">
-                    <a data-toggle="modal" data-target="modal-view">
+                    <a data-toggle="page" data-start="#page-home" data-target="#page-view" data-transition="right"  data-title="타이틀" data-url="url" data-content="view" data-id="2" data-position-y="350">
                         <span class="media-object pull-left fa-stack fa-lg rb-label-negative">
                             <i class="fa fa-circle fa-stack-2x"></i>
                             <i class="fa fa-stack-1x fa-inverse">B</i>
@@ -247,7 +274,7 @@
                     </a>
                 </li>
                 <li class="table-view-cell media">
-                    <a data-toggle="modal" data-target="modal-view">
+                    <a data-toggle="page" data-start="#page-home" data-target="#page-view" data-transition="right"  data-title="타이틀" data-url="url" data-content="view" data-id="2" data-position-y="400">
                         <span class="media-object pull-left fa-stack fa-lg">
                             <i class="fa fa-circle fa-stack-2x"></i>
                             <i class="fa fa-stack-1x fa-inverse">K</i>
@@ -261,7 +288,7 @@
                     </a>
                 </li>
                 <li class="table-view-cell media">
-                    <a data-toggle="modal" data-target="modal-view">
+                    <a data-toggle="page" data-start="#page-home" data-target="#page-view" data-transition="right"  data-title="타이틀" data-url="url" data-content="view" data-id="2" >
                         <span class="media-object pull-left fa-stack fa-lg rb-label-primary">
                             <i class="fa fa-circle fa-stack-2x"></i>
                             <i class="fa fa-stack-1x fa-inverse">B</i>
@@ -275,7 +302,7 @@
                     </a>
                 </li>
                 <li class="table-view-cell media">
-                    <a data-toggle="modal" data-target="modal-view">
+                    <a data-toggle="page" data-start="#page-home" data-target="#page-view" data-transition="right"  data-title="타이틀" data-url="url" data-content="view" data-id="2" >
                         <span class="media-object pull-left fa-stack fa-lg">
                             <i class="fa fa-circle fa-stack-2x"></i>
                             <i class="fa fa-stack-1x fa-inverse">K</i>
@@ -289,7 +316,7 @@
                     </a>
                 </li>
                 <li class="table-view-cell media">
-                    <a data-toggle="modal" data-target="modal-view">
+                    <a data-toggle="page" data-start="#page-home" data-target="#page-view" data-transition="right"  data-title="타이틀" data-url="url" data-content="view" data-id="2" >
                         <span class="media-object pull-left fa-stack fa-lg">
                             <i class="fa fa-circle fa-stack-2x"></i>
                             <i class="fa fa-stack-1x fa-inverse">B</i>
@@ -303,7 +330,7 @@
                     </a>
                 </li>
                 <li class="table-view-cell media">
-                    <a data-toggle="modal" data-target="modal-view">
+                    <a data-toggle="page" data-start="#page-home" data-target="#page-view" data-transition="right"  data-title="타이틀" data-url="url" data-content="view" data-id="2" >
                         <span class="media-object pull-left fa-stack fa-lg">
                             <i class="fa fa-circle fa-stack-2x"></i>
                             <i class="fa fa-stack-1x fa-inverse">K</i>
@@ -317,7 +344,7 @@
                     </a>
                 </li>
                 <li class="table-view-cell media">
-                    <a data-toggle="modal" data-target="modal-view">
+                    <a data-toggle="page" data-start="#page-home" data-target="#page-view" data-transition="right"  data-title="타이틀" data-url="url" data-content="view" data-id="2" >
                         <span class="media-object pull-left fa-stack fa-lg">
                             <i class="fa fa-circle fa-stack-2x"></i>
                             <i class="fa fa-stack-1x fa-inverse">B</i>
@@ -334,9 +361,9 @@
         </div>
     </div>
 
-    <div id="compose" class="page right">
+    <div id="compose" class="page right" style="top:0">
         <header class="bar bar-nav rb-inverse">
-            <a href="javascript:slidePageFrom(homePage, 'left');" class="btn btn-link btn-nav pull-left">
+            <a data-history="back" class="btn btn-link btn-nav pull-left">
             <span class="icon icon-left-nav"></span>
             </a>
             <button class="btn btn-link btn-nav pull-right">
@@ -371,82 +398,60 @@
             </form>
         </div>
     </div>
-</div>
 
+    <div id="page-view" class="page right">
+        <div class="content">
+            <header>
+                <ul class="table-view">
+                    <li class="table-view-cell media">
+                        <a class="navigate-right">
+                            <span class="badge badge-inverted pull-right icon icon-star rb-bookmark"></span>
+                            <div class="media-body">
+                            <h1>메일 주셔서 감사드립니다. 오후에 연락드리겠습니다.</h1>
+                            <p><span class="badge">받은편지함</span> <span class="badge badge-negative">중요</span></p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </header>
+            <section>
+                <ul class="table-view">
+                    <li class="table-view-cell media">
+                        <a class="navigate-right">
+                            <img class="media-object pull-left" src="./image/noavatar-blue.png">
+                            <span class="badge badge-inverted pull-right icon icon-more-vertical rb-more"></span>
+                            <span class="badge badge-inverted pull-right icon fa fa-share rb-foward"></span>
+                            <div class="media-body">
+                                홍길동
+                                <p>받는사람 : break, tester</p>
+                                <p>
+                                    <span class="badge badge-inverted">오후 2:52</span> 
+                                    <span class="badge badge-primary badge-inverted">세부정보 보기</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <article class="content-padded">
 
-<!-- modal -->
-<div id="modal-view" class="modal rb-view rb-effect-scale">
-    <header class="bar bar-nav rb-inverse">
-        <a href="#modal-view" class="btn btn-link btn-nav pull-left">
-            <span class="icon icon-left-nav"></span>
-        </a>
-        <button class="btn btn-link btn-nav pull-right">
-            <span class="icon icon-more-vertical"></span>
-        </button>
-        <button class="btn btn-link btn-nav pull-right">
-            <span class="icon fa fa-envelope-o"></span>
-        </button>
-        <button class="btn btn-link btn-nav pull-right">
-            <span class="icon fa fa-trash"></span>
-        </button>
-        <button class="btn btn-link btn-nav pull-right">
-            <span class="icon fa fa-archive"></span>
-        </button>
-        <h1 class="title">
-        </h1>
-    </header>
+                <p>국제 과학학술지 네이처는 지난달 28일 구글의 인공지능(AI) 바둑 프로그램 '알파고'가 유럽 바둑 챔피언 판후이를 꺾자 이렇게 평가했다. AI가 바둑으로 인간을 이긴 것은 이번이 처음이다. 1997년 체스 챔피언, 2011년 퀴즈쇼 챔피언을 누른 데 이어 AI의 발전 역사에 또 하나의 이정표가 남게 됐다. 학술적 개념으로서의 AI가 탄생한 지 60년만에 이룩한 '쾌거'다.</p>
 
-    <div class="content">
-        <header>
-            <ul class="table-view">
-                <li class="table-view-cell media">
-                    <a class="navigate-right">
-                        <span class="badge badge-inverted pull-right icon icon-star rb-bookmark"></span>
-                        <div class="media-body">
-                        <h1>메일 주셔서 감사드립니다. 오후에 연락드리겠습니다.</h1>
-                        <p><span class="badge">받은편지함</span> <span class="badge badge-negative">중요</span></p>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </header>
-        <section>
-            <ul class="table-view">
-                <li class="table-view-cell media">
-                    <a class="navigate-right">
-                        <img class="media-object pull-left" src="./image/noavatar-blue.png">
-                        <span class="badge badge-inverted pull-right icon icon-more-vertical rb-more"></span>
-                        <span class="badge badge-inverted pull-right icon fa fa-share rb-foward"></span>
-                        <div class="media-body">
-                            홍길동
-                            <p>받는사람 : break, tester</p>
-                            <p>
-                                <span class="badge badge-inverted">오후 2:52</span> 
-                                <span class="badge badge-primary badge-inverted">세부정보 보기</span>
-                            </p>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </section>
-        <article class="content-padded">
+                <p>국제 과학학술지 네이처는 지난달 28일 구글의 인공지능(AI) 바둑 프로그램 '알파고'가 유럽 바둑 챔피언 판후이를 꺾자 이렇게 평가했다. AI가 바둑으로 인간을 이긴 것은 이번이 처음이다. 1997년 체스 챔피언, 2011년 퀴즈쇼 챔피언을 누른 데 이어 AI의 발전 역사에 또 하나의 이정표가 남게 됐다. 학술적 개념으로서의 AI가 탄생한 지 60년만에 이룩한 '쾌거'다.</p>
 
-            <p>국제 과학학술지 네이처는 지난달 28일 구글의 인공지능(AI) 바둑 프로그램 '알파고'가 유럽 바둑 챔피언 판후이를 꺾자 이렇게 평가했다. AI가 바둑으로 인간을 이긴 것은 이번이 처음이다. 1997년 체스 챔피언, 2011년 퀴즈쇼 챔피언을 누른 데 이어 AI의 발전 역사에 또 하나의 이정표가 남게 됐다. 학술적 개념으로서의 AI가 탄생한 지 60년만에 이룩한 '쾌거'다.</p>
+                <p>국제 과학학술지 네이처는 지난달 28일 구글의 인공지능(AI) 바둑 프로그램 '알파고'가 유럽 바둑 챔피언 판후이를 꺾자 이렇게 평가했다. AI가 바둑으로 인간을 이긴 것은 이번이 처음이다. 1997년 체스 챔피언, 2011년 퀴즈쇼 챔피언을 누른 데 이어 AI의 발전 역사에 또 하나의 이정표가 남게 됐다. 학술적 개념으로서의 AI가 탄생한 지 60년만에 이룩한 '쾌거'다.</p>
 
-            <p>국제 과학학술지 네이처는 지난달 28일 구글의 인공지능(AI) 바둑 프로그램 '알파고'가 유럽 바둑 챔피언 판후이를 꺾자 이렇게 평가했다. AI가 바둑으로 인간을 이긴 것은 이번이 처음이다. 1997년 체스 챔피언, 2011년 퀴즈쇼 챔피언을 누른 데 이어 AI의 발전 역사에 또 하나의 이정표가 남게 됐다. 학술적 개념으로서의 AI가 탄생한 지 60년만에 이룩한 '쾌거'다.</p>
+                <p>국제 과학학술지 네이처는 지난달 28일 구글의 인공지능(AI) 바둑 프로그램 '알파고'가 유럽 바둑 챔피언 판후이를 꺾자 이렇게 평가했다. AI가 바둑으로 인간을 이긴 것은 이번이 처음이다. 1997년 체스 챔피언, 2011년 퀴즈쇼 챔피언을 누른 데 이어 AI의 발전 역사에 또 하나의 이정표가 남게 됐다. 학술적 개념으로서의 AI가 탄생한 지 60년만에 이룩한 '쾌거'다.</p>
 
-            <p>국제 과학학술지 네이처는 지난달 28일 구글의 인공지능(AI) 바둑 프로그램 '알파고'가 유럽 바둑 챔피언 판후이를 꺾자 이렇게 평가했다. AI가 바둑으로 인간을 이긴 것은 이번이 처음이다. 1997년 체스 챔피언, 2011년 퀴즈쇼 챔피언을 누른 데 이어 AI의 발전 역사에 또 하나의 이정표가 남게 됐다. 학술적 개념으로서의 AI가 탄생한 지 60년만에 이룩한 '쾌거'다.</p>
-
-            <p>국제 과학학술지 네이처는 지난달 28일 구글의 인공지능(AI) 바둑 프로그램 '알파고'가 유럽 바둑 챔피언 판후이를 꺾자 이렇게 평가했다. AI가 바둑으로 인간을 이긴 것은 이번이 처음이다. 1997년 체스 챔피언, 2011년 퀴즈쇼 챔피언을 누른 데 이어 AI의 발전 역사에 또 하나의 이정표가 남게 됐다. 학술적 개념으로서의 AI가 탄생한 지 60년만에 이룩한 '쾌거'다.</p>
-
-        </article>
+            </article>
+        </div>
     </div>
 </div>
 
 
-<div id="search" class="modal rb-search rb-effect-scale">
+<div id="search" class="modal rb-search zoom">
     <header class="bar bar-nav">
-        <a href="#search" class="btn btn-link btn-nav pull-left" data-drawer-open="left">
+        <a  class="btn btn-link btn-nav pull-left" data-history="back">
             <span class="icon icon-left-nav"></span>
         </a>
         <h1 class="title"><input type="search" placeholder="메일검색"></h1>
@@ -455,7 +460,7 @@
     <div class="content">
         <ul class="table-view">
             <li class="table-view-cell media">
-                <a href="#search" class="">
+                <a class="" data-history="back">
                     <span class="media-object pull-left icon fa fa-clock-o fa-lg"></span>
                     <div class="media-body">
                         검색어 1
@@ -463,7 +468,7 @@
                 </a>
             </li>
             <li class="table-view-cell media">
-                <a href="#search" class="">
+                <a class="" data-history="back">
                     <span class="media-object pull-left icon fa fa-clock-o fa-lg"></span>
                     <div class="media-body">
                         검색어 2
@@ -471,7 +476,7 @@
                 </a>
             </li>
             <li class="table-view-cell media">
-                <a href="#search" class="">
+                <a class="" data-history="back">
                     <span class="media-object pull-left icon fa fa-clock-o fa-lg"></span>
                     <div class="media-body">
                         검색어 3
@@ -483,133 +488,77 @@
 </div>
 
 <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-<script src="../../../../assets/plugins/jquery.finger/0.1.2/jquery.finger.min.js"></script>
+<script src="http://kimsq.github.io/rc/dist/js/rc-control.js"></script>
+<script src="http://kimsq.github.io/rc/dist/js/rc-component.js"></script>
+<script src="http://kimsq.github.io/rc/dist/js/rc-extension.js"></script>
 
 <script src="../../../../assets/plugins/snap/1.9.3/snap.min.js"></script>
 
-
 <script>
 
-$('[data-toggle=modal]').on('tap',function(){
+$('#page-view').on('shown.rc.page', function() {
+    $('#view-header').removeClass('rb-hidden')
+    $('#list-header').addClass('rb-hidden')
+})
+$('#page-view').on('hidden.rc.page', function() {
+    $('#view-header').addClass('rb-hidden')
+    $('#list-header').removeClass('rb-hidden')
+})
+$('#compose').on('shown.rc.page', function() {
+    $('#main-header').addClass('rb-hidden')
+})
+$('#compose').on('hidden.rc.page', function() {
+    $('#main-header').removeClass('rb-hidden')
+})
 
-    var url =  $(this).data('remote');
-    var title =  $(this).data('title');
-
-    var modal =  '#' + $(this).data('target');
-
-    $(modal).addClass("active");
-    $(modal).find('.bar-nav .title').text(title);
-
-    History.pushState({step:2}, title, url);
-    window.addEventListener("popstate", function () {
-        $(modal).removeClass('active')
-    });
-
+// Instance
+snapper = new Snap({
+    element: $("#drawer-left")[0],
+    maxPosition: 1,
+    minPosition: -1,
+    transitionSpeed: 0.1,
+    tapToClose: true,
+    touchToDrag: true
+}),
+snapper.on('open', function(){
+    $('.snap-content').append('<div class="backdrop" data-drawer-close="left"></div>');
 });
-
-    $('#modal-settings').on('tap','[data-form=submit]',function(){
-        var message =  $(this).data('feedback-text');
-        $(this).removeClass('active');
-        window.history.back();
-        if (message) { 
-            feedback.show(message);
-        } else {
-          feedback.show("저장 되었습니다.");
-        }
-    });
-
-var homePage = document.getElementById("homePage"),
-    page1 = document.getElementById("compose"),
-    currentPage = homePage;
-
-    function slidePageFrom(page, from) {
-        // Position the page at the starting position of the animation
-        page.className = "page " + from;
-        // Position the new page and the current page at the ending position of their animation with a transition class indicating the duration of the animation
-        page.className ="page transition center";
-        currentPage.className = "page transition " + (from === "left" ? "right" : "left");
-        currentPage = page;
-    }
-
-
-    // Instance
-    snapper = new Snap({
-        element: $("#drawer-left")[0],
-        maxPosition: 1,
-        minPosition: -1,
-        transitionSpeed: 0.1,
-        tapToClose: true,
-        touchToDrag: true
-    }),
-
-    snapper.on('open', function(){
-        $('.snap-content').append('<div class="backdrop" data-drawer-close="left"></div>');
-    });
-
-
-    snapper.on('close', function(){
-        $(".backdrop").remove();
-    });
-
-    $('body').on('tap click', '[data-drawer-close="left"]', function() {
-        snapper.close('left');
-    });
-    $('body').on('click', '[data-drawer-open="left"]', function() {
+snapper.on('close', function(){
+    $(".backdrop").remove();
+});
+$('body').on('tap click', '[data-drawer-close="left"]', function() {
+    snapper.close('left');
+});
+$('body').on('click', '[data-drawer-open="left"]', function() {
+    snapper.open('left');
+});
+$('body').on('click', '[data-drawer-expand="left"]', function() {
+    snapper.expand('left');
+});
+$('body').on('tap click','[data-drawer-toggle="left"]',function(){
+    if( snapper.state().state=="left" ){
+        snapper.close();
+    } else {
         snapper.open('left');
-    });
-    $('body').on('click', '[data-drawer-expand="left"]', function() {
-        snapper.expand('left');
-    });
-    $('body').on('tap click','[data-drawer-toggle="left"]',function(){
-        if( snapper.state().state=="left" ){
-            snapper.close();
-        } else {
-            snapper.open('left');
-        }
-    });
-
-    $('body').on('click', '[data-drawer-close="right"]', function() {
-        snapper.close('right');
-    });
-    $('body').on('click', '[data-drawer-open="right"]', function() {
-        snapper.open('right');
-    });
-    $('body').on('click', '[data-drawer-expand="right"]', function() {
-        snapper.expand('right');
-    });
-    $('body').on('click','[data-drawer-toggle="right"]',function(){
-        if( snapper.state().state=="right" ){
-            snapper.close();
-        } else {
-            snapper.open('right');
-        }
-    });
-
-
-
-$( document ).ready(function() {
-
-    //jquery.collapse : https://github.com/danielstocks/jQuery-Collapse
-    var doCollapse = function(){
-
-        new jQueryCollapse($("#drawer-pages"), {
-            query: '[data-toggle=collapse]',
-            persist: true
-        });
-
-        new jQueryCollapse($("#drawer-menus"), {
-            query: '[data-toggle=collapse]',
-            accordion: true,
-            persist: true
-        });
-
-    };
-
-    // push.js-jquery.collapse 바인드
-    // window.addEventListener('push', doCollapse);
-    doCollapse();
-
+    }
 });
+$('body').on('click', '[data-drawer-close="right"]', function() {
+    snapper.close('right');
+});
+$('body').on('click', '[data-drawer-open="right"]', function() {
+    snapper.open('right');
+});
+$('body').on('click', '[data-drawer-expand="right"]', function() {
+    snapper.expand('right');
+});
+$('body').on('click','[data-drawer-toggle="right"]',function(){
+    if( snapper.state().state=="right" ){
+        snapper.close();
+    } else {
+        snapper.open('right');
+    }
+});
+
 
 </script>
 
