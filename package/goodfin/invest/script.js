@@ -1,3 +1,20 @@
+$('#widget-01 .card').click(function(){
+    $('#product-view').modal({
+        template: './component/modal-view.html'
+    });
+});
+
+$('#product-view').on('loaded.rc.modal', function () {
+    var swiper5 = new Swiper('#product-view .swiper-container', {
+        pagination: '#product-view .swiper-pagination',
+        spaceBetween: 0,
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+    });
+})
+
+
 // The function that will initialize your Swiper.js instance
 var doSwiper = function(){
     var swiper = new Swiper('#widget-01 .swiper-container', {
@@ -27,12 +44,6 @@ var doSwiper = function(){
         centeredSlides: true,
         paginationClickable: true,
         spaceBetween: 10,
-    });
-
-    var swiper5 = new Swiper('#product-view .swiper-container', {
-        pagination: '.swiper-pagination',
-        spaceBetween: 10,
-        paginationClickable: true,
     });
 
 };
