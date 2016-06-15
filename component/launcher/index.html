@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Launcher</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<link href="http://kimsq.github.io/rc/dist/css/ratchet.css" rel="stylesheet">
+<link href="http://kimsq.github.io/rc/dist/css/rc-plus.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="./style.css">
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+</head>
+<body>
+    
+<header class="bar bar-nav">
+  <h1 class="title">Launcher</h1>
+</header>
+
+<div class="content">
+
+
+	<div class="launcher">
+
+		<div class="material">
+
+		</div>
+		<div class="icon">
+		<a href="#0">
+			<!-- SVG icon from https://google.github.io/material-design-icons/ -->
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+			    <path d="M4 8h4v-4h-4v4zm6 12h4v-4h-4v4zm-6 0h4v-4h-4v4zm0-6h4v-4h-4v4zm6 0h4v-4h-4v4zm6-10v4h4v-4h-4zm-6 4h4v-4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/>
+			    <path d="M0 0h24v24h-24z" fill="none"/>
+			</svg>
+		</a>
+
+	</div>
+
+
+</div>
+
+
+<script type="text/javascript">
+$('.icon a').on('click',function(event){
+  event.preventDefault();
+  $('.material').toggleClass('active');
+});
+</script>
+
+
+</body>
+</html>
