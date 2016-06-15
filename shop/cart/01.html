@@ -1,0 +1,50 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Feed</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- system-style -->
+    <link rel="stylesheet" href="../../assets/css/sys.css">
+
+    <link href="../../assets/plugins/ratchet-2.0.2/css/ratchet.css" rel="stylesheet">
+    <link href="../../assets/css/ratchet-theme-rb.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./01.css">
+
+    <script src="../../assets/plugins/ratchet-2.0.2/js/ratchet.js"></script>
+
+  </head>
+  <body>
+    <header class="bar bar-nav">
+      <h1 class="title">피드</h1>
+    </header>
+
+    <div class="bar bar-footer">
+      <a class="icon icon-compose pull-right" href="#modal-feed-default"></a>
+    </div>
+
+    <div class="content"></div>
+
+    <!-- modal -->
+    <div id="modal-feed-default" class="modal rb-topsubmit">
+        <header class="bar bar-nav">
+            <a class="btn btn-link pull-left" href="#modal-feed-default">취소</a>
+            <h1 class="title">이슈작성</h1>
+        </header>
+
+        <div class="content">
+            <form class="input-group">
+                <input type="text" placeholder="To:">
+                <input type="email" placeholder="From:">
+                <input type="text" placeholder="Subject:">
+                <textarea rows="20"></textarea>
+                <button class="btn btn btn-link" type="submit">게시</button>
+            </form>
+        </div>
+    </div><!-- /.modal -->
+
+</body>
+</html>

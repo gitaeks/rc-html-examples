@@ -1,96 +1,111 @@
 
 <div id="page-step1" class="page center">
-    <header class="bar bar-nav rb-nav">
+    <header class="bar bar-nav bar-inverse">
         <a class="icon icon-left-nav pull-left" data-history="back"></a>
-        <button class="btn btn-link btn-nav pull-right" data-toggle="popup" data-target="#popup-share">
-            <span class="icon icon-more-vertical"></span>
-        </button>
-        <h1 class="title">
-           <span data-role="title"></span>
+        <h1 class="title" data-role="title">
+           
         </h1>
     </header>
 
     <div class="bar bar-standard bar-footer">
-        <a class="btn btn-positive btn-block" data-toggle="page" data-start="#page-step1" href="#page-step2">투자하기</a>
+        <a class="btn btn-primary btn-block" data-toggle="page" data-start="#page-step1" href="#page-step2">구매하기</a>
     </div>
 
-    <div class="content" style="top:0">
+    <div class="content">
 
-        <div class="rb-cover">
-            <div class="card-img-backdrop rb-cover-bg"></div>
-            <div class="swiper-container" data-extension="swiper" data-pagination="true" data-spaceBetween="0">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">  
-                        <img src="http://goodfinance.co.kr/layouts/jumbotron/_images/pic-01.jpg" class="img-responsive">
-                    </div>
-                    <div class="swiper-slide">  
-                        <img src="http://goodfinance.co.kr/layouts/jumbotron/_images/pic-02.jpg" class="img-responsive">
-                    </div>
+        <div class="swiper-container" id="product-view">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">  
+                    <p><img src="./images/product-01-650.jpg" class="img-responsive"></p>
                 </div>
-                 <div class="swiper-pagination"></div>
+                <div class="swiper-slide">  
+                    <p><img src="./images/product-02-650.jpg" class="img-responsive"></p>
+                </div>
             </div>
+             <div class="swiper-pagination"></div>
         </div>
 
-
-
         <div class="content-padded">
-            <span class="badge badge-inverted">68명 참여</span>
-            <span class="badge badge-positive badge-inverted">매입보증채권</span>
-            <h3 class="rc-title" data-role="title"></h3>
+            <span class="badge badge-inverted">91개 구매</span>
+            <span class="badge badge-positive badge-inverted">책임배송보상</span>
+            <h3 class="rc-title">흑염소 골드 한마리+녹용반재</h3>
             <h3 class="rc-price">410,000원 <span class="badge badge-negative">HIT</span></h3>
         </div>
 
         <div class="card">
             <ul class="table-view rb-cart">
-                <li class="table-view-cell"><small>펀딩금액</small> <span class="badge">4억 5000만</span></li>
-                <li class="table-view-cell"><small>최소투자금액</small> <span class="badge">100만</span></li>
+                <li class="table-view-cell"><small>제조사</small> <span class="badge">덕유농장</span></li>
+                <li class="table-view-cell"><small>원산지</small> <span class="badge">대한민국</span></li>
             </ul>
         </div>
 
 
-        <div class="segmented-control content-padded" data-control="affix" data-offset="50">
+
+        <div class="sns_area">
+            <dl>
+                <dt class="hide">SNS로 공유하기</dt>
+                <dd><a class="fb btn_share" data-target="news" data-id="19998016" data-service="facebook" href="#none" onclick="try { ga('total.send', 'event', 'Engaging', 'Facebook', document.title, 1); } catch (e) { }">페이스북</a></dd>
+                <dd><a class="tw btn_share" data-target="news" data-id="19998016" data-service="twitter" href="#none" onclick="try { ga('total.send', 'event', 'Engaging', 'Twitter', document.title, 1); } catch (e) { }">트위터</a></dd>
+                <dd><a class="ks btn_share" data-target="news" data-id="19998016" data-service="kakaostory" href="#none" onclick="try { ga('total.send', 'event', 'Engaging', 'Kakaostory', document.title, 1); } catch (e) { }">카카오스토리</a></dd>
+                <dd><a class="rp openSnsShareService" href="#none">더보기</a></dd>
+            </dl>
+        </div>
+
+
+        <div class="segmented-control content-padded">
             <a class="control-item active" href="#item1mobile">
-                투자요약
+                상품설명
             </a>
             <a class="control-item" href="#item2mobile">
-                건물정보
+                상품후기
             </a>
             <a class="control-item" href="#item3mobile">
-                평가등급
+                상품문의
             </a>
-            <a class="control-item" href="#item4mobile">
-                위치정보
+            <a class="control-item" href="#item3mobile">
+                환불/교환
             </a>
-
         </div>
         <div class="content-padded rb-article">
             <span id="item1mobile" class="control-content active">
-                <ul>            
-                    <li>투자상품 : 건축자금채권</li>
-                    <li>모집금액 : 1차 4.5억원(모집중) + 2차 4.3억원(예정) = 총 8.8억원</li>
-                    <li>연수익률 : 12.8%</li>
-                    <li>투자기간 : 12개월</li>
-                    <li>상환방식 : 매월 이자 지급 후 원금은 만기일시상환 (중도상환가능)</li>
-                    <li>상환재원 : 준공 후 분양(임대) 또는 담보대출</li>
-                    <li>자금용도 : 토지 선순위 담보대출 상환 2.1억원 + 공사비 6억원 + 기타비용 0.7억원 = 총8.8억원</li>
-                </ul>
 
-                <div class="content-padded">
-                    <h3>"착한금융을 즐겨라"</h3>
-                    <p>지난 4월 2일~3일 잠실야구장, 문학구장에 이어, 이번에는 서울 주요 거점에서 사이다를 무료로 증정합니다.</p>
-                    <p>지또 주요 지하철 역사에서도 사이다를 무료로 나눠드리는 게릴라 증정 이벤트가 준비되어 있습니다. 지하철 게릴라 이벤트는 4월 12일부터 한 달간 공덕역, 강남역, 신도림역, 시청역, 영등포, 건대입구역, 가산디지털단지역, 양재역, 고속터미널역, 삼성역, 왕십리역, 선릉역, 종각역 릴레이로 진행됩니다.</p>
-                    <p>지오는 6월말까지 진행되는 #사이다데이 릴레이 이벤트에 많은 관심 바랍니다. 이벤트의 자세한 사항은 페이스북을 통해 안내드릴 예정입니다.</p>
-                </div>
+                <p>
+                흑염소 한마리+녹용반재+의성흑마늘+청매실 첨가+한약재19가지 110g 130포 덕유농장에서 자연 방목한 흑염소로 직접 만든 흑염소 골드 엑기스입니다.
+                </p>
+                <p>
+                소중한 분께 선물용으로, 사랑하는 가족을 위한 건강식품, 흑염소 중탕입니다. 저희 덕유농장에서 직접 방목하여 기른 흑염소이기 때문에 믿을 수 있고, 유통의 중간거품을 줄이고 생산지 농가에서 직접 보내드리기 때문에 좋은 상품을 저렴한 가격에 공급이 가능하게 되었습니다.
+                </p>
 
+
+                <h3>덕유농장의 흑염소 골드 중탕은?</h3>
+
+                <p>
+                영천의 공기좋고 물맑은 보현산 자락의 덕유농장에서 직접 자연 방목하여 기른 흑염소와 몸에 좋은 꽃사슴 녹용반재를 첨가 그리고 의성 흑마늘, 청매실 첨가, 우리 약재(19가지)포함 하여 농장에서 직접 만든 엑기스입니다. 
+                </p>
+
+                <p><img src="http://www.dufarm.co.kr/system/template/index/default/image/005.jpg"> </p>
+
+                <p>
+                첨가 한약재)생강,대추,천궁,당귀,황귀,작약,백출,복령,구기자,숙지황,감초,육계,하수오,갈근,진피,
+                오가피,맥아,상지,두지
+                </p>
+
+                <p>
+                흑염소 골드는 어린이, 노약자 기력회복에 더욱 좋은 녹용과  고혈압 예방, 소화촉진에 탁월한 의성 흑마늘과 5년간 숙성시킨청매실 첨가 건강유지를 위한 건강식품으로서 크게 각광받고 있습니다. 1일 2-3회 내용물을 따뜻하게 데워서 드시면 됩니다. 
+                </p>
+
+                <p>
+                ※보관상 유의사항 : 제품은 직사 광선을 받지 아니하는 서늘한 곳에서 보관하면 됩니다.
+                </p>
             </span>
             <span id="item2mobile" class="control-content">
-                건물정보
+                상품후기
             </span>
             <span id="item3mobile" class="control-content">
-                평가등급
+                상품문의
             </span>
             <span id="item4mobile" class="control-content">
-                위치정보
+                환불/교환
             </span>
         </div>
     </div>
@@ -98,24 +113,24 @@
 
 <!-- step 2 Page -->
 <div id="page-step2" class="page right">
-    <header class="bar bar-nav rb-inverse">
+    <header class="bar bar-nav bar-inverse">
         <a class="icon icon-left-nav pull-left" data-history="back">
         </a>
         <a class="icon fa fa-paper-plane pull-right" href="#page-step3" data-toggle="page" data-start="#page-step2">
         </a>
-        <h1 class="title">투자하기</h1>
+        <h1 class="title">구매하기</h1>
     </header>
 
     <div class="content">
 
         <ul class="table-view">
-            <li class="table-view-cell table-view-divider">투자상품 정보</li>
+            <li class="table-view-cell table-view-divider">주문상품 정보</li>
 
             <li class="table-view-cell media">
                 <a>
-                    <img class="media-object pull-left" src="http://goodfinance.co.kr/layouts/jumbotron/_images/pic-02.jpg" style="width: 64px">
+                    <img class="media-object pull-left" src="../../../../assets/img/shop-01.png" style="width: 64px">
                     <div class="media-body">
-                        제54차 제주도 타운하우스 신축프로젝트
+                        흑염소 골드 한마리+녹용반재
                         <p><span class="badge badge-primary badge-inverted">2개</span></p>
                     </div>
                 </a>
@@ -198,14 +213,14 @@
 
 <!-- step 3 Page -->
 <div id="page-step3" class="page right">
-    <header class="bar bar-nav rb-inverse">
-        <h1 class="title">투자성공</h1>
+    <header class="bar bar-nav bar-inverse">
+        <h1 class="title">결제성공</h1>
     </header>
 
     <div class="bar bar-standard bar-footer">
         <div class="segmented-control">
             <a class="control-item" data-history="back">닫기</a>
-            <a class="control-item" data-history="back">투자내역 조회</a>
+            <a class="control-item" data-history="back">주문/배송조회</a>
         </div>
     </div>
 
@@ -216,47 +231,8 @@
             <i class="fa fa-paper-plane fa-5x" aria-hidden="true"></i>
         </p>
         <br>
-        <h3 class="rb-message">투자 완료되었습니다.</h3>
+        <h3 class="rb-message">주문이 완료되었습니다.</h3>
 
 
     </div>
 </div>
-
-
-<script type="text/javascript">
-
-
-// 애니메이션 바
-(function($){
-    var fadeStart=40
-        ,fadeUntil=160
-        ,fading = $('.rb-cover-image')
-        ,fading2 = $('.rb-cover-bg')
-        ,fading3 = $('.rb-nav')
-        ,fading4 = $('.rb-cover-name')
-    ;
-    $('.content').bind('scroll', function(){
-        var offset = $(this).scrollTop()
-            ,opacity=0
-            ,opacity2=1
-        ;
-        if( offset<=fadeStart ){
-            opacity=1;
-            opacity2=0;
-            opacity4=1;
-            fading3.removeClass('rb-inverse fadeIn animated');
-        }else if( offset<=fadeUntil ){
-            opacity=1-offset/fadeUntil;
-            opacity2=offset/fadeUntil;
-            opacity4=0.7-offset/fadeUntil;
-            fading3.removeClass('rb-inverse fadeIn animated');
-        }else if( offset>fadeUntil ){
-            fading3.addClass('rb-inverse fadeIn animated');
-        }
-        fading.css('opacity',opacity);
-        fading2.css('opacity',opacity2);
-        fading4.css('opacity',opacity4);
-        
-    });
-})(jQuery)
-</script>

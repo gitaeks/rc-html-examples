@@ -1,0 +1,54 @@
+.rb-oneline-list .bar-footer {
+    min-height: 44px;
+    height: auto;
+    padding: 0
+}
+.rb-oneline-list .bar-footer .input-group {
+    position: relative;
+    margin-bottom: 0;
+    padding: 11px 40px 12px 35px;
+}
+.rb-oneline-list .input-group textarea {
+    background-color: #fff;
+    border-bottom: none;
+    margin-bottom: 0;
+    border: none;
+    resize: none;
+    border: none;
+    -webkit-resize: none;
+    max-height: 120px !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.rb-oneline-list .bar-footer .btn-link {
+    padding: 11px 10px 12px 10px;
+    color: #666
+}
+.rb-oneline-list .bar-footer .btn-link .fa {
+    font-size: 21px
+}
+.rb-oneline-list .bar-footer .rb-photo {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    right: auto;
+}
+.rb-oneline-list .bar-footer .rb-submit,
+.rb-oneline-list .bar-footer .rb-emoticon {
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 5px;
+}
+.rb-oneline-list .bar-footer .rb-emoticon .fa {
+    display: inline-block;
+    margin-top: -3px;
+    font-size: 25px;
+    color: #888
+}
+.rb-oneline-list .bar-footer .rb-submit .fa {
+    display: inline-block;
+    margin-top: -3px;
+    font-size: 25px;
+    color: #0084FF
+}

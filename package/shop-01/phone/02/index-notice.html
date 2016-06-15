@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>흑염소 골드 한마리+녹용반재 | 덕유농장</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<link href="../../../../assets/plugins/ratchet-2.0.2/css/ratchet.css" rel="stylesheet">
+<link href="./ratchet-theme-android.css" rel="stylesheet">
+<link href="https://kimsq.github.io/rc/dist/css/rc-plus.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<!-- Swiper : https://github.com/nolimits4web/Swiper -->
+<link href="../../../../assets/plugins/swiper/3.2.7/css/swiper.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./article.css">
+
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://kimsq.github.io/rc/dist/js/rc-control.js"></script>
+<script src="http://kimsq.github.io/rc/dist/js/rc-component.js"></script>
+<script src="http://kimsq.github.io/rc/dist/js/rc-extension.js"></script>
+
+<style type="text/css">
+
+    .swiper-wrapper {
+        height: auto
+    }
+    .swiper-container {
+        width: 100%;
+        height: auto;
+    }
+    .swiper-slide {
+        width: 90%;
+        height: auto;
+    }
+</style>
+
+
+</head>
+
+<body>
+
+
+<header class="bar bar-standard bar-inverse">
+    <a href="#popover-more" data-toggle="popover" data-template="./component/popover-more.html" class="icon icon-more-vertical pull-right"></a>
+    <a href="#modal-cart" data-toggle="modal" data-template="./component/modal-cart.html" class="icon fa fa-shopping-cart fa-lg pull-left"></a>
+    <h1 class="title">
+       <img src="./images/logo.png">
+    </h1>
+</header>
+
+<nav class="bar bar-tab bar-standard bar-header-secondary">
+    <a class="tab-item" href="index.html" data-control="push">
+        홈
+    </a>
+    <a class="tab-item" href="index-gallery.html" data-control="push">
+        둘러보기
+    </a>
+    <a class="tab-item active" href="index-notice.html" data-control="push">
+        공지사항
+        <span class="badge badge-negative">4</span>
+    </a>
+    <a class="tab-item icon icon-more" href="index-more.html" data-control="push">
+        
+    </a>
+</nav>
+
+<div class="content">
+
+    <div class="content-padded">
+        공지사항
+
+         
+    </div>
+
+</div>
+
+<!-- f-button 시작 -->
+<div class="fbutton fbutton-br slidein-spring" id="myFbutton">
+    <div class="fbutton-content">
+
+        <a class="fbutton-button-main" data-toggle="fbutton" data-target="#myFbutton" data-history="true" data-backdrop="true">
+            <i class="fbutton-main-icon-resting fa fa-plus" aria-hidden="true"> </i>
+            <i class="fbutton-main-icon-active fa fa-times" aria-hidden="true"></i>
+        </a>
+
+        <ul class="fbutton-list">
+            <li>
+                <a href="tel:054-337-1533" data-mfb-label="전화상담" class="fbutton-child">
+                    <i class="fbutton-child-icon fa fa-phone" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:cafephoto@naver.com" data-mfb-label="이메일상담" class="fbutton-child">
+                    <i class="fbutton-child-icon fa fa-envelope" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="sms:010-5165-2176" data-mfb-label="카톡상담" class="fbutton-child">
+                    <i class="fbutton-child-icon fa fa-comments-o" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+
+<!-- Popover 시작 -->
+<div id="myPopover" class="popover">
+</div>
+
+<!-- modal 시작 -->
+<div id="modal-cart" class="modal">
+</div>
+
+<div id="notice-view" class="modal zoom">
+    <header class="bar bar-nav bar-inverse">
+        <a class="icon icon-close pull-right" data-history="back"></a>
+        <h1 class="title">가격조정 안내</h1>
+    </header>
+
+    <div class="content">
+        <p class="content-padded">내용</p>
+    </div>
+</div>
+
+<div id="product-view" class="modal zoom">
+
+</div>
+
+<script src="../../../../assets/plugins/swiper/3.2.7/js/swiper.jquery.min.js"></script>
+
+<!-- https://github.com/stephanebachelier/fingerblast.js -->
+<script src="../../../../assets/plugins/fingerblast.js-1.1.1/fingerblast.min.js"></script>
+
+
+<script src="./script.js"></script>
+
+</body>
+</html>

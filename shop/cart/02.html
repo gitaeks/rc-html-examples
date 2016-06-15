@@ -1,0 +1,77 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Feed</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- system-style -->
+    <link rel="stylesheet" href="../../assets/css/sys.css">
+
+   <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link href="../../assets/plugins/ratchet-2.0.2/css/ratchet.css" rel="stylesheet">
+    <link href="../../assets/css/ratchet-theme-rb.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./02.css">
+
+    <script src="../../assets/plugins/ratchet-2.0.2/js/ratchet.js"></script>
+
+  </head>
+
+  <body class="rb-oneline-list">
+    <header class="bar bar-nav">
+        <a class="btn btn-link pull-left" href="#modal-feed-default">취소</a>
+        <h1 class="title">아직 좋아요가 없습니다.</h1>
+    </header>
+
+
+    <!-- 템플릿 시작 -->
+    <div class="bar bar-standard bar-footer">
+
+        <form class="input-group" data-role="form" id="form-issue-oneline">
+            <input type="hidden" name="parent" value="">
+            <input type="hidden" name="uid" value="">
+            <input type="hidden" name="depth" value="">
+            <textarea rows="1" name="content" placeholder="댓글을 입력하세요..."></textarea>
+        
+            <button class="btn btn-link rb-photo"><i class="fa fa-camera"></i></button>
+            <button class="btn btn-link rb-submit" type="submit" style="display: none"><i class="fa fa-paper-plane"></i></button>
+            <button class="btn btn-link rb-emoticon" style="display: none" data-toggle="popup" data-target="" data-content="">
+                <i class="fa fa-smile-o"></i>
+            </button>
+        </form>
+
+    </div>
+    <!-- 템플릿 끝 -->
+
+
+    <div class="content">
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- textarea autosize : https://github.com/jackmoore/autosize -->
+    <script src="../../assets/plugins/autosize-3.0.14/autosize.min.js"></script>
+
+    <script>
+        autosize($('.rb-oneline-list textarea'));
+
+        $('.rb-oneline-list .input-group textarea').on('keyup', function(event) {
+            var $oneline = $('.rb-oneline-list .input-group');
+            
+            $oneline.find('button[type="submit"]').css("display", "none");
+
+            if ($(this).val().length >= 1) {
+                $oneline.find('button[type="submit"]').css("display", "block");
+            }
+        });
+
+    </script>
+
+</body>
+</html>

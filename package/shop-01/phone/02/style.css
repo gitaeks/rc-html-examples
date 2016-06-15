@@ -1,0 +1,581 @@
+
+h3, .h3 {
+    font-size: 18px;
+}
+
+
+.modal .content {
+  background-color: #fff;
+}
+
+.btn-primary {
+    color: #291306;
+    background-color: #F4C740;
+    border: 0;
+}
+
+.bar {background-color: #fff}
+
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+.dl-horizontal dt {
+    float: left;
+    width: 100px;
+    overflow: hidden;
+    clear: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.dl-horizontal dd {
+    margin-left: 120px;
+}
+
+.bar-inverse {
+    background-color: #291306;
+}
+
+.bar-inverse a {
+    color: #fff
+}
+
+
+.bar-inverse .btn-link {
+    color: #fff;
+}
+
+.rb-inverse.bar .btn-link,
+.rb-inverse.bar .title {
+    color: #fff;
+}
+
+.bar .btn-nav.pull-left {
+    margin-left: -10px;
+}
+.bar .btn-nav.pull-right {
+    /*margin-right: -10px;*/
+}
+
+.bar-standard {
+	height: 50px;
+	-webkit-box-shadow: inset 0 0 0 #d2d2d2, 0 3px 3px rgba(0, 0, 0, .07);
+	box-shadow: inset 0 0 0 #d2d2d2, 0 3px 3px rgba(0, 0, 0, .07);
+}
+
+.bar-tab.bar-standard ~ .content {
+    padding-top: 100px;
+}
+
+.bar-tab .tab-item.active {
+    color: #291306;
+    -webkit-box-shadow: inset 0 -2px 0 #291306;
+    box-shadow: inset 0 -2px 0 #291306;
+}
+
+.page .bar.bar-footer {
+    background-color: #444;
+    box-shadow: none;
+}
+
+.backdrop {
+    background-color: rgba(0, 0, 0, .3);
+}
+
+
+.bar .title {
+    position: absolute;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0 -10px;
+    font-weight: 500;
+    color: #000;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.bar.bar-inverse .title {
+    color: #fff
+}
+
+.bar .title img {
+    margin-top: 2px;
+    width: 120px
+}
+
+.bar .icon {
+    font-size: 24px;
+}
+
+.bar .btn-link .icon {
+    top: 4px;
+}
+
+.bar .btn-link {
+	padding: 0 10px;
+}
+
+.bar-nav ~ .content {
+    padding-top: 57px;
+}
+
+
+.bar-tab .tab-item {
+    position: relative;
+}
+.bar-tab .tab-item .badge {
+    position: absolute;
+    top: 4px;
+    right: -3px;
+    padding: 4px 7px;
+}
+
+.content > .table-view:first-child {
+    margin-top:0;
+}
+.content .table-view-cell > a > .rb-time {
+	top: 25%;
+}
+.content .table-view-cell > a > .rb-bookmark {
+	top: 65%;
+}
+
+
+.content .table-view-cell .media-object {
+	color: #9E9E9E
+}
+
+.content .table-view-cell {line-height: 1.5}
+.content .table-view-cell p {
+	line-height: 1.3
+}
+
+.content .rb-jumbotron {
+    margin-top: -10px;
+    margin-left: 0;
+    margin-right: 0;
+    height: 130px;
+    background-color: #252525;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: none;
+    border-radius: 0
+}
+
+.content .rb-jumbotron:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.1)),to(rgba(0,0,0,.6)));
+    background-image: -moz-linear-gradient(top,rgba(0,0,0,.1),rgba(0,0,0,.6));
+    background-image: -o-linear-gradient(top,rgba(0,0,0,.1),rgba(0,0,0,.6));
+    background-image: linear-gradient(to bottom,rgba(0,0,0,.1),rgba(0,0,0,.6));
+    content: '';
+}
+
+.content .rb-jumbotron .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    padding: 0;
+    margin-left: -20px;
+    margin-top: -20px;
+    font-size: 3rem;
+    background-color: transparent;
+    box-shadow: none;
+    color: #eee;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+
+.content .rb-jumbotron .badge {
+    position: absolute;
+    left: 1px;
+    bottom: 1px;
+    color: #fff;
+    background-color: rgba(0,0,0,.5);
+    font-size: .8em;
+    border-radius: 0;
+}
+
+
+
+
+/*쓰기전용*/
+#compose .input-group {
+    box-shadow: none;
+}
+#compose .input-row label {
+    width: 23%;
+    text-align: center;
+    font-size: 16px;
+    color: #999
+}
+#compose .input-row input {
+    width: 77%;
+}
+#compose .input-row label + select {
+    width: 77%;
+}
+#compose .content {
+    background-color: #fff
+}
+#compose .content textarea {
+    border-bottom: none;
+    border: none;
+    border-radius: 0;
+    resize: none;
+    box-shadow: none;
+}
+#compose .input-group {
+    background-position: inherit; 
+}
+
+
+@media (max-width: 360px) {
+    #compose .input-row label {
+        padding: 10px 5px;
+    } 
+}
+
+.input-row.rb-navigate-down {
+    position: relative;
+}
+
+.input-row label + select {
+    float: right;
+    font-size: 16px;
+    padding-left: 0;
+    padding-right: 30px;
+    margin-bottom: 0;
+    border-bottom: 0;
+    background-color: #fff;
+    color: #ABABAB;
+    line-height: 16px;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.input-row.rb-navigate-down:after {
+    content: "\e814";
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    display: inline-block;
+    font-family: Ratchicons;
+    font-size: inherit;
+    line-height: 1;
+    color: #bbb;
+    text-decoration: none;
+}
+
+
+/*유틸리티*/
+.fa-stack.rb-label-positive .fa-stack-2x {
+	color: #FF8A65
+}
+.fa-stack.rb-label-primary .fa-stack-2x {
+	color: #B39DDB
+}
+.fa-stack.rb-label-negative .fa-stack-2x {
+	color: #F06292
+}
+
+
+/*검색전용*/
+
+.rb-search .bar {
+	box-shadow: inset 0 0 0 #d2d2d2, 0 1px 1px rgba(0, 0, 0, .07); 
+}
+
+.rb-search .bar input {
+	display: inline-block;
+	margin-left: -20px;
+	border: none;
+	box-shadow: none;
+}
+.rb-search .content {
+	background-color: #fff
+}
+.rb-search .table-view,
+.rb-search .table-view .table-view-cell {
+    border-bottom: none;
+}
+.rb-search .table-view .table-view-cell a {
+	color: #777
+}
+.rb-search .table-view .media-object.pull-left {
+	margin-top: 3px;
+    margin-right: 20px;
+}
+
+/*Modal Effect*/
+
+ .rb-effect-scale {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    visibility: hidden;
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    z-index: 1
+}
+ .rb-effect-scale.active {
+    z-index: 11;
+    visibility: visible;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+
+/*메일보기*/
+
+.modal.rb-view .content {
+	background-color: #fff
+}
+.modal.rb-view .content header .table-view {
+	padding: 10px 0
+}
+.modal.rb-view .content header .table-view,
+.modal.rb-view .content section .table-view,
+.modal.rb-view .content header .table-view-cell,
+.modal.rb-view .content section .table-view-cell {
+	border: none;
+}
+
+.modal.rb-view .content header .table-view {
+	border-bottom : 1px solid #eee ;
+}
+.modal.rb-view .content header .table-view-cell h1 {
+	font-size: 22px;
+	font-weight: normal;
+}
+
+.modal.rb-view .content section {
+	margin-top: -15px
+}
+
+.modal.rb-view .content section .table-view-cell .media-object {
+	width: 42px;
+	height: 42px;
+	border-radius: 50%
+}
+
+.modal.rb-view .content section .table-view-cell .rb-more,
+.modal.rb-view .content section .table-view-cell .rb-foward {
+	top: 25%;
+}
+.modal.rb-view .content section .table-view-cell .rb-foward {
+	right: 50px;
+}
+
+.modal.rb-view .content article p {
+	font-size: 18px;
+	color: #444;
+	line-height: 1.5
+}
+
+#compose .media-object {
+    width: 64px;
+    border: 1px solid #ccc
+}
+
+#compose .rb-cart {
+    margin-top: -16px
+}
+
+#compose .rb-cart .table-view-cell {
+    padding: 5px 65px 5px 15px;
+}
+
+#compose .rb-cart .table-view-divider {
+    padding-top: 25px;
+    background-color: #eee
+}
+
+#compose .rb-cart .table-view-cell.rb-highlight {
+    padding: 15px 65px 15px 15px;
+}
+#compose .rb-cart .table-view-cell .badge {
+    font-size: 16px
+}
+
+#compose .rb-cart h4 {
+    padding: 5px 65px 5px 15px;
+    padding-top: 25px;
+    background-color: #eee;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-top: 0;
+    border-bottom: 2px solid #a9a9a9; 
+    color: #999
+}
+
+.rb-message {
+    text-align: center;
+}
+
+.rb-message .fa {
+    font-size: 8em;
+    color: #999
+}
+
+.sns_area {
+    clear: both;
+    margin-bottom: 30px;
+    zoom: 1;
+    float: left;
+    margin-left: -4px;
+}
+
+.sns_area dd a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url('../../../../assets/img/i_sns_fb.png') center center no-repeat;
+    background-size: 31px 31px;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.sns_area .tw {
+    background: url('../../../../assets/img/i_sns_tw.png') center center no-repeat;
+    background-size: 31px 31px;
+}
+.sns_area .ks {
+    background: url('../../../../assets/img/i_sns_ky.png') center center no-repeat;
+    background-size: 31px 31px;
+}
+.sns_area .rp {
+    background: url('../../../../assets/img/i_sns_rp.png') center center no-repeat;
+    background-size: 31px 31px;
+}
+
+.sns_area dt {
+    display: none;
+}
+.sns_area dd {
+    float: left;
+}
+
+.rb-article p {
+    font-size: 18px
+}
+
+
+
+.rb-card-groups {
+    margin-bottom: 20px
+}
+
+.rb-card-groups .card-group {
+    margin-top: -1px
+}
+.rb-card-groups .card {
+    border-radius: 0
+}
+.rb-card-groups .card-title,
+.rb-card-groups .card-text {
+    text-align: center;  
+}
+.rb-card-groups .card-title {
+    margin-bottom: 0
+}
+
+
+
+
+/* 주문 전용*/
+.page .input-group {
+    box-shadow: none;
+}
+.page .input-row label {
+    width: 23%;
+    text-align: center;
+    font-size: 16px;
+    color: #999
+}
+.page .input-row input {
+    width: 77%;
+}
+.page .input-row label + select {
+    width: 77%;
+}
+.page .content {
+    background-color: #fff
+}
+.page .content textarea {
+    border-bottom: none;
+    border: none;
+    border-radius: 0;
+    resize: none;
+    box-shadow: none;
+}
+.page .input-group {
+    background-position: inherit; 
+}
+
+
+@media (max-width: 360px) {
+    .page .input-row label {
+        padding: 10px 5px;
+    } 
+}
+
+.input-row.rb-navigate-down {
+    position: relative;
+}
+
+.input-row label + select {
+    float: right;
+    font-size: 16px;
+    padding-left: 0;
+    padding-right: 30px;
+    margin-bottom: 0;
+    border-bottom: 0;
+    background-color: #fff;
+    color: #ABABAB;
+    line-height: 16px;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.input-row.rb-navigate-down:after {
+    content: "\e814";
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    display: inline-block;
+    font-family: Ratchicons;
+    font-size: inherit;
+    line-height: 1;
+    color: #bbb;
+    text-decoration: none;
+}
+
+

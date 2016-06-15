@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>킴스큐 샵</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<link href="../../../../assets/plugins/ratchet-2.0.2/css/ratchet.css" rel="stylesheet">
+<link href="../../../../assets/plugins/ratchet-2.0.2/css/ratchet-theme-android.css" rel="stylesheet">
+<link href="https://kimsq.github.io/rc/dist/css/rc-plus.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href="../../../../assets/plugins/snap/1.9.3/snap.css" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+
+<script src="../../../../assets/plugins/ratchet-2.0.2/js/ratchet.js"></script>
+
+<!-- Swiper : https://github.com/nolimits4web/Swiper -->
+<link href="../../../../assets/plugins/swiper/3.2.7/css/swiper.css" rel="stylesheet">
+
+<style type="text/css">
+
+.snap-drawer-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transform: translate3d(-265px, 0, 0);
+    transform: translate3d(-265px, 0, 0);
+
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+     box-shadow: 0px 0px 10px rgba(0,0,0,0.9); 
+}
+
+.snapjs-left .snap-drawer-left {
+    z-index: 11;
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+<div class="snap-drawers">
+    <div class="snap-drawer snap-drawer-left" id="drawer-left">
+        <div class="rb-drawer-header rb-sidebar-close" style="background-image: url('../../../../assets/img/cover2.jpg');" data-toggle="collapse">
+            <a class="rb-avatar" href="#"><img src="../../../../assets/img/noavatar-blue.png"></a>
+            <ul class="table-view">
+                <li class="table-view-cell media">
+                    <a class="navigate-right" data-drawer-toggle="settings" href="#">
+                        <div class="media-body">
+                            홍길동
+                            <p>test@email.com</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="rb-drawer-body">
+            <div class="">
+                <ul class="table-view">
+                    <li class="table-view-cell media active">
+                        <a class="navigate-right">
+                            <span class="badge badge-inverted"></span>
+                            <div class="media-body">
+                                주문배송조회
+                            </div>
+                        </a>
+                    </li>
+                    <li class="table-view-cell media">
+                        <a class="navigate-right">
+                            <span class="badge badge-inverted">3</span>
+                            <div class="media-body">
+                                장바구니
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <h5 class="content-padded">채널</h5>
+                <ul class="table-view">
+                    <li class="table-view-cell media">
+                        <a class="navigate-right">
+                            <span class="badge badge-inverted">99+</span>
+                            <span class="media-object pull-left icon icon-star"></span>
+                            <div class="media-body">
+                                노하우/스타일
+                            </div>
+                        </a>
+                    </li>
+                    <li class="table-view-cell media">
+                        <a class="navigate-right">
+                            <span class="badge badge-inverted">99+</span>
+                            <span class="media-object pull-left icon icon-pages"></span>
+                            <div class="media-body">
+                                음식/요리
+                            </div>
+                        </a>
+                    </li>
+                    <li class="table-view-cell media">
+                        <a class="navigate-right">
+                            <span class="badge badge-inverted">99+</span>
+                            <span class="media-object pull-left icon icon-pages"></span>
+                            <div class="media-body">
+                                다이어트
+                            </div>
+                        </a>
+                    </li>
+                    <li class="table-view-cell media">
+                        <a class="navigate-right">
+                            <span class="badge badge-inverted">99+</span>
+                            <span class="media-object pull-left icon icon-pages"></span>
+                            <div class="media-body">
+                                건강관리
+                            </div>
+                        </a>
+                    </li>
+                    <li class="table-view-cell media">
+                        <a class="navigate-right">
+                            <span class="badge badge-inverted">99+</span>
+                            <span class="media-object pull-left icon icon-pages"></span>
+                            <div class="media-body">
+                                애견관리
+                            </div>
+                        </a>
+                    </li>
+                    <li class="table-view-cell media">
+                        <a class="navigate-right">
+                            <span class="badge badge-inverted">99+</span>
+                            <span class="media-object pull-left icon icon-pages"></span>
+                            <div class="media-body">
+                                여행/캠프
+                            </div>
+                        </a>
+                    </li>
+                    <li class="table-view-cell media">
+                        <a class="navigate-right">
+                            <span class="badge badge-inverted">99+</span>
+                            <span class="media-object pull-left icon icon-pages"></span>
+                            <div class="media-body">
+                                스펨함
+                            </div>
+                        </a>
+                    </li>
+                    <li class="table-view-cell media">
+                        <a class="navigate-right">
+                            <span class="badge badge-inverted">99+</span>
+                            <span class="media-object pull-left icon icon-pages"></span>
+                            <div class="media-body">
+                                중요편지함
+                            </div>
+                        </a>
+                    </li>
+                    <li class="table-view-cell media">
+                        <a class="navigate-right">
+                            <span class="badge badge-inverted">99+</span>
+                            <span class="media-object pull-left icon icon-trash"></span>
+                            <div class="media-body">
+                                휴지통
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<div class="snap-content" id="content-wrap">
+    <div id="homePage" class="page center">
+        <header class="bar bar-nav rb-inverse">
+            <button class="btn btn-link btn-nav pull-left" data-drawer-open="left">
+                <span class="icon icon-bars"></span>
+            </button>
+            <a href="#cart" class="btn btn-link btn-nav pull-right">
+                <span class="fa fa-shopping-cart fa-lg" style="font-size: 1.6em"></span>
+            </a>
+            <h1 class="title">
+                제품상세
+            </h1>
+        </header>
+
+        <div class="bar bar-standard bar-footer">
+            <a class="btn btn-negative btn-block" href="javascript:slidePageFrom(page1, 'right');">구매하기</a>
+        </div>
+
+        <div class="content">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./images/bt-1(1).jpg" class="img-responsive"></div>
+                    <div class="swiper-slide"><img src="./images/02.jpg" class="img-responsive"></div>
+                    <div class="swiper-slide"><img src="./images/03.jpg" class="img-responsive"></div>
+                    <div class="swiper-slide"><img src="./images/04.jpg" class="img-responsive"></div>
+                    <div class="swiper-slide"><img src="./images/05.jpg" class="img-responsive"></div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+            
+            <div class="content-padded">
+                <span class="badge badge-inverted">91개 구매</span>
+                <span class="badge badge-positive badge-inverted">독일 직구 구매대행</span>
+                <h3 class="rc-title">블랜텍 Xpress 블랜더</h3>
+                <h3 class="rc-price">1,000,000원 <span class="badge badge-negative">30%</span></h3>
+                <p>강력한 그라인딩 능력을 자랑하는 블랜더 “블렌텍”</p>
+            </div>
+
+            <div class="card">
+                <ul class="table-view rb-cart">
+                    <li class="table-view-cell"><small>시중가</small> <span class="badge badge-negative badge-inverted">1,500,000 원</span></li>
+                    <li class="table-view-cell"><small>배송비</small> <span class="badge badge-inverted">2,500 원</span></li>
+                    <li class="table-view-cell"><small>제조사</small> <span class="badge badge-inverted">블렌텍(해외)</span></li>
+                    <li class="table-view-cell"><small>판매자</small> <span class="badge badge-inverted">(주)코디아 아이앤</span></li>
+                </ul>
+                </ul>
+            </div>
+
+
+
+            <div class="sns_area">
+                <dl>
+                    <dt class="hide">SNS로 공유하기</dt>
+                    <dd><a class="fb btn_share" data-target="news" data-id="19998016" data-service="facebook" href="#none" onclick="try { ga('total.send', 'event', 'Engaging', 'Facebook', document.title, 1); } catch (e) { }">페이스북</a></dd>
+                    <dd><a class="tw btn_share" data-target="news" data-id="19998016" data-service="twitter" href="#none" onclick="try { ga('total.send', 'event', 'Engaging', 'Twitter', document.title, 1); } catch (e) { }">트위터</a></dd>
+                    <dd><a class="ks btn_share" data-target="news" data-id="19998016" data-service="kakaostory" href="#none" onclick="try { ga('total.send', 'event', 'Engaging', 'Kakaostory', document.title, 1); } catch (e) { }">카카오스토리</a></dd>
+                    <dd><a class="rp openSnsShareService" href="#none">더보기</a></dd>
+                </dl>
+            </div>
+
+
+            <div class="segmented-control content-padded">
+                <a class="control-item active" href="#item1mobile">
+                    상품설명
+                </a>
+                <a class="control-item" href="#item2mobile">
+                    후기/문의
+                </a>
+                <a class="control-item" href="#item3mobile">
+                    환불/교환
+                </a>
+            </div>
+            <div class="content-padded">
+                <span id="item1mobile" class="control-content active">
+
+                    <img src="./images/detail.jpg" class="img-responsive">
+
+                </span>
+                <span id="item2mobile" class="control-content">
+                    후기 및 문의
+                </span>
+                <span id="item3mobile" class="control-content">
+                    환불/교환
+                </span>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div id="compose" class="page right">
+        <header class="bar bar-nav rb-inverse">
+            <a href="javascript:slidePageFrom(homePage, 'left');" class="btn btn-link btn-nav pull-left">
+                <span class="icon icon-left-nav"></span>
+            </a>
+            <button class="btn btn-link btn-nav pull-right">
+                <span class="icon icon-more-vertical"></span>
+            </button>
+            <a class="btn btn-link btn-nav pull-right" href="javascript:slidePageFrom(page2, 'right');">
+                <span class="icon fa fa-paper-plane"></span>
+            </a>
+            <h1 class="title">구매하기</h1>
+        </header>
+
+        <div class="content">
+
+            <ul class="table-view">
+                <li class="table-view-cell table-view-divider">주문상품 정보</li>
+
+                <li class="table-view-cell media">
+                    <a class="navigate-right">
+                        <img class="media-object pull-left" src="./images/01.png">
+                        <div class="media-body">
+                            블랜텍 Xpress 블랜더
+                            <p><span class="badge badge-primary badge-inverted">2개</span></p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="table-view rb-cart">
+                <li class="table-view-cell table-view-divider">최종결제 금액</li>
+                <li class="table-view-cell"><small>상품금액</small> <span class="badge badge-inverted">1,000,000 원</span></li>
+                <li class="table-view-cell"><small>배송비</small> <span class="badge badge-inverted">0 원</span></li>
+                <li class="table-view-cell"><small>할인금액</small> <span class="badge badge-negative badge-inverted">0 원</span></li>
+                <li class="table-view-cell"><small>적립금사용</small> <span class="badge badge-inverted">0 원</span></li>
+                <li class="table-view-cell rb-highlight"><strong>최종 결제금액</strong> <span class="badge badge-negative badge-inverted">1,000,000 원</span></li>
+
+                <li class="table-view-cell table-view-divider">구매자 정보</li>
+                <li class="table-view-cell">이름 <span class="badge badge-inverted">홍길동</span></li>
+                <li class="table-view-cell">연락처 <span class="badge badge-inverted">010-9070-0777</span></li>
+                <li class="table-view-cell">이메일 <span class="badge badge-inverted">break@kimsq.com</span></li>
+            </ul>
+
+            <div class="rb-cart">
+                <h4>배송지 정보</h4>   
+                <form class="input-group">
+                    <div class="input-row rb-navigate-down">
+                        <label>배송지</label>
+                        <select>
+                            <option label="선택하세요" disabled="disabled">선택하세요</option>
+                            <option selected="selected">최근배송지</option>
+                            <option>배송지1</option>
+                            <option>배송지2</option>
+                        </select>
+                    </div>
+                    <div class="input-row">
+                        <label>수령인</label>
+                        <input type="text" placeholder="" value="홍길동">
+                    </div>
+                    <div class="input-row">
+                        <label>연락처</label>
+                        <input type="text" placeholder="" value="010-9070-0777">
+                    </div>
+                    <div class="input-row">
+                        <label>배송지</label>
+                        <input type="text" placeholder="" value="100-111">
+                    </div>
+                    <div class="input-row">
+                        <label></label>
+                        <input type="text" placeholder="" value="경기도 남양주시 와부읍 덕소리">
+                    </div>
+                    <div class="input-row">
+                        <label></label>
+                        <input type="text" placeholder="" value="코오롱 아파트 100동 10 ">
+                    </div>
+                    <textarea rows="2" placeholder="배송지 메모"></textarea>
+                </form>
+
+                <h4>결제방법 선택</h4>  
+                <form class="input-group">
+                    <div class="input-row rb-navigate-down">
+                        <label>카드종류</label>
+                        <select>    
+                            <option label="선택하세요" disabled="disabled">선택하세요</option>
+                            <option>신한카드</option>
+                            <option>롯데카드</option>
+                            <option>카드 등록</option>
+                        </select>
+                    </div>
+                    <div class="input-row rb-navigate-down">
+                        <label>할부개월</label>
+                        <select>    
+                            <option label="선택하세요" disabled="disabled">선택하세요</option>
+                            <option>없음</option>
+                            <option>3개월</option>
+                            <option>6개월</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="complete" class="page right">
+        <header class="bar bar-nav rb-inverse">
+            <a href="javascript:slidePageFrom(page1, 'left');" class="btn btn-link btn-nav pull-left">
+                <span class="icon icon-left-nav"></span>
+            </a>
+            <button class="btn btn-link btn-nav pull-right">
+                <span class="icon icon-more-vertical"></span>
+            </button>
+            <h1 class="title">결제성공</h1>
+        </header>
+
+        <div class="bar bar-standard bar-footer">
+            <div class="segmented-control">
+                <a class="control-item">처음으로</a>
+                <a class="control-item">주문/배송조회</a>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <br><br>
+            <p class="rb-message">
+                <i class="fa fa-paper-plane fa-5x" aria-hidden="true"></i>
+            </p>
+            <br>
+            <h3 class="rb-message">주문이 완료되었습니다.</h3>
+
+
+        </div>
+    </div>
+
+
+
+</div>
+
+
+<div id="cart" class="modal rb-search rb-effect-scale">
+    <header class="bar bar-nav">
+        <a href="#cart" class="btn btn-link btn-nav pull-left" data-drawer-open="left">
+            <span class="icon icon-left-nav"></span>
+        </a>
+        <h1 class="title"><input type="search" placeholder="장바구니"></h1>
+    </header>
+
+    <div class="content">
+        <ul class="table-view">
+            <li class="table-view-cell media">
+                <a href="#search" class="">
+                    <span class="media-object pull-left icon fa fa-clock-o fa-lg"></span>
+                    <div class="media-body">
+                        상품 1
+                    </div>
+                </a>
+            </li>
+            <li class="table-view-cell media">
+                <a href="#search" class="">
+                    <span class="media-object pull-left icon fa fa-clock-o fa-lg"></span>
+                    <div class="media-body">
+                        상품 2
+                    </div>
+                </a>
+            </li>
+            <li class="table-view-cell media">
+                <a href="#search" class="">
+                    <span class="media-object pull-left icon fa fa-clock-o fa-lg"></span>
+                    <div class="media-body">
+                        상품 3
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script src="../../../../assets/plugins/jquery.finger/0.1.2/jquery.finger.min.js"></script>
+
+<script src="../../../../assets/plugins/snap/1.9.3/snap.min.js"></script>
+<script src="../../../../assets/plugins/swiper/3.2.7/js/swiper.jquery.min.js"></script>
+
+<script>
+
+// Initialize Swiper
+var swiper = new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+    paginationClickable: true,
+    loop: true
+});
+
+
+$('[data-toggle=modal]').on('tap',function(){
+
+    var url =  $(this).data('remote');
+    var title =  $(this).data('title');
+
+    var modal =  '#' + $(this).data('target');
+
+    $(modal).addClass("active");
+    $(modal).find('.bar-nav .title').text(title);
+
+    History.pushState({step:2}, title, url);
+    window.addEventListener("popstate", function () {
+        $(modal).removeClass('active')
+    });
+
+});
+
+    $('#modal-settings').on('tap','[data-form=submit]',function(){
+        var message =  $(this).data('feedback-text');
+        $(this).removeClass('active');
+        window.history.back();
+        if (message) { 
+            feedback.show(message);
+        } else {
+          feedback.show("저장 되었습니다.");
+        }
+    });
+
+var homePage = document.getElementById("homePage"),
+    page1 = document.getElementById("compose"),
+    page2 = document.getElementById("complete"),
+    currentPage = homePage;
+
+    function slidePageFrom(page, from) {
+        // Position the page at the starting position of the animation
+        page.className = "page " + from;
+        // Position the new page and the current page at the ending position of their animation with a transition class indicating the duration of the animation
+        page.className ="page transition center";
+        currentPage.className = "page transition " + (from === "left" ? "right" : "left");
+        currentPage = page;
+    }
+
+
+    // Instance
+    snapper = new Snap({
+        element: $("#drawer-left")[0],
+        maxPosition: 1,
+        minPosition: -1,
+        transitionSpeed: 0.1,
+        tapToClose: true,
+        touchToDrag: true
+    }),
+
+    snapper.on('open', function(){
+        $('.snap-content').append('<div class="backdrop" data-drawer-close="left"></div>');
+    });
+
+
+    snapper.on('close', function(){
+        $(".backdrop").remove();
+    });
+
+    $('body').on('tap click', '[data-drawer-close="left"]', function() {
+        snapper.close('left');
+    });
+    $('body').on('click', '[data-drawer-open="left"]', function() {
+        snapper.open('left');
+    });
+    $('body').on('click', '[data-drawer-expand="left"]', function() {
+        snapper.expand('left');
+    });
+    $('body').on('tap click','[data-drawer-toggle="left"]',function(){
+        if( snapper.state().state=="left" ){
+            snapper.close();
+        } else {
+            snapper.open('left');
+        }
+    });
+
+    $('body').on('click', '[data-drawer-close="right"]', function() {
+        snapper.close('right');
+    });
+    $('body').on('click', '[data-drawer-open="right"]', function() {
+        snapper.open('right');
+    });
+    $('body').on('click', '[data-drawer-expand="right"]', function() {
+        snapper.expand('right');
+    });
+    $('body').on('click','[data-drawer-toggle="right"]',function(){
+        if( snapper.state().state=="right" ){
+            snapper.close();
+        } else {
+            snapper.open('right');
+        }
+    });
+
+
+
+$( document ).ready(function() {
+
+    //jquery.collapse : https://github.com/danielstocks/jQuery-Collapse
+    var doCollapse = function(){
+
+        new jQueryCollapse($("#drawer-pages"), {
+            query: '[data-toggle=collapse]',
+            persist: true
+        });
+
+        new jQueryCollapse($("#drawer-menus"), {
+            query: '[data-toggle=collapse]',
+            accordion: true,
+            persist: true
+        });
+
+    };
+
+    // push.js-jquery.collapse 바인드
+    // window.addEventListener('push', doCollapse);
+    doCollapse();
+
+});
+
+</script>
+
+</body>
+</html>

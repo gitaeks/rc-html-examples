@@ -1,8 +1,58 @@
  RC_initSwiper();
 
+
+$('#widget-01 .card').click(function(){
+    $('#product-view').modal({
+        template: './component/modal-view.html'
+    });
+});
+
 $('#product-view').on('loaded.rc.modal', function () {
-    RC_initSwiper();
+    var swiper5 = new Swiper('#product-view .swiper-container', {
+        pagination: '#product-view .swiper-pagination',
+        spaceBetween: 0,
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+    });
 })
+
+
+// The function that will initialize your Swiper.js instance
+var doSwiper = function(){
+    var swiper = new Swiper('#widget-01 .swiper-container', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 'auto',
+        paginationClickable: true,
+        spaceBetween: 5,
+    });
+
+    var swiper2 = new Swiper('#widget-02 .swiper-container', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 'auto',
+        paginationClickable: true,
+        spaceBetween: 5,
+    });
+
+    var swiper3 = new Swiper('#widget-03 .swiper-container', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 'auto',
+        paginationClickable: true,
+        spaceBetween: 5,
+    });
+
+    var swiper4 = new Swiper('#widget-04 .swiper-container', {
+        pagination: '.swiper-pagination',
+        slidesPerView: '2',
+        centeredSlides: true,
+        paginationClickable: true,
+        spaceBetween: 10,
+    });
+
+};
+
+window.addEventListener('push', doSwiper);
+doSwiper();
 
 
 // 검색 
