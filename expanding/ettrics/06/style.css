@@ -1,0 +1,234 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-moz-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  height: 250px;
+  width: 100%;
+  pointer-events: none;
+}
+header .title {
+  position: absolute;
+  top: 50%;
+  left: 80px;
+  color: white;
+  font-size: 40px;
+  line-height: 40px;
+  margin-top: -20px;
+  transition: .3s all ease;
+  z-index: 999;
+  font-family: Roboto;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+header .header-bg {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  background: #ec4590;
+  transition: .3s all ease;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+header.active .title {
+  font-size: 20px;
+  -webkit-transform: translate(-30px, -85px);
+  -moz-transform: translate(-30px, -85px);
+  -ms-transform: translate(-30px, -85px);
+  -o-transform: translate(-30px, -85px);
+  transform: translate(-30px, -85px);
+  transition: .3s all ease .15s;
+}
+header.active .header-bg {
+  -webkit-transform: translateY(-170px);
+  -moz-transform: translateY(-170px);
+  -ms-transform: translateY(-170px);
+  -o-transform: translateY(-170px);
+  transform: translateY(-170px);
+  background: #e11873;
+  transition: .3s all ease .15s;
+}
+header.active .cta-ctr {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transition: .5s all ease .2s;
+}
+header.active .cta:after {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  transition: .5s all ease .2s;
+  box-shadow: 0 -8px 12px 1px rgba(0, 0, 0, 0.15);
+}
+header .cta-ctr {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  bottom: 0;
+  -webkit-transform-origin: bottom center;
+  -moz-transform-origin: bottom center;
+  -ms-transform-origin: bottom center;
+  -o-transform-origin: bottom center;
+  transform-origin: bottom center;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  transition: .3s all ease;
+}
+header .cta {
+  width: 60px;
+  height: 60px;
+  background: #F9B24F;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .3s all ease;
+  pointer-events: auto;
+  position: relative;
+}
+header .cta:after {
+  content: "";
+  box-shadow: 0 8px 12px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/111167/arrow-down.svg") no-repeat center 14px transparent;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  transition: .3s all ease;
+}
+header .cta:hover {
+  background-color: #fabd68;
+}
+
+.content-ctr {
+  width: 100%;
+  height: 100%;
+  background: white;
+  overflow: scroll;
+  position: relative;
+}
+.content-ctr.active .header-content-ctr {
+  height: 0%;
+  transition: .3s height ease .45s;
+}
+.content-ctr.active .header-content-ctr .title {
+  transition: .3s all ease;
+  opacity: 0;
+  -webkit-transform: translateY(-20px);
+  -moz-transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  -o-transform: translateY(-20px);
+  transform: translateY(-20px);
+}
+.content-ctr.active .header-content-ctr .par {
+  transition: .3s all ease .05s;
+  opacity: 0;
+  -webkit-transform: translateY(-20px);
+  -moz-transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  -o-transform: translateY(-20px);
+  transform: translateY(-20px);
+}
+.content-ctr.active .main-content-ctr {
+  height: 100%;
+  overflow: scroll;
+}
+.content-ctr.active .main-content-ctr .title {
+  transition: .3s all ease .65s;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+  opacity: 1;
+}
+.content-ctr.active .main-content-ctr .par {
+  transition: .3s all ease .7s;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+  opacity: 1;
+}
+.content-ctr .title {
+  font-family: Roboto;
+  margin-bottom: 30px;
+  font-size: 34px;
+  color: #E61875;
+  transition: .3s all ease;
+}
+.content-ctr .par {
+  font-family: Roboto;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #777;
+}
+.content-ctr .header-content-ctr {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  transition: .3s height ease;
+}
+.content-ctr .header-content-ctr .title {
+  transition: .3s all ease .15s;
+}
+.content-ctr .header-content-ctr .par {
+  transition: .3s all ease .3s;
+}
+.content-ctr .header-content {
+  position: absolute;
+  right: 0;
+  bottom: 110px;
+  left: 80px;
+}
+.content-ctr .main-content-ctr {
+  position: relative;
+  min-height: 0%;
+  transition: .3s height ease;
+  overflow: hidden;
+}
+.content-ctr .main-content-ctr .title,
+.content-ctr .main-content-ctr .par {
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+  -moz-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  -o-transform: translateY(20px);
+  transform: translateY(20px);
+}
+.content-ctr .main-content {
+  position: relative;
+  top: 50%;
+  right: 0;
+  left: 0;
+  margin-left: 50px;
+  margin-top: -59px;
+}

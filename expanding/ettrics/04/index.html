@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Material card opening effect</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,300' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!-- <link href="http://kimsq.github.io/rc/dist/css/ratchet.css" rel="stylesheet"> -->
+<!-- <link href="http://kimsq.github.io/rc/dist/css/rc-plus.css" rel="stylesheet"> -->
+<link href="./style.css" rel="stylesheet">
+
+</head>
+
+<body>
+<!-- http://codepen.io/superoak/pen/yyQNRO -->
+
+<div class="content">
+
+    <section class="nav-bar">
+        <button class="left ripple"><i class="fa fa-bars"></i></button>
+        <h1 class="left">
+	        Events
+	      </h1>
+    </section>
+    <section class="action-bar">
+        <button class="ripple toggle-btn" data-ripple-color="rgba(0,0,0, .3)"><i class="fa fa-arrow-left"></i></button>
+        <div class="right">
+            <button><i class="fa fa-info-circle"></i></button>
+            <button><i class="fa fa-share-alt"></i></button>
+        </div>
+    </section>
+    <article class="card toggle-btn">
+        <div class="card-overlay"></div>
+        <header class="card-cover-placeholder">
+            <div class="card-cover"></div>
+        </header>
+        <div class="card-content">
+            <h2>
+          <a class="card-title" href="javascript:0">Iron City, Birmingham, AL</a>
+        </h2>
+            <p>
+                <a class="card-description" href="javascript:0">Run the Jewels is an American hip hop duo, formed by rappers EL-P and Killer Mike in 2013. That same year, they released their sel...</a>
+            </p>
+            <div class="card-content-opened">
+                <label>Venue Name</label>
+                <h2>
+            Iron City, Birmingham, AL
+          </h2>
+                <label>Ticked Price</label><strong class="left">$30.00</strong>
+                <button class="right ripple" data-ripple-color="#d7d7d7">Buy ticket</button>
+                <div class="clearfix"></div>
+                <label>About</label>
+                <p>
+                    Run the Jewels is an American hip hop duo, formed by New York City-based rapper-music producer EL-P and Atlanta-based rapper Killer Mike, in 2013. Later that year, they released their eponymous debut studio album, Run the Jewels, as a free digital download.
+                    The duo announced they would begin recording the highly anticipated sequel to their debut, in February 2014, after a series of Australian live dates as part of St. Jerome's Laneway Festival.
+                </p>
+            </div>
+            <button class="card-content-button ripple" data-ripple-color="#ededed"><i class="fa fa-plus"></i></button>
+        </div>
+        <footer class="card-actions clearfix">
+            <button class="card-btn ripple" data-ripple-color="#ededed">Add to calendar</button>
+        </footer>
+    </article>
+    <article class="card">
+        <div class="card-cover-2"></div>
+    </article>
+
+
+
+</div>
+
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,389 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 20px;
+  outline: none;
+}
+
+h1,
+h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5em;
+  margin-bottom: 10px;
+}
+
+.clearfix:after {
+  display: table;
+  clear: both;
+  content: " ";
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.title {
+  width: 400px;
+  height: 100vh;
+  text-align: center;
+  background-color: #f39c12;
+  color: white;
+}
+.title .title-content {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.title h1 {
+  font-size: 30px;
+}
+.title .toggle-btn {
+  background-color: #e67e22;
+  padding: 20px;
+  margin: 20px;
+  color: white;
+  border-radius: 4px;
+  box-shadow: 0 4px #d7751e;
+}
+
+.phone {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 460px;
+  padding: 85px 20px 0 20px;
+  background-color: #212121;
+  border-radius: 50% 50% 0 0 / 40px;
+}
+.phone .phone-buttons:before, .phone .phone-buttons:after {
+  background-color: #1D1D1D;
+  width: 5px;
+  position: absolute;
+  content: "";
+}
+.phone .phone-buttons:before {
+  top: 180px;
+  left: -5px;
+  height: 160px;
+  border-radius: 4px 0 0 4px;
+}
+.phone .phone-buttons:after {
+  right: -5px;
+  top: 140px;
+  height: 80px;
+  border-radius: 0 4px 4px 0;
+}
+.phone .phone-camera {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-left: -13px;
+  border: 4px solid #1D1D1D;
+  background-color: #424242;
+}
+
+.app {
+  height: 540px;
+  overflow: hidden;
+  position: relative;
+  background-color: #EFEFEF;
+}
+
+.status-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  height: 24px;
+  padding: 6px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  font-size: 12px;
+}
+.status-bar div {
+  margin-left: 10px;
+}
+
+.nav-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  height: 90px;
+  background-color: #00BDE7;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.1);
+  padding: 49px 20px 25px 20px;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+.nav-bar h1 {
+  color: white;
+  font-size: 20px;
+  font-weight: normal;
+}
+.nav-bar button {
+  margin-right: 30px;
+  color: #0C88AD;
+}
+.nav-bar.hide {
+  top: -90px;
+  opatity: 0;
+}
+
+.action-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 24px;
+  z-index: 3;
+  opacity: 0;
+  -webkit-transition: all 60ms;
+  transition: all 60ms;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+.action-bar button {
+  overflow: hidden;
+  padding: 25px 20px;
+  color: white;
+  border-radius: 50%;
+  font-size: 20px;
+}
+.action-bar.show {
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+  -webkit-transition-delay: 100ms;
+          transition-delay: 100ms;
+  opacity: 1;
+}
+
+.card {
+  width: 95%;
+  margin: 20px auto;
+  background-color: white;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.card .card-overlay {
+  background-color: black;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  visibility: hidden;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+.card .card-cover-placeholder {
+  height: 240px;
+}
+.card .card-cover,
+.card .card-cover-2 {
+  cursor: pointer;
+  background-image: url(http://cdn.ticketfly.com/i/00/01/33/64/99-atjmbo1.jpg);
+  background-clip: content-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 240px;
+  border-radius: 4px 4px 0 0;
+  -webkit-transition: all 450ms;
+  transition: all 450ms;
+}
+.card .card-cover-2 {
+  background-image: url(http://blogs.phoenixnewtimes.com/uponsun/The%20Growlers/the_growlers_surf_music.jpg);
+}
+.card .card-content {
+  position: relative;
+  padding: 20px 20px 10px 20px;
+}
+.card .card-title {
+  display: inline-block;
+  color: #7C7C7C;
+  font-weight: bold;
+}
+.card .card-description {
+  display: inline-block;
+  color: #BDBDBD;
+  font-size: 15px;
+}
+.card .card-actions {
+  border-top: 1px solid #EDEDED;
+}
+.card .card-btn {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  text-align: right;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #FE1C7A;
+  font-size: 16px;
+}
+.card .card-content-opened {
+  width: 100%;
+  height: 0;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding: 0 30px 10px 80px;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  -webkit-transition-delay: 200ms;
+          transition-delay: 200ms;
+  overflow: hidden;
+  color: #9E9E9E;
+}
+.card .card-content-opened label,
+.card .card-content-opened h2,
+.card .card-content-opened strong,
+.card .card-content-opened button,
+.card .card-content-opened p {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  opacity: 0;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  -webkit-transition-delay: 500ms;
+          transition-delay: 500ms;
+}
+.card .card-content-opened h2 {
+  color: #7A7A7A;
+  font-size: 18px;
+}
+.card .card-content-opened label {
+  color: #4DCFEF;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 30px 0 5px 0;
+  display: block;
+}
+.card .card-content-opened strong {
+  color: #7A7A7A;
+  font-size: 44px;
+}
+.card .card-content-opened button {
+  line-height: 1;
+  background-color: #F7F7F7;
+  padding: 12px 20px;
+  color: #7A7A7A;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+.card .card-content-button {
+  position: absolute;
+  left: 15px;
+  top: -45px;
+  z-index: 3;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  color: #FE1C7A;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
+}
+.card.open .card-overlay {
+  opacity: .3;
+  visibility: visible;
+}
+.card.open .card-cover {
+  -webkit-transform: scale(1.2) translateY(-25px);
+          transform: scale(1.2) translateY(-25px);
+  position: relative;
+  z-index: 2;
+}
+.card.open .card-content-opened {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  height: 400px;
+}
+.card.open .card-content-opened * {
+  opacity: 1;
+}
+.card.open .card-content-button {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+  -webkit-transition-delay: 600ms;
+          transition-delay: 600ms;
+}
+
+.ripple {
+  overflow: hidden;
+  position: relative;
+}
+
+.ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: white;
+  -webkit-animation: ripple-animation 2s;
+          animation: ripple-animation 2s;
+}
+
+@-webkit-keyframes ripple-animation {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.4;
+  }
+  to {
+    -webkit-transform: scale(100);
+            transform: scale(100);
+    opacity: 0;
+  }
+}
+
+@keyframes ripple-animation {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.4;
+  }
+  to {
+    -webkit-transform: scale(100);
+            transform: scale(100);
+    opacity: 0;
+  }
+}
